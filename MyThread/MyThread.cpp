@@ -33,14 +33,12 @@ void MyThread::shutdown() {
 
 void MyThread::execute(void *arg) {
     while(!isStopped()) {
-    	int x = rand() % 6;
-    	switch(x){
-    	case 0: toggleLight(RED);
-    	case 1: toggleLight(YELLOW);
-    	case 2: toggleLight(GREEN);
-    	case 3: val ^= BIT_0; val ^= BIT_1;
-    	case 4: val ^= BIT_0; val ^= BIT_1;
-    	case 5: cal ^= Bit_4;
+        toggleLight(RED);
+        usleep(500000);
+        toggleLight(YELLOW);
+        usleep(500000);
+        toggleLight(GREEN);
+        sleep(1);
     }
 }
 
