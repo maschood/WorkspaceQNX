@@ -10,14 +10,9 @@ include $(QCONFIG)
 USEFILE=
 
 # Next lines are for C++ projects only
-
 EXTRA_SUFFIXES+=cxx cpp
-
 LDFLAGS+=-lang-c++
-
 VFLAG_g=-gstabs+
-
-LIBS+=ioaccess
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL
@@ -26,7 +21,5 @@ endif
 include $(QNX_INTERNAL)
 
 include $(MKFILES_ROOT)/qtargets.mk
-
 OPTIMIZE_TYPE_g=none
 OPTIMIZE_TYPE=$(OPTIMIZE_TYPE_$(filter g, $(VARIANTS)))
-
