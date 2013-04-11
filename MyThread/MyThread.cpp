@@ -38,24 +38,23 @@ void MyThread::execute(void *arg) {
         toggleLight(YELLOW);
         usleep(500000);
         toggleLight(GREEN);
-        sleep(1);
+        usleep(500000);
     }
 }
 
 void MyThread::toggleLight(Color color)
 {
     uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-    switch (color) {
-        case RED:
-            val ^= BIT_7;
-            break;
-        case YELLOW:
-            val ^= BIT_6;
-            break;
-        case GREEN:
-            val ^= BIT_5;
-            break;
-    }
+    int x = rand() % 6;
+    	switch(x){
+    	case 0: val ^= BIT_7; break;
+    	case 1: val ^= BIT_6; break;
+    	case 2: val ^= BIT_5; break;
+    	case 3: val ^= BIT_4; break;
+    	case 4: if(val & 2){val ^= BIT_1; val ^= BIT_0;} else {val ^= BIT_0;} break;
+    	case 5: if(val & 1){val ^= BIT_0; val ^= BIT_1;} else {val ^= BIT_1;} break;
+
+    	}
     out8(DIO_BASE + DIO_OFFS_A, val);
 }
 
