@@ -18,6 +18,11 @@
 
 
 int main(int argc, char *argv[]) {
+#ifdef SIMULATION
+    cout << "Simulation aktiv" << endl;
+    cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen." << endl;
+    IOaccess_open(); // Baue die Verbindung zur Simulation auf
+#endif
 
 	HAL* hal = HAL::get_instance();
 
@@ -45,7 +50,8 @@ int main(int argc, char *argv[]) {
         hal->bar_close();
         sleep(1);
     }
-
-
+#ifdef SIMULATION
+    IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
+#endif
 	return EXIT_SUCCESS;
 }
