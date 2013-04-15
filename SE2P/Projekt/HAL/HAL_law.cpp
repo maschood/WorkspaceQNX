@@ -5,6 +5,8 @@
  *      Author: Erik Matthiessen
  */
 
+#include "HAL.h"
+
 HAL::HAL() {
     // Initialisierung der Digitalen IO Karte
     out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
