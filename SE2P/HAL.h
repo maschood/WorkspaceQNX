@@ -4,8 +4,13 @@
  *  Created on: 10.04.2013
  *      Author: Erik Matthiessen
  */
-#include "Addresses.h"
+#include <stdint.h>
+#include <iostream>
+#include <unistd.h>
 
+#include "Addresses.h"
+#include "HWaccess.h"
+#include "Mutex.h"
 
 #ifndef HAL_H_
 #define HAL_H_
@@ -13,6 +18,17 @@
 
 class HAL
 {
+	  private:
+        HAL();      // Default Konstruktor
+        /**
+         * Instance for using Singleton
+         */
+        static HAL* instance;
+        /**
+         * Mutex for Threadsafe Hal use
+         */
+        static Mutex* halMutex;
+
     public:
         static HAL* get_instance();		// Gibt die Referenz auf die HAL zurück
 
@@ -33,11 +49,6 @@ class HAL
         int conveyor_move_left();
         int conveyor_stop();
         ~HAL();     // Destruktor
-
-    private:
-        HAL();      // Default Konstruktor
-        static HAL* instance;
-
 };
 
 #endif /* HAL_H_ */
