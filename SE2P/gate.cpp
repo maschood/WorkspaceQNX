@@ -18,9 +18,8 @@
         int HAL::bar_open(){
         	int resu = -1;
             uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-            val = val || BIT_4;
             resu = 0;
-            out8(DIO_BASE + DIO_OFFS_A, val);
+            out8(DIO_BASE + DIO_OFFS_A, val | BIT_4);
             return resu;
         }
         /*
@@ -30,8 +29,7 @@
         int HAL::bar_close(){
         	int resu = -1;
             uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-            val = val && (!BIT_4);
             resu = 0;
-            out8(DIO_BASE + DIO_OFFS_A, val);
+            out8(DIO_BASE + DIO_OFFS_A, val & ~BIT_4);
             return resu;
         }

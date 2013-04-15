@@ -17,7 +17,7 @@
         int HAL::conveyor_move_right(){
         	int resu = -1;
             uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-            val = val || BIT_0;
+            val = val | BIT_0;
             resu = 0;
             out8(DIO_BASE + DIO_OFFS_A, val);
             return resu;
@@ -28,7 +28,7 @@
         int HAL::conveyor_move_left(){
         	int resu = -1;
             uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-            val = val || BIT_1;
+            val = val | BIT_1;
             resu = 0;
             out8(DIO_BASE + DIO_OFFS_A, val);
             return resu;
@@ -39,8 +39,8 @@
         int HAL::conveyor_stop(){
         	int resu = -1;
             uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
-            val = val && (!BIT_0);
-            val = val && (!BIT_1);
+            val = val & ~BIT_0;
+            val = val & ~BIT_1;
             resu = 0;
             out8(DIO_BASE + DIO_OFFS_A, val);
             return resu;
