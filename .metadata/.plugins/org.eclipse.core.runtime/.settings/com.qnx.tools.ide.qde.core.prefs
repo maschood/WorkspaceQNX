@@ -1,0 +1,10 @@
+#Tue Apr 16 08:38:29 CEST 2013
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mudflapth=false
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.active_configurations=_x86_g ;_x86_r
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mod_lib_refs=true
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.use_shared_storage=false
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.profiling=false
+eclipse.preferences.version=1
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.instrumentedFunctionProfiling=false
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.type=2
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.code_coverage=false

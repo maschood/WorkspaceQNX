@@ -1,0 +1,17 @@
+/*
+ * RS232_2.cpp
+ *
+ *  Created on: 16.04.2013
+ *      Author: maschood
+ */
+
+#include "RS232_2.h"
+
+RS232_2::RS232_2() {
+	// TODO Auto-generated constructor stub
+
+}
+
+RS232_2::~RS232_2() {
+	// TODO Auto-generated destructor stub
+}

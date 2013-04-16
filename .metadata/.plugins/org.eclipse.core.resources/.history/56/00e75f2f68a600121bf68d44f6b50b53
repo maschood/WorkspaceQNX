@@ -1,0 +1,17 @@
+/*
+ * RS232_1.h
+ *
+ *  Created on: 16.04.2013
+ *      Author: maschood
+ */
+
+#ifndef RS232_1_H_
+#define RS232_1_H_
+
+class RS232_1 {
+public:
+	RS232_1();
+	virtual ~RS232_1();
+};
+
+#endif /* RS232_1_H_ */

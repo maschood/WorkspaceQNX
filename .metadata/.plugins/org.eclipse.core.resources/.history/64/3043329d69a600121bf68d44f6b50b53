@@ -1,0 +1,25 @@
+/*
+ * RS232_1.cpp
+ *
+ *  Created on: 16.04.2013
+ *      Author: maschood
+ */
+
+#include "RS232_1.h"
+
+RS232_1::RS232_1() {
+
+	if((fd = open(DEV_SER1, O_RDWR)) < 0)
+	{
+		printf("Debug RS232_1: opening devfile1 failed\n");
+		exit(EXIT_FAILURE);
+	} else {
+		printf("Debug RS232_1: opening devfile1 SUCCESSED\n");
+	}
+
+
+}
+
+RS232_1::~RS232_1() {
+	// TODO Auto-generated destructor stub
+}

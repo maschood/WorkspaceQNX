@@ -1,0 +1,8 @@
+#Tue Apr 16 08:39:13 CEST 2013
+spelling_locale_initialized=true
+useAnnotationsPrefPage=true
+consoleOnTop=true
+eclipse.preferences.version=1
+wizard.preferred.toolchains=com.qnx.qcc.toolChain com.qnx.qcc.toolChain.exe.coverage com.qnx.qcc.toolChain.sharedLib.coverage com.qnx.qcc.toolChain.staticLib.coverage
+sourceHoverBackgroundColor=255,255,225
+useQuickDiffPrefPage=true

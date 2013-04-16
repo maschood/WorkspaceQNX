@@ -1,0 +1,17 @@
+/*
+ * RS232Test.cpp
+ *
+ *  Created on: 16.04.2013
+ *      Author: maschood
+ */
+
+#include "RS232Test.h"
+
+RS232Test::RS232Test() {
+	// TODO Auto-generated constructor stub
+
+}
+
+RS232Test::~RS232Test() {
+	// TODO Auto-generated destructor stub
+}

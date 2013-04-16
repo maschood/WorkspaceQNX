@@ -17,7 +17,6 @@
 #include "HAWThread.h"
 #include "Mutex.h"
 #include "RS232_1.h"
-#include "RS232Test.h"
 
 
 int main(int argc, char *argv[]) {
@@ -39,10 +38,10 @@ int main(int argc, char *argv[]) {
 	cout << "Adresse des Pointers: " << &hal2 << endl;
 	cout << "Inhalt des Pointers: " << hal2 << endl;
 
+	RS232_1 ser1;
 
-	RS232Test testrs;
-
-   // while(1) {
+    while(1) {
+    	ser1.sendMsg('b');
 
 //        hal->lamp_red_on();
 //        sleep(1);
@@ -66,7 +65,7 @@ int main(int argc, char *argv[]) {
 //        sleep(1);
 //        hal->bar_close();
 //        sleep(1);
- //   }
+    }
 #ifdef SIMULATION
     IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
 #endif
