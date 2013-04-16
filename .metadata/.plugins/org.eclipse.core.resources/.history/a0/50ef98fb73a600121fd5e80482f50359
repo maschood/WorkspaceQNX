@@ -24,7 +24,7 @@
 #include <hw/inout.h>
 
 #ifdef SIMULATION
-//#include <ioaccess.h>
+#include <ioaccess.h>
 #endif
 
 // End of File
