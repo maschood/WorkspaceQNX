@@ -35,15 +35,3 @@ int main(int argc, char *argv[]) {
 	return EXIT_SUCCESS;
 }
 
-<<<<<<< HEAD
-void main::stfu(){
-
-<<<<<<< HEAD
-printf("Es passiert etwas anderes");
-=======
-	printf("hier passiert was wichtiges");
->>>>>>> remotes/origin/TestBranch
-
-}
-=======
->>>>>>> 7d596ac22c14bb330bb9738594c1fd324147ac40
