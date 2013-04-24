@@ -28,7 +28,8 @@ EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL
 #===== EXTRA_SRCVPATH - a space-separated list of directories to search for source files.
 EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_Test  \
 	$(PROJECT_ROOT)/R232_1 $(PROJECT_ROOT)/HAL_A  \
-	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/Regressionstest
+	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/Regressionstest  \
+	$(PROJECT_ROOT)/HAWThread $(PROJECT_ROOT)/Mutex
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL
