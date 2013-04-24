@@ -17,7 +17,7 @@
 #include "HAWThread.h"
 #include "Mutex.h"
 #include "RS232_1.h"
-#include "RS232Test.h"
+
 
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION

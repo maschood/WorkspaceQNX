@@ -40,7 +40,6 @@
 <element>ioaccess</element>
 </libs>
 <SRCS>
-<element>D:/WorkspaceQNX/SE2P/RS232Test.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/main.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/R232_1/RS232_1.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/R232_1/RS232_2.cpp</element>
@@ -51,6 +50,7 @@
 <element>D:/WorkspaceQNX/SE2P/HAL_A/HAL_A_light.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/HAL_S/HAL_S.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/HAL_S/HAL_S_interrupt.cpp</element>
+<element>D:/WorkspaceQNX/SE2P/Regressionstest/Regressionstest.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/HAWThread/HAWThread.cpp</element>
 <element>D:/WorkspaceQNX/SE2P/Mutex/Mutex.cpp</element>
 </SRCS>
