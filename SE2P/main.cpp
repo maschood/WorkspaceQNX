@@ -79,3 +79,9 @@ int main(int argc, char *argv[]) {
 #endif
 	return EXIT_SUCCESS;
 }
+
+void main::stfu(){
+
+	printf("hier passiert was wichtiges");
+
+}
