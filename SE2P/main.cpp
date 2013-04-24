@@ -68,7 +68,12 @@ int main(int argc, char *argv[]) {
 //        sleep(1);
  //   }
  
+<<<<<<< HEAD
  cx.mkb nxcj.kbncxnblkdnbkcnbkndb
+=======
+ 
+ hallokdmcdkscmdslkcm
+>>>>>>> Branch1
 #ifdef SIMULATION
    // IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
 #endif
