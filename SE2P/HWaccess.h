@@ -15,7 +15,8 @@
  * Zur Not : Ein Clean auf das Projekt ausführen
  */
 
-#define SIMULATION
+//#define SIMULATION
+#define HW
 
 // Die drei folgenden includes dürfen nur in dieser Datei stehen
 
@@ -24,7 +25,7 @@
 #include <hw/inout.h>
 
 #ifdef SIMULATION
-//#include <ioaccess.h>
+#include <ioaccess.h>
 #endif
 
 // End of File
