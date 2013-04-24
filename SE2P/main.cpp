@@ -67,6 +67,8 @@ int main(int argc, char *argv[]) {
 //        hal->bar_close();
 //        sleep(1);
  //   }
+ 
+ cx.mkb nxcj.kbncxnblkdnbkcnbkndb
 #ifdef SIMULATION
    // IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
 #endif
