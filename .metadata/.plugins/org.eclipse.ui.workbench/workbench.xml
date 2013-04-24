@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="18" version="2.0">
+<workbench progressCount="11" version="2.0">
 <workbenchAdvisor/>
 <window height="728" maximized="true" width="1024" x="50" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -15,7 +15,7 @@
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="84" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
@@ -483,26 +483,47 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RS232Test.cpp" tooltip="SE2P/RS232Test.cpp">
+<persistable path="/SE2P/RS232Test.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RS232Test.h" tooltip="SE2P/RS232Test.h">
+<persistable path="/SE2P/RS232Test.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutex.cpp" tooltip="SE2P/Mutex.cpp">
+<persistable path="/SE2P/Mutex.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
+<persistable path="/SE2P/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.cpp" tooltip="SE2P/HAWThread.cpp">
+<persistable path="/SE2P/HAWThread.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="SE2P/Definitions.h">
+<persistable path="/SE2P/Definitions.h"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Addresses.h" tooltip="SE2P/Addresses.h">
 <persistable path="/SE2P/Addresses.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test.cpp" tooltip="SE2P/Hal_Test/HAL_Test.cpp">
-<persistable path="/SE2P/Hal_Test/HAL_Test.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RS232_1.cpp" tooltip="SE2P/R232_1/RS232_1.cpp">
+<persistable path="/SE2P/R232_1/RS232_1.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RS232_1.h" tooltip="SE2P/R232_1/RS232_1.h">
+<persistable path="/SE2P/R232_1/RS232_1.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Puck.h" tooltip="SE2P/Projekt/Puck_Klasse/Puck.h">
+<persistable path="/SE2P/Projekt/Puck_Klasse/Puck.h"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test.h" tooltip="SE2P/Hal_Test/HAL_Test.h">
 <persistable path="/SE2P/Hal_Test/HAL_Test.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test_Bar.cpp" tooltip="SE2P/Hal_Test/HAL_Test_Bar.cpp">
-<persistable path="/SE2P/Hal_Test/HAL_Test_Bar.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test_Conveyor.cpp" tooltip="SE2P/Hal_Test/HAL_Test_Conveyor.cpp">
-<persistable path="/SE2P/Hal_Test/HAL_Test_Conveyor.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.h" tooltip="SE2P/HAL_S/HAL_S.h">
+<persistable path="/SE2P/HAL_S/HAL_S.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test_Lamp.cpp" tooltip="SE2P/Hal_Test/HAL_Test_Lamp.cpp">
-<persistable path="/SE2P/Hal_Test/HAL_Test_Lamp.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
-<persistable path="/SE2P/main.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S_interrupt.cpp" tooltip="SE2P/HAL_S/HAL_S_interrupt.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S_interrupt.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HWaccess.h" tooltip="SE2P/HWaccess.h">
 <persistable path="/SE2P/HWaccess.h"/>
