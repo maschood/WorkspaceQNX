@@ -10,76 +10,32 @@
 #include <string>
 #include <unistd.h>
 
-
 #include "Addresses.h"
-#include "HAL.h"
+#include "HAL_A.h"
+#include "HAL_S/HAL_S.h"
 #include "HWaccess.h"
 #include "HAWThread.h"
 #include "Mutex.h"
 #include "RS232_1.h"
 #include "RS232Test.h"
 
-
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION
     cout << "Simulation aktiv" << endl;
     cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen." << endl;
-    //IOaccess_open(); // Baue die Verbindung zur Simulation auf
+    IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
+    HAL_S* hal_s  = HAL_S::get_instance();
+    hal_s->start_process();
 
-
-	HAL* hal = HAL::get_instance();
-
-	cout << "Adresse des Pointers: " << &hal << endl;
-	cout << "Inhalt des Pointers: " << hal << endl;
-
-	HAL* hal2 = HAL::get_instance();
-
-	cout << "Adresse des Pointers: " << &hal2 << endl;
-	cout << "Inhalt des Pointers: " << hal2 << endl;
-
-
-	RS232Test testrs;
-
-   // while(1) {
-
-//        hal->lamp_red_on();
-//        sleep(1);
-//        hal->lamp_red_off();
-//        sleep(1);
-//        hal->lamp_green_on();
-//        sleep(1);
-//        hal->lamp_green_off();
-//        sleep(1);
-//        hal->lamp_yellow_on();
-//        sleep(1);
-//        hal->lamp_yellow_off();
-//        sleep(1);
-//        hal->conveyor_move_left();
-//        sleep(1);
-//        hal->conveyor_stop();
-//        sleep(1);
-//        hal->conveyor_move_right();
-//        sleep(1);
-//        hal->bar_open();
-//        sleep(1);
-//        hal->bar_close();
-//        sleep(1);
- //   }
- 
-<<<<<<< HEAD
- cx.mkb nxcj.kbncxnblkdnbkcnbkndb
-=======
- 
- hallokdmcdkscmdslkcm
->>>>>>> Branch1
 #ifdef SIMULATION
-   // IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
+   IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
 #endif
 	return EXIT_SUCCESS;
 }
 
+<<<<<<< HEAD
 void main::stfu(){
 
 <<<<<<< HEAD
@@ -89,3 +45,5 @@ printf("Es passiert etwas anderes");
 >>>>>>> remotes/origin/TestBranch
 
 }
+=======
+>>>>>>> 7d596ac22c14bb330bb9738594c1fd324147ac40

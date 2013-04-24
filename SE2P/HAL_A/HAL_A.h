@@ -16,21 +16,10 @@
 #define HAL_H_
 
 
-class HAL
+class HAL_A
 {
-	  private:
-        HAL();      // Default Konstruktor
-        /**
-         * Instance for using Singleton
-         */
-        static HAL* instance;
-        /**
-         * Mutex for Threadsafe Hal use
-         */
-        static Mutex* halMutex;
-
-    public:
-        static HAL* get_instance();		// Gibt die Referenz auf die HAL zurück
+	    public:
+        static HAL_A* get_instance();		// Gibt die Referenz auf die HAL zurück
 
         // bLampensteuerung
         int lamp_red_on();
@@ -48,7 +37,29 @@ class HAL
         int conveyor_move_right();
         int conveyor_move_left();
         int conveyor_stop();
-        ~HAL();     // Destruktor
+
+        //LED
+        int led_start_button_on();
+        int led_reset_button_on();
+        int led_start_button_off();
+        int led_reset_button_off();
+
+        int general_switch_off();
+
+        ~HAL_A();     // Destruktor
+
+	  private:
+        HAL_A();      // Default Konstruktor
+        /**
+         * Instance for using Singleton
+         */
+        static HAL_A* instance;
+        /**
+         * Mutex for Threadsafe Hal use
+         */
+        static Mutex* halMutex;
+
+
 };
 
 #endif /* HAL_H_ */
