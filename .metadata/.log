@@ -84,11 +84,16 @@ java.io.FileNotFoundException: C:\Users\ich\Documents\GitHub\WorkspaceQNX\.metad
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:1831)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:453)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+<<<<<<< HEAD
 !SESSION 2013-04-24 15:16:04.942 -----------------------------------------------
+=======
+!SESSION 2013-04-24 15:14:48.202 -----------------------------------------------
+>>>>>>> b17c7afc34466d9a4aaa7ee72c4ac04e9e5ef09d
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+<<<<<<< HEAD
 Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\GitHub\WorkspaceQNX
 
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-24 15:16:06.674
@@ -136,3 +141,20 @@ java.io.FileNotFoundException: D:\GitHub\WorkspaceQNX\.metadata\.plugins\org.ecl
 	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:991)
 	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:44)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+=======
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-24 15:14:49.591
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-04-24 15:14:59.278
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-24 15:14:59.278
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@114a947),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@114a947)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@114a947),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@114a947)),sourcePriority=16640)
+>>>>>>> b17c7afc34466d9a4aaa7ee72c4ac04e9e5ef09d
