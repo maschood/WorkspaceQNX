@@ -82,6 +82,10 @@ int main(int argc, char *argv[]) {
 
 void main::stfu(){
 
+<<<<<<< HEAD
 printf("Es passiert etwas anderes");
+=======
+	printf("hier passiert was wichtiges");
+>>>>>>> remotes/origin/TestBranch
 
 }
