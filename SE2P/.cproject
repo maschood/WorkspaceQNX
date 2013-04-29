@@ -22,7 +22,7 @@
 <buildTargets>
 <target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments/>
+<buildArguments></buildArguments>
 <buildTarget>all</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>
@@ -30,7 +30,7 @@
 </target>
 <target name="clean" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments/>
+<buildArguments></buildArguments>
 <buildTarget>clean</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>
@@ -38,7 +38,7 @@
 </target>
 <target name="rebuild" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
 <buildCommand>make</buildCommand>
-<buildArguments/>
+<buildArguments></buildArguments>
 <buildTarget>clean all</buildTarget>
 <stopOnError>false</stopOnError>
 <useDefaultCommand>true</useDefaultCommand>

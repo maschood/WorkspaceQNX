@@ -1,4 +1,8 @@
-#Tue Apr 16 08:39:13 CEST 2013
+#Mon Apr 29 11:46:17 CEST 2013
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation\tTorg.eclipse.cdt.ui.CEditor.presentation
 PLUGINS_NOT_ACTIVATED_ON_STARTUP=
+org.eclipse.cdt.ui.editors.textfont=1|Courier New|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
 eclipse.preferences.version=1
+terminal.views.view.font.definition=1|Courier New|11.25|0|WINDOWS|1|-15|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
 org.eclipse.ui.commands=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<org.eclipse.ui.commands/>
+ColorsAndFontsPreferencePage.selectedElement=Fterminal.views.view.font.definition
