@@ -17,20 +17,24 @@
 #include "HAWThread.h"
 #include "Mutex.h"
 #include "RS232_1.h"
-
+#include "Regressionstest.h"
 
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION
-    cout << "Simulation aktiv" << endl;
-    cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen." << endl;
-    IOaccess_open(); // Baue die Verbindung zur Simulation auf
+	cout << "Simulation aktiv" << endl;
+	cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen."
+			<< endl;
+	IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
-    HAL_S* hal_s  = HAL_S::get_instance();
-    hal_s->start_process();
+	//  HAL_S* hal_s  = HAL_S::get_instance();
+	//  hal_s->start_process();
+
+	Regressionstest rt;
+	rt.startTest();
 
 #ifdef SIMULATION
-   IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
+	IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
 #endif
 	return EXIT_SUCCESS;
 }
