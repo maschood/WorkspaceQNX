@@ -15,8 +15,9 @@
 #include "Addresses.h"
 #include "HWaccess.h"
 #include "Definitions.h"
+#include "HAWThread.h"
 
-class HAL_S{
+class HAL_S {
 public:
 	static HAL_S* get_instance(); // returns an pointer to the instance of the HAL_S.
 

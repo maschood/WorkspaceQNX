@@ -32,6 +32,7 @@ HAL_S* HAL_S::get_instance() {
 		return NULL;
 	}
 
+
 	if (instance == NULL) {
 		instance = new HAL_S();
 	}

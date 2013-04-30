@@ -11,6 +11,7 @@ void HAL_S::check_entrance(uint8_t val){ // checks if a puk is at the entrence.
 	if((~val & BIT_0) == BIT_0){
 		printf("Something in the entrance\n");
 		printf("%x\n", val);
+
 	}
 }
 
