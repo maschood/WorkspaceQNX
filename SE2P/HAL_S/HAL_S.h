@@ -18,6 +18,7 @@
 
 class HAL_S{
 public:
+
 	static HAL_S* get_instance(); // returns an pointer to the instance of the HAL_S.
 
 	void start_process(); // Starts a process that permanently checks all sensors.

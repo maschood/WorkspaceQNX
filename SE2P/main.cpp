@@ -18,6 +18,7 @@
 #include "Mutex.h"
 #include "RS232_1.h"
 
+#include"Test/Vererbungstest.h"
 
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION
@@ -28,6 +29,8 @@ int main(int argc, char *argv[]) {
 
     HAL_S* hal_s  = HAL_S::get_instance();
     hal_s->start_process();
+
+
 
 #ifdef SIMULATION
    IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation

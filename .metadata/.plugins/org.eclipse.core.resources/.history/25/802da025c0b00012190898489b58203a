@@ -1,0 +1,10 @@
+/*
+ * Vererbungstest.h
+ *
+ *  Created on: 29.04.2013
+ *      Author: ich
+ */
+
+Vererbungstest: public HAWThread{
+
+};
