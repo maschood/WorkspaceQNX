@@ -12,6 +12,19 @@ void HAL_S::check_entrance(uint8_t val){ // checks if a puk is at the entrence.
 		printf("Something in the entrance\n");
 		printf("%x\n", val);
 	}
+	char b = 1;
+	char* bp = &b;
+	char a = 0;
+	char* ap = &a;
+	int sts = MsgSend(coid_channel_Test, bp, 1, ap, 1);
+	if(sts == -1){
+		printf("Error\n");
+	}
+	while(a == 0){
+
+	}
+	printf("wuhuuuuuuuuuuuu MF a hat sich geaendert!!!!!");
+
 }
 
 void HAL_S::check_hight_determinism(uint8_t val){ // checks if a puk is at the mesure laser.

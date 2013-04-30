@@ -13,11 +13,6 @@
 <storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
 <storageModule moduleId="org.eclipse.cdt.core.language.mapping"/>
 <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
-<storageModule moduleId="org.eclipse.cdt.core.pathentry">
-<pathentry excluding="Mutex/" kind="src" path=""/>
-<pathentry kind="out" path=""/>
-<pathentry kind="con" path="com.qnx.tools.ide.qde.QDE_PROJECT_CONTAINER"/>
-</storageModule>
 <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
 <buildTargets>
 <target name="build" path="" targetID="com.qnx.tools.ide.qde.core.cbuilder">
@@ -45,6 +40,11 @@
 <runAllBuilders>true</runAllBuilders>
 </target>
 </buildTargets>
+</storageModule>
+<storageModule moduleId="org.eclipse.cdt.core.pathentry">
+<pathentry excluding="Mutex/|TestEmpfanger/" kind="src" path=""/>
+<pathentry kind="out" path=""/>
+<pathentry kind="con" path="com.qnx.tools.ide.qde.QDE_PROJECT_CONTAINER"/>
 </storageModule>
 </cconfiguration>
 </storageModule>

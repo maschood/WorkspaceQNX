@@ -6,6 +6,7 @@
  */
 
 #include "HAL_S/HAL_S.h"
+//#include <sys/neutrino.h>
 
 HAL_S* HAL_S::instance = NULL;
 
@@ -15,6 +16,9 @@ HAL_S::HAL_S() {
 	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
 	out8(DIO_BASE + DIO_OFFS_B, 0x00);
 	out8(DIO_BASE + DIO_OFFS_C, 0x00);
+
+	chid_channel_Test = ChannelCreate(0);
+
 }
 
 HAL_S::~HAL_S() {

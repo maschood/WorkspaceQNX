@@ -1,0 +1,14 @@
+/*
+ * Vererbungstest.h
+ *
+ *  Created on: 29.04.2013
+ *      Author: ich
+ */
+
+#include "HAWThread/HAWThread.h"
+
+Vererbungstest: public HAWThread{
+	Vererbungstest();
+	~Vererbungstest();
+
+};
