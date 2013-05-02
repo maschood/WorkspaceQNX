@@ -30,23 +30,13 @@
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
-<part id="1"/>
-<part id="2"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Vererbungstest.h" partName="Vererbungstest.h" path="C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test/Vererbungstest.h" title="Vererbungstest.h" tooltip="SE2P/Test/Vererbungstest.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/Test/Vererbungstest.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="240" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.cpp" partName="HAWThread.cpp" path="C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread/HAWThread.cpp" title="HAWThread.cpp" tooltip="SE2P/HAWThread/HAWThread.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAWThread/HAWThread.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1555" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.h" partName="HAWThread.h" path="C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread/HAWThread.h" title="HAWThread.h" tooltip="SE2P/HAWThread/HAWThread.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAWThread/HAWThread.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="1224"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" partName="Regressionstest.cpp" path="D:/GitHub/WorkspaceQNX/SE2P/Regressionstest/Regressionstest.cpp" title="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="368" selectionTopPixel="84"/>
 </editor>
 </editors>
 <views>
@@ -89,8 +79,7 @@
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
-<expanded>
-<category IMemento.internal.id="Warnings"/>
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="0" org.eclipse.ui.ide.markerType="0" org.eclipse.ui.ide.pathField="0" org.eclipse.ui.ide.resourceField="0" org.eclipse.ui.ide.severityAndDescriptionField="0"/>
@@ -442,7 +431,7 @@
 </presentation>
 </folder>
 </info>
-<info folder="true" part="topLeft" ratio="0.2496318" ratioLeft="339" ratioRight="1019" relationship="2" relative="org.eclipse.ui.internal.ViewStack@97bb58">
+<info folder="true" part="topLeft" ratio="0.19335793" ratioLeft="262" ratioRight="1093" relationship="2" relative="org.eclipse.ui.internal.ViewStack@97bb58">
 <folder appearance="2" expanded="2">
 <page content="org.eclipse.cdt.ui.CView" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
@@ -508,16 +497,9 @@
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_S.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_S.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAWThread/HAWThread.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Test/Vererbungstest.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Regressionstest/Regressionstest.cpp"/>
 </editors>
-<item historyLabel="Vererbungstest.h" index="3">
-<position info="not_deleted" x="243" y="0"/>
-</item>
-<item historyLabel="HAWThread.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Vererbungstest.h" index="3">
-<position info="not_deleted" x="243" y="0"/>
-</item>
 <item historyLabel="Vererbungstest.h" index="3">
 <position info="not_deleted" x="241" y="0"/>
 </item>
@@ -656,8 +638,17 @@
 <item historyLabel="HAWThread.cpp" index="16">
 <position info="not_deleted" x="1555" y="0"/>
 </item>
-<item active="true" historyLabel="HAWThread.h" index="11">
+<item historyLabel="HAWThread.h" index="11">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="HAWThread.h" index="11">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Vererbungstest.h" index="17">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="Regressionstest.cpp" index="18">
+<position info="not_deleted" x="0" y="471"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -665,13 +656,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@97bb58"/>
-</trimArea>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="bottom"/>
-<trimItem IMemento.internal.id="topRight"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -683,6 +667,9 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.h" tooltip="SE2P/HAWThread/HAWThread.h">
 <persistable path="/SE2P/HAWThread/HAWThread.h"/>
 </file>
@@ -724,9 +711,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
 <persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="RS232Test.cpp" tooltip="SE2P/RS232Test.cpp">
-<persistable path="/SE2P/RS232Test.cpp"/>
 </file>
 </mruList>
 </workbench>
