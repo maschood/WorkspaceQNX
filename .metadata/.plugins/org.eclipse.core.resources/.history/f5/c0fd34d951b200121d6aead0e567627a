@@ -1,0 +1,22 @@
+/*
+ * Abletung_Test.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+//#include "HAWThread/HAWThread.h"
+
+//class CoolerShit : public HAWThread{
+class CoolerShit{
+public:
+	CoolerShit();
+	~CoolerShit();
+
+	void ausfuehren();
+
+protected:
+
+	void execute(void*);
+
+};

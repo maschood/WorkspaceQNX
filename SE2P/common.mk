@@ -23,14 +23,22 @@ VFLAG_g=-gstabs+
 LIBS+=ioaccess
 
 #===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
-EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL
+EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL  \
+	$(PROJECT_ROOT)/Versuchsordner $(PROJECT_ROOT)/HAL_A  \
+	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/HAWThread  \
+	$(PROJECT_ROOT)/Hal_Test $(PROJECT_ROOT)/R232_1  \
+	$(PROJECT_ROOT)/Regressionstest
 
 #===== EXTRA_SRCVPATH - a space-separated list of directories to search for source files.
 EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_Test  \
 	$(PROJECT_ROOT)/R232_1 $(PROJECT_ROOT)/HAL_A  \
 	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/Regressionstest  \
 	$(PROJECT_ROOT)/HAWThread $(PROJECT_ROOT)/Mutex  \
+<<<<<<< HEAD
 	$(PROJECT_ROOT)/Test_Empfaenger $(PROJECT_ROOT)/Test
+=======
+	$(PROJECT_ROOT)/Versuchsordner
+>>>>>>> Erik
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL

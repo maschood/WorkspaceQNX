@@ -1,0 +1,10 @@
+/*
+ * TVTest.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+class TVTest : HAWThread{
+
+};

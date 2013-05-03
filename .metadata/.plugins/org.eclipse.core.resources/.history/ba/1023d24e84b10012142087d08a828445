@@ -1,0 +1,23 @@
+/*
+ * Basis.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+#include <stdint.h>
+#include <iostream>
+#include <unistd.h>
+
+class Basis{
+public:
+	Basis();
+	~Basis();
+
+	void Ausgabe();
+
+private:
+
+	int value;
+
+};

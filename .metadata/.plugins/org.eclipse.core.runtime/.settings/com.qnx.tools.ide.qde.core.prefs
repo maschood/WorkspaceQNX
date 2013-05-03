@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #Mon Apr 29 11:07:30 CEST 2013
+=======
+#Tue Apr 30 12:31:42 CEST 2013
+>>>>>>> Erik
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mudflapth=false
 prompt_for_rebuild=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.active_configurations=_x86_g ;_x86_r
@@ -8,7 +12,6 @@ com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mod_lib_refs=true
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.use_shared_storage=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.profiling=false
 eclipse.preferences.version=1
-rebuild_after_changes=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.instrumentedFunctionProfiling=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.type=2
 open_project_properties_width=934

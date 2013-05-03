@@ -1,0 +1,19 @@
+/*
+ * ChildClass.cpp
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+ChildClass::ChildClass(int id){
+	id = id;
+	count = count;
+}
+void ChildClass::shutdown(){
+	cout << "Shutting down..." << endl;
+}
+
+void ChildClass::ausgabe(){
+	printf("ID: %d | COUNT: %d",id,count);
+	count++;
+}

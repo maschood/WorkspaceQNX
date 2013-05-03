@@ -1,0 +1,14 @@
+/*
+ * TVTest.cpp
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+#include "Versuchsordner/TVTest.h"
+
+int TVTest::wichtigeMethode(){
+
+
+	return 0;
+}

@@ -1,0 +1,20 @@
+/*
+ * Basis.cpp
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+#include "Versuchsordner/Basis.h"
+
+void B_asis::Ausgabe(){
+
+	value++;
+
+	printf("Ausgabe aus der Ausgabe aus Basis| Zahl: %i\n",value);
+
+}
+
+B_asis::B_asis(){
+	value = 0;
+}

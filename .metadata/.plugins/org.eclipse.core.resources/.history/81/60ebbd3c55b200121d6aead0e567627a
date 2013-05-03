@@ -1,0 +1,30 @@
+/*
+ * ChildClass.h
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+#include "HAWThread/HAWThread.cpp"
+
+namespace thread
+{
+
+class ChildClass : HAWThread{
+public:
+	int index;
+
+	void setIndex(int i){
+	void setCount(int i)
+
+	ChildClass(int i);
+	~ChildClass();
+
+	void execute(void*);
+
+private:
+	int count;
+
+	void Ausgabe();
+};
+};

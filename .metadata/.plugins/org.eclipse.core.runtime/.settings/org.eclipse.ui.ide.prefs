@@ -1,8 +1,15 @@
+<<<<<<< HEAD
 #Fri May 03 14:49:09 CEST 2013
+=======
+#Tue Apr 30 11:16:22 CEST 2013
+>>>>>>> Erik
 OPEN_REQUIRED_PROJECTS=always
 eclipse.preferences.version=1
 tipsAndTricks=true
 platformState=1365422762667
+<<<<<<< HEAD
 EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+=======
+>>>>>>> Erik
 quickStart=true
 PROBLEMS_FILTERS_MIGRATE=true

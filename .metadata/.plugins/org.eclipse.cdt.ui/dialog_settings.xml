@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+<<<<<<< HEAD
+=======
+	<item key="LastUsedSourceTemplate" value="Default C++ source template"/>
+>>>>>>> Erik
 	<item key="LastUsedHeaderTemplate" value="Default C++ header template"/>
 	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
 		<item key="inactiveFilter" value="false"/>

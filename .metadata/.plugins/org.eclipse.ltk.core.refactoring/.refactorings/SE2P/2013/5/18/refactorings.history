@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SE2P/Versuchsordner/Abletung_Test.h&apos; to &apos;Ableitung_Test.h&apos;" description="Rename resource &apos;Abletung_Test.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Versuchsordner/Abletung_Test.h" name="Ableitung_Test.h" stamp="1367406790397" updateReferences="true"/>
+</session>

@@ -18,7 +18,13 @@
 #include "Mutex.h"
 #include "RS232_1.h"
 
+<<<<<<< HEAD
 #include"Test/Vererbungstest.h"
+=======
+//#include "Versuchsordner/ChildClass.h"
+
+
+>>>>>>> Erik
 
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION
@@ -28,7 +34,32 @@ int main(int argc, char *argv[]) {
 #endif
 
     HAL_S* hal_s  = HAL_S::get_instance();
-    hal_s->start_process();
+    hal_s->start(NULL);
+
+//   ChildClass* one;
+//   one = new ChildClass();
+//    ChildClass* two;
+//    two = new ChildClass();
+
+//    one->InstanzialteChildClass(1);
+//    two->InstanzialteChildClass(2);
+
+//    one->start(NULL);
+//    two->start(NULL);
+
+    while(MANOWAR){
+    	printf("bla in der Main\n");
+    }
+//    ChildClass* eins = new ChildClass();
+//    eins->InstanzialteChildClass(1);
+//    ChildClass* zwei;
+//    zwei->InstanzialteChildClass(2);
+//
+//    eins->ChildClass::start();
+//    zwei->ChildClass::start();
+
+
+
 
 
 
@@ -37,4 +68,3 @@ int main(int argc, char *argv[]) {
 #endif
 	return EXIT_SUCCESS;
 }
-

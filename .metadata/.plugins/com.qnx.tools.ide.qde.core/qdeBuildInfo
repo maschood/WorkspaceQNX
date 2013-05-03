@@ -13,8 +13,12 @@
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Regressionstest</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Mutex</element>
+<<<<<<< HEAD
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test_Empfaenger</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test</element>
+=======
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Versuchsordner</element>
+>>>>>>> Erik
 </srcDirs>
 <libDirs>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/x86/o-g</element>
@@ -36,9 +40,15 @@
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Regressionstest</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Mutex</element>
+<<<<<<< HEAD
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test_Empfaenger</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL</element>
+=======
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Versuchsordner</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Hal_Test</element>
+>>>>>>> Erik
 </incDirs>
 <libs>
 <element>ioaccess</element>
@@ -52,6 +62,7 @@
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_A/HAL_A_conveyor.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_A/HAL_A_led.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_A/HAL_A_light.cpp</element>
+<<<<<<< HEAD
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_S/HAL_ISR.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_S/HAL_S.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_S/HAL_S_interrupt.cpp</element>
@@ -62,6 +73,14 @@
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread/HAWThread.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Mutex/Mutex.cpp</element>
 <element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Test_Empfaenger/Test_Empfaenger.cpp</element>
+=======
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_S/HAL_S.cpp</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAL_S/HAL_S_interrupt.cpp</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Regressionstest/Regressionstest.cpp</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/HAWThread/HAWThread.cpp</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Mutex/Mutex.cpp</element>
+<element>C:/Users/ich/Documents/GitHub/WorkspaceQNX/SE2P/Versuchsordner/ChildClass.cpp</element>
+>>>>>>> Erik
 </SRCS>
 </qdeBuildInfo>
 </QdeProjectsBuildInfo>

@@ -1,0 +1,19 @@
+/*
+ * Basis.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+class Basis{
+public:
+	Basis();
+	~Basis();
+
+	void Ausgabe();
+
+private:
+
+	int value = 0;
+
+};
