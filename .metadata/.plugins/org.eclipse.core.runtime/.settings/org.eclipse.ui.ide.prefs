@@ -1,7 +1,8 @@
-#Mon Apr 29 13:51:02 CEST 2013
+#Fri May 03 14:53:09 CEST 2013
 OPEN_REQUIRED_PROJECTS=always
 eclipse.preferences.version=1
 tipsAndTricks=true
-platformState=1365422762667
+platformState=1364490493824
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
 quickStart=true
 PROBLEMS_FILTERS_MIGRATE=true

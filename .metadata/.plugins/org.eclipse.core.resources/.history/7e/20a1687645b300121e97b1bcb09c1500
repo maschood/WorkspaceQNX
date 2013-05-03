@@ -1,0 +1,33 @@
+/*
+ * HAL_ISR.cpp
+ *
+ *  Created on: 30.04.2013
+ *      Author: maschood
+ */
+
+#include "HAL_ISR.h"
+
+HAL_ISR::HAL_ISR() {
+	// TODO Auto-generated constructor stub
+
+}
+
+HAL_ISR::~HAL_ISR() {
+	// TODO Auto-generated destructor stub
+}
+
+void HAL_ISR::initInterrupt(){
+		// create channel to receive pulse messages from the ISR
+	    chid = ChannelCreate(0);
+	    if (chid == -1) {
+	        perror("SensorikIntro: ChannelCreate isrChid failed");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    coid = ConnectAttach(0, 0, chid, _NTO_SIDE_CHANNEL, 0);
+	    if (coid == -1) {
+	        perror("SensorikIntro: ConnectAttach isr_coid failed");
+	        exit(EXIT_FAILURE);
+	    }
+
+}

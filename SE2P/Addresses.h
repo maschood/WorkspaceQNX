@@ -24,4 +24,15 @@
 #define BIT_6 0x40
 #define BIT_7 0x80
 
+//Interrupt
+#define HW_SERIAL_IRQ 11
+
+#define OFFS_INT_STATUS 0x0F
+#define PB_STATUS       0x02
+#define PC_STATUS       0x08
+
+#define OFFS_INT_CTRL   0x0B
+#define PB_CTRL         0x02
+#define PC_CTRL         0x04
+
 #endif /* ADDRESSES_H_ */

@@ -1,0 +1,73 @@
+/*
+ * HAL_ISR.cpp
+ *
+ *  Created on: 30.04.2013
+ *      Author: maschood
+ */
+
+#include "HAL_ISR.h"
+
+const struct sigevent * intHandler(void *arg, int id) {
+	int iir;
+	struct sigevent *event = (struct sigevent *) arg;
+	/*
+	 * determine the source of the interrupt
+	 * by reading the Interrupt Identification Register
+	 */
+	iir = in8(base_reg + REG_II) & IIR_MASK;
+	/* no interrupt? */
+	if (iir & 1) {
+		/* then no event */
+		return (NULL);
+	}
+	switch (iir) {
+	case IIR_MSR:
+		serial_msr = in8(base_reg + REG_MS);
+		/* wake up thread */
+		return (event);
+		break;
+	case IIR_THE:
+		/* do nothing */
+		break;
+	case IIR_RX:
+		/* note the character */
+		serial_rx = in8(base_reg + REG_RX);
+		break;
+	case IIR_LSR:
+		/* note the line status reg. */
+		serial_lsr = in8(base_reg + REG_LS);
+		break;
+	default:
+		break;
+	}
+	/* don’t bother anyone */
+	return (NULL);
+}
+HAL_ISR::HAL_ISR() {
+	// TODO Auto-generated constructor stub
+
+}
+
+HAL_ISR::~HAL_ISR() {
+	// TODO Auto-generated destructor stub
+}
+
+void HAL_ISR::initInterrupt(){
+		// create channel to receive pulse messages from the ISR
+	    chid = ChannelCreate(0);
+	    if (chid == -1) {
+	        perror("SensorikIntro: ChannelCreate isrChid failed");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    coid = ConnectAttach(0, 0, chid, _NTO_SIDE_CHANNEL, 0);
+	    if (coid == -1) {
+	        perror("SensorikIntro: ConnectAttach isr_coid failed");
+	        exit(EXIT_FAILURE);
+	    }
+
+	    SIGEV_PULSE_INIT(&event, isr_coid, SIGEV_PULSE_PRIO_INHERIT, 0, 0);
+
+	    int interruptId = InterruptAttach(11, intHandler, &event, sizeof(event), 0);
+
+}
