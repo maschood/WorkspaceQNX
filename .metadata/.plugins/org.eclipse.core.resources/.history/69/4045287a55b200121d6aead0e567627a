@@ -1,0 +1,34 @@
+/*
+ * ChildClass.cpp
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+#include <stdio.h>
+#include "ChildClass.h"
+#include "HAWThread/HAWThread.h"
+
+namespace thread
+{
+
+	void ChildClass::setIndex(int i){
+		index = i;
+	}
+
+	void ChildClass::setCount(int i){
+		count = i;
+	}
+
+	void ChildClass::Ausgabe(){
+		printf("Child %d count: %d",index, count);
+
+		count++;
+	}
+
+	void ChildClass::execute(void*){
+		while(isStopped() == 0){
+			Ausgabe();
+		}
+	}
+};

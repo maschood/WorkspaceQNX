@@ -8,3 +8,4 @@
 #define MANOWAR 1
 
 #define CHECK_B BIT_0+BIT_1+BIT_3+BIT_6+BIT_7
+#define CHECK_C BIT_5+BIT_7

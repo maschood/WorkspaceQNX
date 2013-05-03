@@ -1,0 +1,16 @@
+/*
+ * TVTest.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+#include "Versuchsordner/Basis.h"
+
+class TVTest : Basis{
+public:
+	TVTest();
+	~TVTest();
+	int wichtigeMethode();
+	void Ausgabe();
+};

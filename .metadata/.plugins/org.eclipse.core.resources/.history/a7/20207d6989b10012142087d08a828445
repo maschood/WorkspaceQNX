@@ -1,0 +1,21 @@
+/*
+ * Basis.h
+ *
+ *  Created on: 30.04.2013
+ *      Author: ich
+ */
+
+#include <stdio.h>
+
+class B_asis{
+public:
+	B_asis();
+	~B_asis();
+
+	virtual void Ausgabe();
+
+private:
+
+	int value;
+
+};

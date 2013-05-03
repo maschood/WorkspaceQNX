@@ -1,0 +1,27 @@
+/*
+ * Ableitung_Test.cpp
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+#include "Ableitung_Test.h"
+#include <stdio.h>
+
+
+	void ausfuehren(){
+		int i = 0;
+		while(isStopped() == 0){
+			i++;
+			printf("i ist: %d",i);
+
+			if(i == 1000){
+
+			}
+		}
+	}
+
+
+	void execute(void*){
+		ausfuehren();
+	}

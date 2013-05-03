@@ -1,0 +1,30 @@
+/*
+ * ChildClass.cpp
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+#include <stdio.h>
+#include"Versuchsordner/ChildClass.h"
+namespace thread{
+
+void ChildClass::InstanzialteChildClass(int id){
+	id = id;
+	count = 0;
+}
+void ChildClass::shutdown(){
+	printf("shutting down");
+}
+
+void ChildClass::ausgabe(){
+	printf("ID: %d | COUNT: %d",id,count);
+	count++;
+}
+
+void execute(void* arg){
+	while(!isStoped()){
+		ausgabe();
+	}
+}
+}

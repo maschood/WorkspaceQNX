@@ -1,0 +1,23 @@
+/*
+ * ChildClass.h
+ *
+ *  Created on: 01.05.2013
+ *      Author: ich
+ */
+
+
+
+class ChildClass : public HAWThread{
+public:
+	int index;
+
+	ChildClass(int i);
+	~ChildClass();
+
+	void execute(void*)=0;
+
+private:
+	int count;
+
+	void Ausgabe();
+};
