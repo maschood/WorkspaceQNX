@@ -1,15 +1,11 @@
-<<<<<<< HEAD
-#Fri May 03 14:49:09 CEST 2013
-=======
-#Tue Apr 30 11:16:22 CEST 2013
->>>>>>> Erik
-OPEN_REQUIRED_PROJECTS=always
-eclipse.preferences.version=1
-tipsAndTricks=true
-platformState=1365422762667
-<<<<<<< HEAD
-EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
-=======
->>>>>>> Erik
-quickStart=true
+#Sat May 04 16:16:42 CEST 2013
+>>>>>>>=Erik
+<<<<<<<=HEAD
 PROBLEMS_FILTERS_MIGRATE=true
+quickStart=true
+tipsAndTricks=true
+eclipse.preferences.version=1
+platformState=1366622918036
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+OPEN_REQUIRED_PROJECTS=always
+=\=\=\=\=\=\=
