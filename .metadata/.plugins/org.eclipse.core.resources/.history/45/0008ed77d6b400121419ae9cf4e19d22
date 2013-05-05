@@ -1,0 +1,26 @@
+/*
+ * Regressionstest.cpp
+ *
+ *  Created on: 04.05.2013
+ *      Author: NG
+ */
+
+#include "Regressionstest/Regressionstest.h"
+#include "Addresses.h"
+#include "HAL_A/HAL_A.h"
+#include "HAL_S/HAL_S.h"
+#include <stdlib.h>
+
+
+Regressionstest::Regressionstest() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Regressionstest::~Regressionstest() {
+	// TODO Auto-generated destructor stub
+}
+
+HAL_A* hal_a = HAL_A::get_instance();
+
+

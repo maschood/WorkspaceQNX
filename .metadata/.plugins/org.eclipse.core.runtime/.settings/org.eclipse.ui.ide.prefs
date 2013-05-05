@@ -1,6 +1,17 @@
+<<<<<<< HEAD
 #Sat May 04 16:16:42 CEST 2013
 >>>>>>>=Erik
 <<<<<<<=HEAD
+=======
+#Tue Apr 30 01:22:01 CEST 2013
+OPEN_REQUIRED_PROJECTS=always
+eclipse.preferences.version=1
+TASKS_FILTERS_MIGRATE=true
+tipsAndTricks=true
+platformState=1366622918036
+EXIT_PROMPT_ON_CLOSE_LAST_WINDOW=false
+quickStart=true
+>>>>>>> Nilüfer
 PROBLEMS_FILTERS_MIGRATE=true
 quickStart=true
 tipsAndTricks=true

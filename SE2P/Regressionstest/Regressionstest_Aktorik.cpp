@@ -1,16 +1,25 @@
 /*
  * Regressionstest.cpp
  *
+<<<<<<< HEAD
  *  Created on: 24.04.2013
  *      Author: NG
  */
 
 #include "Regressionstest.h"
+=======
+ *  Created on: 04.05.2013
+ *      Author: NG
+ */
+
+#include "Regressionstest/Regressionstest.h"
+>>>>>>> Nilüfer
 #include "Addresses.h"
 #include "HAL_A/HAL_A.h"
 #include "HAL_S/HAL_S.h"
 #include <stdlib.h>
 
+<<<<<<< HEAD
 #define PRINTBOOL(x) x ? "true" : "false"
 
 using namespace std;
@@ -20,6 +29,9 @@ Regressionstest::Regressionstest() {
 Regressionstest::~Regressionstest() {
 }
 
+=======
+using namespace std;
+>>>>>>> Nilüfer
 HAL_A* hal_a = HAL_A::get_instance();
 bool erg = false;
 
@@ -180,7 +192,14 @@ bool Regressionstest::test_general_switch_off() {
 void Regressionstest::TestAktorik() {
 	erg = test_lamp_red_on();
 	//	printf("lamp red on? %s \n" , erg );
+<<<<<<< HEAD
 	cout << "lamp red on? " << erg << endl;
+=======
+	cout << "lamp red on? " << (erg ? "True" : "False") << endl;
+	//	cout << "lamp red on? " << erg << endl;
+
+
+>>>>>>> Nilüfer
 	sleep(2);
 
 	erg = test_lamp_yellow_on();
@@ -243,4 +262,7 @@ void Regressionstest::TestAktorik() {
 	cout << "OFF? " << erg << endl;
 	sleep(2);
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> Nilüfer

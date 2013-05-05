@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <workbench progressCount="17" version="2.0">
+=======
+<workbench progressCount="18" version="2.0">
+>>>>>>> Nilüfer
 <workbenchAdvisor/>
 <window height="728" width="1024" x="50" y="0">
 <fastViewData fastViewLocation="1024"/>
@@ -19,6 +23,11 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<<<<<<< HEAD
+=======
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+>>>>>>> Nilüfer
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -33,7 +42,18 @@
 </editorArea>
 </editors>
 <views>
-<view id="org.eclipse.ui.views.TaskList" partName="Tasks"/>
+<view id="org.eclipse.ui.views.TaskList" partName="Tasks">
+<viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
+<columnWidths org.eclipse.ui.ide.completionField="40" org.eclipse.ui.ide.descriptionField="304" org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.priorityField="20" org.eclipse.ui.ide.resourceField="94"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.completionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.priorityField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.descriptionField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.locationField"/>
+<visible IMemento.internal.id="org.eclipse.ui.ide.markerType"/>
+</viewState>
+</view>
 <view id="com.qnx.tools.ide.SystemProfiler.ui.views.filters" partName="Filters"/>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug"/>
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" partName="Malloc Information"/>
@@ -52,7 +72,9 @@
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.processview" partName="Process Information"/>
 <view id="QNXSystemBuilderProjectView" partName="System Builder Projects"/>
 <view id="com.qnx.tools.ide.target.internal.ui.targetview" partName="Target Navigator"/>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
+<view id="org.eclipse.ui.views.PropertySheet" partName="Properties">
+<viewState/>
+</view>
 <view id="com.qnx.tools.ide.SystemProfiler.views.ClientServer" partName="Client/Server CPU Statistics"/>
 <view id="qnxTftpView" partName="TFTP Server"/>
 <view id="com.qnx.tools.ide.SystemProfiler.ui.views.logview" partName="Trace Event Log"/>
@@ -67,7 +89,14 @@
 <view id="org.eclipse.tm.terminal.view.TerminalView" partName="Terminal"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<<<<<<< HEAD
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+=======
+<expanded>
+<category IMemento.internal.id="Errors"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="369" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+>>>>>>> Nilüfer
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.pathField"/>
@@ -442,12 +471,17 @@
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
+<<<<<<< HEAD
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
+=======
+>>>>>>> Nilüfer
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.views.ProblemView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -469,6 +503,7 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
+<<<<<<< HEAD
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
@@ -481,6 +516,19 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+=======
+<info part="org.eclipse.ui.editorss" ratio="0.18081181" ratioLeft="245" ratioRight="1110" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.46612903" ratioLeft="289" ratioRight="331" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.cdt.ui.includeBrowser" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+>>>>>>> Nilüfer
 </presentation>
 </folder>
 </info>
@@ -515,5 +563,55 @@
 </trimArea>
 </trimLayout>
 </window>
+<<<<<<< HEAD
 <mruList/>
+=======
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S_interrupt.cpp" tooltip="SE2P/HAL_S/HAL_S_interrupt.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S_interrupt.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutex.cpp" tooltip="SE2P/Mutex/Mutex.cpp">
+<persistable path="/SE2P/Mutex/Mutex.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest_Aktorik.cpp" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="SE2P/Definitions.h">
+<persistable path="/SE2P/Definitions.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.h" tooltip="SE2P/HAL_S/HAL_S.h">
+<persistable path="/SE2P/HAL_S/HAL_S.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.h" tooltip="SE2P/Regressionstest/Regressionstest.h">
+<persistable path="/SE2P/Regressionstest/Regressionstest.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Regressionstest_Aktorik" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik">
+<persistable path="/SE2P/Regressionstest/Regressionstest_Aktorik"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
+<persistable path="/SE2P/main.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Addresses.h" tooltip="SE2P/Addresses.h">
+<persistable path="/SE2P/Addresses.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="SE2P" tooltip="SE2P/x86/o/SE2P">
+<persistable path="/SE2P/x86/o/SE2P"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
+<persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A_led.cpp" tooltip="SE2P/HAL_A/HAL_A_led.cpp">
+<persistable path="/SE2P/HAL_A/HAL_A_led.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A_conveyor.cpp" tooltip="SE2P/HAL_A/HAL_A_conveyor.cpp">
+<persistable path="/SE2P/HAL_A/HAL_A_conveyor.cpp"/>
+</file>
+</mruList>
+>>>>>>> Nilüfer
 </workbench>

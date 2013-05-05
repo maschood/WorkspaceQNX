@@ -6,8 +6,8 @@
 >>>>>>> Erik
 	<item key="LastUsedHeaderTemplate" value="Default C++ header template"/>
 	<section name="org.eclipse.cdt.internal.ui.includebrowser.IBViewPart">
-		<item key="inactiveFilter" value="false"/>
 		<item key="includedBy" value="true"/>
+		<item key="inactiveFilter" value="false"/>
 		<item key="systemFilter" value="false"/>
 		<item key="showFolders" value="false"/>
 	</section>

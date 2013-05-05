@@ -311,16 +311,21 @@ java.io.FileNotFoundException: D:\WorkspaceQNX\.metadata\.plugins\org.eclipse.co
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:453)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SESSION 2013-04-29 10:17:02.236 -----------------------------------------------
 =======
 !SESSION 2013-04-30 10:17:50.655 -----------------------------------------------
 >>>>>>> Erik
+=======
+!SESSION 2013-04-29 10:48:31.850 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-29 10:17:03.690
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
@@ -332,6 +337,12 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 
 !ENTRY org.eclipse.ui 4 0 2013-04-30 10:17:56.084
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-29 10:48:33.582
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui 4 0 2013-04-29 10:48:39.388
+>>>>>>> Nilüfer
 !MESSAGE Unable to create editor ID org.eclipse.cdt.ui.editor.CEditor: The file does not exist.
 !STACK 1
 org.eclipse.core.runtime.CoreException: The file does not exist.
@@ -395,6 +406,7 @@ org.eclipse.core.runtime.CoreException: The file does not exist.
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
 <<<<<<< HEAD
+<<<<<<< HEAD
 !SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2013-04-29 10:17:07.493
 !MESSAGE The file does not exist.
 
@@ -408,6 +420,15 @@ org.eclipse.core.runtime.CoreException: The file does not exist.
 !MESSAGE Ignored attempt to add saveable that was already registered
 !STACK 0
 org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@bbb2d0 from part: org.eclipse.ui.internal.ErrorEditorPart@bbb2d0
+=======
+!SUBENTRY 1 org.eclipse.core.filebuffers 4 0 2013-04-29 10:48:39.388
+!MESSAGE The file does not exist.
+
+!ENTRY org.eclipse.ui 2 2 2013-04-29 10:48:39.435
+!MESSAGE Ignored attempt to add saveable that was already registered
+!STACK 0
+org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse.ui.internal.DefaultSaveable@1d8c046 from part: org.eclipse.ui.internal.ErrorEditorPart@1d8c046
+>>>>>>> Nilüfer
 	at org.eclipse.ui.internal.SaveablesList.logWarning(SaveablesList.java:187)
 	at org.eclipse.ui.internal.SaveablesList.addModel(SaveablesList.java:117)
 	at org.eclipse.ui.internal.SaveablesList.addModels(SaveablesList.java:289)
@@ -453,6 +474,7 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.ui.workbench 2 0 2013-04-29 10:17:08.629
 !MESSAGE A handler conflict occurred.  This may disable some commands.
 !SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-29 10:17:08.629
@@ -461,6 +483,11 @@ org.eclipse.core.runtime.AssertionFailedException: unknown saveable: org.eclipse
 !MESSAGE A handler conflict occurred.  This may disable some commands.
 !SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-30 10:17:57.129
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.ui.workbench 2 0 2013-04-29 10:48:40.870
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-29 10:48:40.870
+>>>>>>> Nilüfer
 !MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
 HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
@@ -469,6 +496,7 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@acbd3a),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@acbd3a)),sourcePriority=16640)
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.cdt.core 1 0 2013-04-29 10:17:30.362
 !MESSAGE Indexed 'SE2P' (1 sources, 79 headers) in 5,72 sec: 7.043 declarations; 13.125 references; 0 unresolved inclusions; 0 syntax errors; 4 unresolved names (0,02 %)
@@ -592,6 +620,55 @@ org.eclipse.jface.text.BadLocationException
 	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+=======
+!ENTRY org.eclipse.cdt.core 1 0 2013-04-29 10:49:32.101
+!MESSAGE Indexed 'SE2P' (13 sources, 111 headers) in 8,63 sec: 9.754 declarations; 15.522 references; 0 unresolved inclusions; 0 syntax errors; 24 unresolved names (0,09 %)
+
+!ENTRY org.eclipse.cdt.core 2 0 2013-04-29 11:55:53.699
+!MESSAGE Formatting problem(s)
+!SUBENTRY 1 org.eclipse.cdt.core 2 0 2013-04-29 11:55:53.699
+!MESSAGE [40/1] unexpected token type, expecting:13, actual:Token type=1  image =hal offset=668
+!STACK 0
+org.eclipse.cdt.internal.formatter.AbortFormatting: [40/1] unexpected token type, expecting:13, actual:Token type=1  image =hal offset=668
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1260)
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1245)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatClosingBrace(CodeFormatterVisitor.java:3140)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatBlock(CodeFormatterVisitor.java:3109)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:1025)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatDeclaration(CodeFormatterVisitor.java:332)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:322)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:138)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:258)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.format(CodeFormatterVisitor.java:238)
+	at org.eclipse.cdt.internal.formatter.CCodeFormatter.format(CCodeFormatter.java:161)
+	at org.eclipse.cdt.internal.corext.util.CodeFormatterUtil.format(CodeFormatterUtil.java:126)
+	at org.eclipse.cdt.internal.ui.text.CFormattingStrategy.format(CFormattingStrategy.java:64)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:193)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:142)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:882)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1450)
+	at org.eclipse.cdt.internal.ui.editor.CSourceViewer.doOperation(CSourceViewer.java:387)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:333)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+>>>>>>> Nilüfer
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
 	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
@@ -627,6 +704,7 @@ org.eclipse.jface.text.BadLocationException
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.cdt.ui 4 4 2013-04-29 11:07:56.912
 =======
 !ENTRY org.eclipse.cdt.ui 4 4 2013-05-01 13:13:24.671
@@ -649,6 +727,51 @@ org.eclipse.jface.text.BadLocationException
 	at org.eclipse.swt.custom.StyledText$7.handleEvent(StyledText.java:5542)
 	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1003)
+=======
+!ENTRY org.eclipse.cdt.core 2 0 2013-04-29 12:00:20.116
+!MESSAGE Formatting problem(s)
+!SUBENTRY 1 org.eclipse.cdt.core 2 0 2013-04-29 12:00:20.116
+!MESSAGE [67/1] unexpected token type, expecting:13, actual:Token type=1  image =hal_a offset=1152
+!STACK 0
+org.eclipse.cdt.internal.formatter.AbortFormatting: [67/1] unexpected token type, expecting:13, actual:Token type=1  image =hal_a offset=1152
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1260)
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1245)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatClosingBrace(CodeFormatterVisitor.java:3140)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatBlock(CodeFormatterVisitor.java:3109)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:1025)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatDeclaration(CodeFormatterVisitor.java:332)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:322)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:138)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:258)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.format(CodeFormatterVisitor.java:238)
+	at org.eclipse.cdt.internal.formatter.CCodeFormatter.format(CCodeFormatter.java:161)
+	at org.eclipse.cdt.internal.corext.util.CodeFormatterUtil.format(CodeFormatterUtil.java:126)
+	at org.eclipse.cdt.internal.ui.text.CFormattingStrategy.format(CFormattingStrategy.java:64)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:193)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:142)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:882)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1450)
+	at org.eclipse.cdt.internal.ui.editor.CSourceViewer.doOperation(CSourceViewer.java:387)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:333)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
 	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
 	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
@@ -682,6 +805,86 @@ org.eclipse.jface.text.BadLocationException
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+
+!ENTRY org.eclipse.cdt.core 2 0 2013-04-29 12:00:21.208
+!MESSAGE Formatting problem(s)
+!SUBENTRY 1 org.eclipse.cdt.core 2 0 2013-04-29 12:00:21.208
+!MESSAGE [67/1] unexpected token type, expecting:13, actual:Token type=1  image =hal_a offset=1151
+!STACK 0
+org.eclipse.cdt.internal.formatter.AbortFormatting: [67/1] unexpected token type, expecting:13, actual:Token type=1  image =hal_a offset=1151
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1260)
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1245)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatClosingBrace(CodeFormatterVisitor.java:3140)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatBlock(CodeFormatterVisitor.java:3109)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:1025)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatDeclaration(CodeFormatterVisitor.java:332)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:322)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:138)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:258)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.format(CodeFormatterVisitor.java:238)
+	at org.eclipse.cdt.internal.formatter.CCodeFormatter.format(CCodeFormatter.java:161)
+	at org.eclipse.cdt.internal.corext.util.CodeFormatterUtil.format(CodeFormatterUtil.java:126)
+	at org.eclipse.cdt.internal.ui.text.CFormattingStrategy.format(CFormattingStrategy.java:64)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:193)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:142)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:882)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1450)
+	at org.eclipse.cdt.internal.ui.editor.CSourceViewer.doOperation(CSourceViewer.java:387)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:333)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+>>>>>>> Nilüfer
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1368)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4053)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:346)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3946)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4619)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2411)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3501)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+<<<<<<< HEAD
 <<<<<<< HEAD
 !SESSION 2013-04-29 11:13:45.987 -----------------------------------------------
 =======
@@ -850,12 +1053,148 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@c38157),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c38157)),sourcePriority=16640)
 !SESSION 2013-05-02 09:19:21.097 -----------------------------------------------
+=======
+
+!ENTRY org.eclipse.ui 4 4 2013-04-29 12:03:07.039
+!MESSAGE Resource '/SE2P' is not open.
+
+!ENTRY org.eclipse.ui 4 0 2013-04-29 12:03:07.039
+!MESSAGE Resource '/SE2P' is not open.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/SE2P' is not open.
+	at org.eclipse.core.internal.resources.Project.checkAccessible(Project.java:116)
+	at org.eclipse.core.internal.resources.File.create(File.java:124)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.ltk.internal.core.refactoring.resource.undostates.FileUndoState.createExistentResourceFromHandle(FileUndoState.java:167)
+	at org.eclipse.ltk.internal.core.refactoring.resource.undostates.AbstractResourceUndoState.createResource(AbstractResourceUndoState.java:81)
+	at org.eclipse.ltk.internal.core.refactoring.resource.UndoDeleteResourceChange.perform(UndoDeleteResourceChange.java:70)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.core.refactoring.CompositeChange.perform(CompositeChange.java:278)
+	at org.eclipse.ltk.internal.core.refactoring.UndoableOperation2ChangeAdapter$1.run(UndoableOperation2ChangeAdapter.java:320)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1782)
+	at org.eclipse.ltk.internal.core.refactoring.UndoableOperation2ChangeAdapter.executeChange(UndoableOperation2ChangeAdapter.java:350)
+	at org.eclipse.ltk.internal.core.refactoring.UndoableOperation2ChangeAdapter.undo(UndoableOperation2ChangeAdapter.java:182)
+	at org.eclipse.core.commands.operations.TriggeredOperations.undo(TriggeredOperations.java:227)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.doUndo(DefaultOperationHistory.java:415)
+	at org.eclipse.core.commands.operations.DefaultOperationHistory.undo(DefaultOperationHistory.java:1280)
+	at org.eclipse.ui.operations.UndoActionHandler.runCommand(UndoActionHandler.java:78)
+	at org.eclipse.ui.operations.OperationHistoryActionHandler$4.run(OperationHistoryActionHandler.java:311)
+	at org.eclipse.jface.operation.ModalContext.runInCurrentThread(ModalContext.java:464)
+	at org.eclipse.jface.operation.ModalContext.run(ModalContext.java:372)
+	at org.eclipse.jface.dialogs.ProgressMonitorDialog.run(ProgressMonitorDialog.java:507)
+	at org.eclipse.ui.internal.operations.TimeTriggeredProgressMonitorDialog.access$6(TimeTriggeredProgressMonitorDialog.java:1)
+	at org.eclipse.ui.internal.operations.TimeTriggeredProgressMonitorDialog$2.run(TimeTriggeredProgressMonitorDialog.java:203)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.internal.operations.TimeTriggeredProgressMonitorDialog.run(TimeTriggeredProgressMonitorDialog.java:216)
+	at org.eclipse.ui.operations.OperationHistoryActionHandler.run(OperationHistoryActionHandler.java:326)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.actions.RetargetAction.runWithEvent(RetargetAction.java:230)
+	at org.eclipse.jface.commands.ActionHandler.execute(ActionHandler.java:119)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1368)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4053)
+	at org.eclipse.swt.widgets.Tree.WM_CHAR(Tree.java:5825)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3946)
+	at org.eclipse.swt.widgets.Tree.windowProc(Tree.java:5821)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4619)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2411)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3501)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+!SUBENTRY 1 org.eclipse.core.resources 4 372 2013-04-29 12:03:07.039
+!MESSAGE Resource '/SE2P' is not open.
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-04-29 13:29:33.576
+!MESSAGE Connection timed out: connect
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-04-29 13:29:39.017
+!MESSAGE Connection timed out: connect
+!STACK 0
+java.net.ConnectException: Connection timed out: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2013-04-30 00:39:17.037 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-02 09:19:22.513
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
 
@@ -871,12 +1210,29 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
 !SESSION 2013-05-02 10:36:19.288 -----------------------------------------------
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-30 00:39:22.029
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-04-30 00:40:34.382
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-30 00:40:34.382
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1388e5e),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1388e5e)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1388e5e),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1388e5e)),sourcePriority=16640)
+!SESSION 2013-04-30 01:25:40.162 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-30 10:46:03.262
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
@@ -908,12 +1264,29 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
 !SESSION 2013-05-02 11:06:31.055 -----------------------------------------------
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-04-30 01:25:41.972
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-04-30 01:25:50.711
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-04-30 01:25:50.711
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@c38157),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c38157)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@c38157),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@c38157)),sourcePriority=16640)
+!SESSION 2013-05-04 16:19:08.598 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-02 22:07:28.929
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
@@ -967,12 +1340,32 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@87ad67),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@87ad67)),sourcePriority=16640)
 !SESSION 2013-05-02 12:18:24.222 -----------------------------------------------
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-04 16:19:10.299
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-04 16:19:16.570
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-04 16:19:16.570
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1cc5461),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1cc5461)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1cc5461),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1cc5461)),sourcePriority=16640)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-04 16:21:35.815
+!MESSAGE Indexed 'SE2P' (13 sources, 113 headers) in 8,33 sec: 9.883 declarations; 15.956 references; 0 unresolved inclusions; 0 syntax errors; 24 unresolved names (0,09 %)
+!SESSION 2013-05-04 16:39:39.036 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-02 12:18:29.433
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
 
@@ -988,6 +1381,103 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1f52460),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1f52460)),sourcePriority=16640)
 !SESSION 2013-05-02 12:51:23.225 -----------------------------------------------
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-04 16:39:40.705
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-05-04 16:39:41.578
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-04 16:39:47.272
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-04 16:39:47.272
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@76458f),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@76458f)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@76458f),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@76458f)),sourcePriority=16640)
+
+!ENTRY org.eclipse.cdt.core 2 0 2013-05-04 16:50:03.755
+!MESSAGE Formatting problem(s)
+!SUBENTRY 1 org.eclipse.cdt.core 2 0 2013-05-04 16:50:03.755
+!MESSAGE [35/1] unexpected token type, expecting:13, actual:null
+!STACK 0
+org.eclipse.cdt.internal.formatter.AbortFormatting: [35/1] unexpected token type, expecting:13, actual:null
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1260)
+	at org.eclipse.cdt.internal.formatter.Scribe.printNextToken(Scribe.java:1245)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatClosingBrace(CodeFormatterVisitor.java:3140)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatBlock(CodeFormatterVisitor.java:3109)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:1025)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.formatDeclaration(CodeFormatterVisitor.java:332)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:322)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.CPPASTFunctionDefinition.accept(CPPASTFunctionDefinition.java:138)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.visit(CodeFormatterVisitor.java:297)
+	at org.eclipse.cdt.internal.core.dom.parser.ASTTranslationUnit.accept(ASTTranslationUnit.java:258)
+	at org.eclipse.cdt.internal.formatter.CodeFormatterVisitor.format(CodeFormatterVisitor.java:238)
+	at org.eclipse.cdt.internal.formatter.CCodeFormatter.format(CCodeFormatter.java:161)
+	at org.eclipse.cdt.internal.corext.util.CodeFormatterUtil.format(CodeFormatterUtil.java:126)
+	at org.eclipse.cdt.internal.ui.text.CFormattingStrategy.format(CFormattingStrategy.java:64)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.formatMaster(MultiPassContentFormatter.java:193)
+	at org.eclipse.jface.text.formatter.MultiPassContentFormatter.format(MultiPassContentFormatter.java:142)
+	at org.eclipse.jface.text.source.SourceViewer.doOperation(SourceViewer.java:882)
+	at org.eclipse.jface.text.source.projection.ProjectionViewer.doOperation(ProjectionViewer.java:1450)
+	at org.eclipse.cdt.internal.ui.editor.CSourceViewer.doOperation(CSourceViewer.java:387)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:333)
+	at org.eclipse.ui.texteditor.TextOperationAction$1.run(TextOperationAction.java:131)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.TextOperationAction.run(TextOperationAction.java:129)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1368)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4053)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:346)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3946)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4619)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2411)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3501)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+!SESSION 2013-05-04 17:43:56.665 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
@@ -995,12 +1485,21 @@ BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-02 22:10:56.311
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
 
 !ENTRY org.eclipse.ui.workbench 2 0 2013-05-02 22:11:06.529
 !MESSAGE A handler conflict occurred.  This may disable some commands.
 !SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-02 22:11:06.529
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-04 17:43:58.396
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-04 17:44:08.162
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-04 17:44:08.162
+>>>>>>> Nilüfer
 !MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
 HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
@@ -1008,6 +1507,7 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+<<<<<<< HEAD
 !SESSION 2013-05-03 14:33:53.886 -----------------------------------------------
 =======
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-02 12:51:27.967
@@ -1025,12 +1525,36 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1275a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1275a34)),sourcePriority=16640)
 !SESSION 2013-05-03 14:06:42.595 -----------------------------------------------
 >>>>>>> Erik
+=======
+
+!ENTRY org.eclipse.cdt.core 4 0 2013-05-04 17:51:16.379
+!MESSAGE Error: Resource '/SE2P/Regressionstest/Regressionstest.h' does not exist.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: Resource '/SE2P/Regressionstest/Regressionstest.h' does not exist.
+	at org.eclipse.core.internal.resources.Resource.checkExists(Resource.java:319)
+	at org.eclipse.core.internal.resources.Resource.checkAccessible(Resource.java:196)
+	at org.eclipse.core.internal.resources.File.getContents(File.java:286)
+	at org.eclipse.cdt.internal.core.parser.InternalParserUtil.createWorkspaceFileReader(InternalParserUtil.java:82)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getCodeReader(TranslationUnit.java:964)
+	at org.eclipse.cdt.internal.core.pdom.indexer.ProjectIndexerInputAdapter.getCodeReader(ProjectIndexerInputAdapter.java:233)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.createAST(AbstractIndexerTask.java:243)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseFile(AbstractIndexerTask.java:676)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.parseLinkage(AbstractIndexerTask.java:614)
+	at org.eclipse.cdt.internal.core.pdom.AbstractIndexerTask.runTask(AbstractIndexerTask.java:316)
+	at org.eclipse.cdt.internal.core.pdom.indexer.PDOMIndexerTask.run(PDOMIndexerTask.java:122)
+	at org.eclipse.cdt.internal.core.pdom.PDOMIndexerJob.run(PDOMIndexerJob.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SUBENTRY 1 org.eclipse.core.resources 4 368 2013-05-04 17:51:16.379
+!MESSAGE Resource '/SE2P/Regressionstest/Regressionstest.h' does not exist.
+!SESSION 2013-05-05 21:26:56.011 -----------------------------------------------
+>>>>>>> Nilüfer
 eclipse.buildId=201006232051
 java.version=1.5.0_11
 java.vendor=Sun Microsystems Inc.
 BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
 Command-line arguments:  -os win32 -ws win32 -arch x86
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 !ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-03 14:33:55.119
 !MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
@@ -1046,6 +1570,14 @@ Command-line arguments:  -os win32 -ws win32 -arch x86
 !MESSAGE A handler conflict occurred.  This may disable some commands.
 !SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-03 14:07:13.311
 >>>>>>> Erik
+=======
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-05 21:26:58.008
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-05 21:27:11.674
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-05 21:27:11.674
+>>>>>>> Nilüfer
 !MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
 HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
@@ -1053,6 +1585,7 @@ HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.e
 HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
 	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
 	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+<<<<<<< HEAD
 !SESSION 2013-05-04 16:16:23.504 -----------------------------------------------
 eclipse.buildId=201006232051
 java.version=1.5.0_11
@@ -1318,3 +1851,5 @@ java.io.FileNotFoundException: D:\GitHub\WorkspaceQNX\.metadata\.plugins\org.ecl
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:1831)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$5.run(IDEWorkbenchAdvisor.java:453)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+=======
+>>>>>>> Nilüfer

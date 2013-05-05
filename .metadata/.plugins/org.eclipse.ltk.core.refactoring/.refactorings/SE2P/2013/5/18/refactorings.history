@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <session version="1.0">
 <refactoring comment="Rename resource &apos;SE2P/Versuchsordner/Abletung_Test.h&apos; to &apos;Ableitung_Test.h&apos;" description="Rename resource &apos;Abletung_Test.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Versuchsordner/Abletung_Test.h" name="Ableitung_Test.h" stamp="1367406790397" updateReferences="true"/>
+=======
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;SE2P/Regressionstest/Regressionstest_Aktorik.cpp&apos; to &apos;Regressionstnmnb,est_Aktorik.cpp&apos;" description="Rename resource &apos;Regressionstest_Aktorik.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Regressionstest/Regressionstest_Aktorik.cpp" name="Regressionstnmnb,est_Aktorik.cpp" stamp="1367682370166" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SE2P/Regressionstest/Regressionstest_Aktorik&apos; to &apos;Regressionstest_Aktorik.cpp&apos;" description="Rename resource &apos;Regressionstest_Aktorik&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Regressionstest/Regressionstest_Aktorik" name="Regressionstest_Aktorik.cpp" stamp="1367682409369" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;SE2P/Regressionstest/Regressionstnmnb,est_Aktorik.cpp&apos; to &apos;Regressionstest_Aktorik.cpp&apos;" description="Rename resource &apos;Regressionstnmnb,est_Aktorik.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Regressionstest/Regressionstnmnb,est_Aktorik.cpp" name="Regressionstest_Aktorik.cpp" stamp="1367682452893" updateReferences="true"/>
+>>>>>>> Nilüfer
 </session>

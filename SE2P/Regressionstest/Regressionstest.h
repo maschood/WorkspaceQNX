@@ -1,7 +1,7 @@
 /*
  * Regressionstest.h
  *
- *  Created on: 24.04.2013
+ *  Created on: 04.05.2013
  *      Author: NG
  */
 
@@ -15,13 +15,21 @@ class Regressionstest {
 public:
 	Regressionstest();
 	virtual ~Regressionstest();
+<<<<<<< HEAD
 	bool test_lamp_red_on();
 	void TestAktorik();
 	void TestSensorik();
+=======
+	void TestAktorik();
+>>>>>>> Nilüfer
 	void TestLauf();
 private:
 
 	//Aktorik
+<<<<<<< HEAD
+=======
+	bool test_lamp_red_on();
+>>>>>>> Nilüfer
 	bool test_lamp_yellow_on();
 	bool test_lamp_green_on();
 	bool test_lamp_red_off();
@@ -40,6 +48,7 @@ private:
 	bool test_led_start_button_off();
 	bool test_led_reset_button_off();
 	bool test_general_switch_off();
+<<<<<<< HEAD
 
 	//Sensorik
 	bool test_check_entrance(uint8_t val);
@@ -55,6 +64,8 @@ private:
 	bool test_check_reset_button(uint8_t val);
 	bool test_check_quick_stop(uint8_t val);
 
+=======
+>>>>>>> Nilüfer
 };
 
 #endif /* REGRESSIONSTEST_H_ */
