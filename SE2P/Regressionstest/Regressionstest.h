@@ -1,27 +1,23 @@
 /*
  * Regressionstest.h
  *
- *  Created on: 24.04.2013
+ *  Created on: 04.05.2013
  *      Author: NG
  */
 
 #ifndef REGRESSIONSTEST_H_
 #define REGRESSIONSTEST_H_
 
-#define ISOFF	0
-#define ISON	1
-
 class Regressionstest {
 public:
 	Regressionstest();
 	virtual ~Regressionstest();
-	bool test_lamp_red_on();
 	void TestAktorik();
-	void TestSensorik();
 	void TestLauf();
 private:
 
 	//Aktorik
+	bool test_lamp_red_on();
 	bool test_lamp_yellow_on();
 	bool test_lamp_green_on();
 	bool test_lamp_red_off();

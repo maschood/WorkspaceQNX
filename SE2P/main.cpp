@@ -30,8 +30,6 @@ int main(int argc, char *argv[]) {
 	//  HAL_S* hal_s  = HAL_S::get_instance();
 	//  hal_s->start_process();
 
-	Regressionstest rt;
-	rt.startTest();
 
 #ifdef SIMULATION
 	IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation
