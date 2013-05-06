@@ -1,0 +1,4 @@
+#Mon May 06 23:54:51 CEST 2013
+file_types=cvsignore\n1\nindex\n1\ntif\n2\ntiff\n2\nmxsd\n1\nhtml\n1\nc\n1\nh\n1\ngif\n2\nprefs\n1\nxml\n1\nico\n2\nproperties\n1\nexsd\n1\nMF\n1\nppt\n2\nhpp\n1\nbmp\n2\na\n2\ncpp\n1\nso\n2\npdf\n2\nxsl\n1\nini\n1\nzip\n2\nhtm\n1\nexe\n2\no\n2\ndll\n2\nhh\n1\ncom\n2\ncproject\n1\ncc\n1\ncdtbuild\n1\noptions\n1\ntxt\n1\ndoc\n2\njpeg\n2\nproject\n1\nhistory\n1\ncxx\n1\npng\n2\nxls\n2\njpg\n2\nlaunch\n1\n
+eclipse.preferences.version=1
+ignore_files=*.a\ntrue\n*.dll\ntrue\n*.exe\ntrue\n*.so\ntrue\n

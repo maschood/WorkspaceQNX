@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SEP2/R232_1&apos; to &apos;RS232&apos;" description="Rename resource &apos;R232_1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="R232_1" name="RS232" stamp="1367874427715" updateReferences="true"/>
+</session>
