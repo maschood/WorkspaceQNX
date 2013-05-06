@@ -1,0 +1,88 @@
+/*
+ * HAL_S.cpp
+ *
+ *  Created on: 23.04.2013
+ *      Author: ich
+ */
+
+#include "HAL_S/HAL_S.h"
+//#include <sys/neutrino.h>
+
+HAL_S* HAL_S::instance = NULL;
+
+HAL_S::HAL_S() {
+
+	// Initialising the IO card
+	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
+	out8(DIO_BASE + DIO_OFFS_B, 0x00);
+	out8(DIO_BASE + DIO_OFFS_C, 0x00);
+
+//	chid_channel_Test = ChannelCreate(0);
+
+
+}
+
+HAL_S::~HAL_S() {
+	delete instance;
+	instance = NULL;
+	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
+	out8(DIO_BASE + DIO_OFFS_B, 0x00);
+	out8(DIO_BASE + DIO_OFFS_C, 0x00);
+}
+
+HAL_S* HAL_S::get_instance() {
+	// Requesting access to HW
+	if (-1 == ThreadCtl(_NTO_TCTL_IO, 0)) {
+		perror("ThreadCtl access failed\n");
+		return NULL;
+	}
+
+	if (instance == NULL) {
+		instance = new HAL_S();
+	}
+
+	return instance;
+}
+
+void HAL_S::execute(void* arg){
+	while(!isStopped()){
+		start_process();
+		// An dieser Stelle soll auf den Interrupt gewartet werden
+	}
+}
+
+void HAL_S::start_process(){
+
+	// check if at least one bit is set an a closer check is necessary
+	HAL_S::val_b_last = HAL_S::val_b_current;
+	HAL_S::val_c_last = HAL_S::val_c_current;
+
+	HAL_S::val_b_current = in8(DIO_BASE + DIO_OFFS_B);
+	HAL_S::val_c_current = in8(DIO_BASE + DIO_OFFS_C);
+
+
+	HAL_S::last_state = HAL_S::current_state;
+	HAL_S::current_state = (val_b_current + (val_c_current << 8));
+
+
+	if(HAL_S::last_state - HAL_S::current_state != 0){
+		if((HAL_S::val_b_current & CHECK_B)-(HAL_S::val_b_last & CHECK_B) != 0){
+			check_entrance(HAL_S::val_b_current, HAL_S::val_b_last);
+			check_hight_determinism(HAL_S::val_b_current, HAL_S::val_b_last);
+			check_bar(HAL_S::val_b_current, HAL_S::val_b_last);
+			check_slide_full(HAL_S::val_b_current, HAL_S::val_b_last);
+			check_exit(HAL_S::val_b_current, HAL_S::val_b_last);
+		}
+
+		if((HAL_S::val_c_current & 0xf0)-(HAL_S::val_c_last & 0xf0) != 0){
+			check_start_button(HAL_S::val_c_current, HAL_S::val_c_last);
+			check_stop_button(HAL_S::val_c_current, HAL_S::val_c_last);
+			check_reset_button(HAL_S::val_c_current, HAL_S::val_c_last);
+			check_quick_stop(HAL_S::val_c_current, HAL_S::val_c_last);
+		}
+
+	}
+
+}
+void HAL_S::shutdown(){
+}
