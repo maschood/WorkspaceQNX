@@ -4,6 +4,15 @@
 		<list key="ENABLED_TRANSFERS">
 		</list>
 	</section>
+	<section name="CleanDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="1890"/>
+		<item key="DIALOG_HEIGHT" value="440"/>
+		<item key="DIALOG_Y_ORIGIN" value="220"/>
+		<item key="BUILD_NOW" value="true"/>
+		<item key="DIALOG_WIDTH" value="500"/>
+		<item key="TOGGLE_SELECTED" value="false"/>
+		<item key="BUILD_ALL" value="true"/>
+	</section>
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="658"/>
 		<item key="DIALOG_Y_ORIGIN" value="361"/>

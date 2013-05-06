@@ -41,14 +41,15 @@
 #define AIO_GET_VAL	0x10
 #define AIO_PORT_A	(AIO_BASE + AIO_OFFS_A)
 
-//PULSE Message
-#define BHANCHOD  0xCA
-#define BHANCHOD1 0xC9
-#define BHANCHOD2 0xCF
-#define BHANCHOD3 0xC3
-#define BHANCHOD4 0xDB
-#define BHANCHOD5 0xE8
-#define BHANCHOD6 0x4B
+//HAL Sensorik PORT_B HIGH
+#define PORT_B_0 0xCA
+#define PORT_B_1 0xC9
+#define PORT_B_2 0xCF
+#define PORT_B_3 0xC3
+#define PORT_B_4 0xDB
+#define PORT_B_5 0xEB
+#define PORT_B_6 0x8B
+#define PORT_B_7 0x4B
 
 
 #endif /* ADDRESSES_H_ */

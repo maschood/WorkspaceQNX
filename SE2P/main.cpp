@@ -12,7 +12,6 @@
 
 #include "Addresses.h"
 #include "HAL_A.h"
-#include "HAL_S/HAL_S.h"
 #include "HWaccess.h"
 #include "HAWThread.h"
 #include "Mutex.h"
@@ -28,8 +27,8 @@ int main(int argc, char *argv[]) {
 #endif
 
 //    HAL_S* hal_s  = HAL_S::get_instance();
-//    hal_s->start_process();
-//
+//    hal_s->start(NULL);
+
 
 
 //    HAL_A* hal_a = HAL_A::get_instance();
@@ -42,7 +41,7 @@ int main(int argc, char *argv[]) {
 //        sleep(1);
 //    }
 
-    cout << "Sensorik Intro" << endl;
+    cout << "HAL Sensorik" << endl;
         cout << "=========================================================" << endl;
         cout << endl;
 
@@ -60,6 +59,7 @@ int main(int argc, char *argv[]) {
         sens->join();
 
         cout << " done." << endl;
+
 
 
 #ifdef SIMULATION

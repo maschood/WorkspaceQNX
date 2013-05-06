@@ -6,6 +6,7 @@
  */
 
 #include "HAL_S/HAL_S.h"
+//#include <sys/neutrino.h>
 
 HAL_S* HAL_S::instance = NULL;
 
@@ -15,6 +16,10 @@ HAL_S::HAL_S() {
 	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
 	out8(DIO_BASE + DIO_OFFS_B, 0x00);
 	out8(DIO_BASE + DIO_OFFS_C, 0x00);
+
+//	chid_channel_Test = ChannelCreate(0);
+
+
 }
 
 HAL_S::~HAL_S() {
@@ -32,7 +37,6 @@ HAL_S* HAL_S::get_instance() {
 		return NULL;
 	}
 
-
 	if (instance == NULL) {
 		instance = new HAL_S();
 	}
@@ -40,33 +44,45 @@ HAL_S* HAL_S::get_instance() {
 	return instance;
 }
 
-void HAL_S::start_process(){
-	uint8_t val;
-//	unit8_t val_c;
-
-	val = in8(DIO_BASE + DIO_OFFS_B);
-//	val_c = in8(DIO_BASE + DIO_OFFS_C);
-
-	// Hier einen neuen Thread erzeugen
-	while(MANOWAR){
-
-		// check if at least one bit is set an a closer check is necessary
-		val = in8(DIO_BASE + DIO_OFFS_B);
-		if((val & CHECK_B) != CHECK_B){
-			check_entrance(val);
-			check_hight_determinism(val);
-			check_bar(val);
-			check_slide_full(val);
-			check_exit(val);
-		}
-
-		val = in8(DIO_BASE + DIO_OFFS_C);
-		int cHECK_C = BIT_5+BIT_7;
-		if((val & 0xf0) != cHECK_C){
-			check_start_button(val);
-			check_stop_button(val);
-			check_reset_button(val);
-			check_quick_stop(val);
-		}
+void HAL_S::execute(void* arg){
+	while(!isStopped()){
+		start_process();
+		// An dieser Stelle soll auf den Interrupt gewartet werden
 	}
+}
+
+void HAL_S::start_process(){
+
+	// check if at least one bit is set an a closer check is necessary
+	val_b_last = val_b_current;
+	val_c_last = val_c_current;
+
+	val_b_current = in8(DIO_BASE + DIO_OFFS_B);
+	val_c_current = in8(DIO_BASE + DIO_OFFS_C);
+
+
+	last_state = current_state;
+	current_state = (val_b_current + (val_c_current << 8));
+
+
+	if(last_state - current_state != 0){
+		if((val_b_current & CHECK_B)-(val_b_last & CHECK_B) != 0){
+			check_entrance(val_b_current, val_b_last);
+			check_hight_determinism(val_b_current, val_b_last);
+			check_bar(val_b_current, val_b_last);
+			check_slide_full(val_b_current, val_b_last);
+			check_exit(val_b_current, val_b_last);
+		}
+
+		if((val_c_current & 0xf0)-(val_c_last & 0xf0) != 0){
+			check_start_button(val_c_current, val_c_last);
+			check_stop_button(val_c_current, val_c_last);
+			check_reset_button(val_c_current, val_c_last);
+			check_quick_stop(val_c_current, val_c_last);
+		}
+
+	}
+
+}
+void HAL_S::shutdown(){
 }

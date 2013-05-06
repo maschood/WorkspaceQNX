@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="728" maximized="true" width="1024" x="1915" y="314">
+<window height="728" maximized="true" width="1024" x="1917" y="229">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="365"/>
@@ -19,7 +19,7 @@
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -28,36 +28,10 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-<part id="4"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.h" partName="HAL_ISR.h" path="D:/WorkspaceQNX/SE2P/HAL_S/HAL_ISR.h" title="HAL_ISR.h" tooltip="SE2P/HAL_S/HAL_ISR.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAL_S/HAL_ISR.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="446" selectionTopPixel="0"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.cpp" partName="HAL_ISR.cpp" path="D:/WorkspaceQNX/SE2P/HAL_S/HAL_ISR.cpp" title="HAL_ISR.cpp" tooltip="SE2P/HAL_S/HAL_ISR.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAL_S/HAL_ISR.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3572" selectionTopPixel="2278"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="D:/WorkspaceQNX/SE2P/main.cpp" title="main.cpp" tooltip="SE2P/main.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/main.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1151" selectionTopPixel="422"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.h" partName="HAL_A.h" path="D:/WorkspaceQNX/SE2P/HAL_A/HAL_A.h" title="HAL_A.h" tooltip="SE2P/HAL_A/HAL_A.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAL_A/HAL_A.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="283" selectionTopPixel="32"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Addresses.h" partName="Addresses.h" path="D:/WorkspaceQNX/SE2P/Addresses.h" title="Addresses.h" tooltip="SE2P/Addresses.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/Addresses.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1124" selectionTopPixel="150"/>
-</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
@@ -73,7 +47,9 @@
 </viewState>
 </view>
 <view id="com.qnx.tools.ide.SystemProfiler.ui.views.filters" partName="Filters"/>
-<view id="org.eclipse.debug.ui.DebugView" partName="Debug"/>
+<view id="org.eclipse.debug.ui.DebugView" partName="Debug">
+<viewState/>
+</view>
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.mallocview" partName="Malloc Information"/>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
@@ -84,11 +60,17 @@
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" CommonNavigator.LINKING_ENABLED.delayed="0" currentWorkingSetName="Aggregate for window 1366102474816" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints"/>
+<view id="org.eclipse.debug.ui.BreakpointView" partName="Breakpoints">
+<viewState>
+<isTrackingSelection value="false"/>
+</viewState>
+</view>
 <view id="org.eclipse.ui.views.BookmarkView" partName="Bookmarks"/>
 <view id="org.eclipse.cdt.debug.ui.executablesView" partName="Executables"/>
 <view id="com.qnx.tools.ide.target.fsys" partName="Target File System Navigator"/>
-<view id="org.eclipse.debug.ui.VariableView" partName="Variables"/>
+<view id="org.eclipse.debug.ui.VariableView" partName="Variables">
+<viewState/>
+</view>
 <view id="com.qnx.tools.ide.sysinfo.internal.ui.processview" partName="Process Information"/>
 <view id="QNXSystemBuilderProjectView" partName="System Builder Projects"/>
 <view id="com.qnx.tools.ide.target.internal.ui.targetview" partName="Target Navigator"/>
@@ -123,7 +105,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.SystemProfiler.ui.SystemProfilerPerspective" id="com.qnx.tools.ide.SystemProfiler.ui.perspective.traceperspective" label="QNX System Profiler"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -321,10 +303,10 @@
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.keyBindings"/>
 <alwaysOnActionSet id="org.eclipse.ui.actionSet.openFiles"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.launchActionSet"/>
-<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.cdt.debug.ui.debugActionSet"/>
 <alwaysOnActionSet id="org.eclipse.ui.NavigateActionSet"/>
 <alwaysOnActionSet id="org.eclipse.debug.ui.breakpointActionSet"/>
+<alwaysOnActionSet id="org.eclipse.debug.ui.debugActionSet"/>
 <show_view_action id="org.eclipse.debug.ui.DebugView"/>
 <show_view_action id="org.eclipse.debug.ui.VariableView"/>
 <show_view_action id="org.eclipse.debug.ui.BreakpointView"/>
@@ -355,8 +337,10 @@
 <view id="org.eclipse.debug.ui.BreakpointView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <fastViewBars/>
-<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
+<layout>&#x0A;<mainWindow>&#x0A;<info folder="true" part="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.DebugView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
 <page content="org.eclipse.ui.views.ResourceNavigator" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info folder="true" part="stickyFolderRight" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.help.ui.HelpView" label="LabelNotFound"/>
@@ -364,26 +348,37 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ConsoleFolderView" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.cdt.debug.ui.executablesView" label="Executables"/>
+<page content="org.eclipse.ui.views.BookmarkView" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.memory.memorybrowser.MemoryBrowser" label="LabelNotFound"/>
+<page content="org.eclipse.debug.ui.MemoryView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.44835165" ratioLeft="204" ratioRight="251" relationship="4" relative="org.eclipse.debug.internal.ui.NavigatorFolderView"/>
-<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.OutlineFolderView" ratio="0.75" ratioLeft="750" ratioRight="250" relationship="2" relative="org.eclipse.ui.editorss">&#x0A;<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
 <page content="org.eclipse.cdt.debug.ui.DisassemblyView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+</presentation>
 </folder>
 </info>
-<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="500" ratioRight="500" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
+<info folder="true" part="org.eclipse.debug.internal.ui.ToolsFolderView" ratio="0.5" ratioLeft="500" ratioRight="500" relationship="2" relative="org.eclipse.debug.internal.ui.NavigatorFolderView">&#x0A;<folder activePageID="org.eclipse.debug.ui.VariableView" appearance="2" expanded="2">&#x0A;<page content="org.eclipse.debug.ui.VariableView" label="Variables"/>
 <page content="org.eclipse.debug.ui.BreakpointView" label="Breakpoints"/>
 <page content="org.eclipse.debug.ui.ExpressionView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.RegisterView" label="LabelNotFound"/>
 <page content="org.eclipse.cdt.debug.ui.SignalsView" label="LabelNotFound"/>
 <page content="org.eclipse.debug.ui.ModuleView" label="LabelNotFound"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">&#x0A;<part id="0"/>
+<part id="1"/>
+</presentation>
 </folder>
 </info>
 </mainWindow>
@@ -444,11 +439,11 @@
 <perspective_action id="org.eclipse.debug.ui.DebugPerspective"/>
 <perspective_action id="org.eclipse.team.ui.TeamSynchronizingPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.cdt.ui.includeBrowser"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
+<view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -473,19 +468,10 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.18302584" ratioLeft="248" ratioRight="1107" relationship="2" relative="topLeft"/>
-<info folder="true" part="bottom" ratio="0.85493827" ratioLeft="831" ratioRight="141" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
-<page content="org.eclipse.cdt.ui.includeBrowser" label="Include Browser"/>
-<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<info folder="true" part="bottom" ratio="0.7548387" ratioLeft="468" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-<part id="1"/>
-<part id="2"/>
-<part id="3"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="topRight" ratio="0.7493333" ratioLeft="562" ratioRight="188" relationship="2" relative="org.eclipse.ui.editorss">
@@ -498,172 +484,26 @@
 </presentation>
 </folder>
 </info>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@16cdad0" ratio="0.7921811" ratioLeft="770" ratioRight="202" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
+<page content="org.eclipse.cdt.ui.includeBrowser" label="Include Browser"/>
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+</presentation>
+</folder>
+</info>
 </mainWindow>
 </layout>
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory>
-<editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_ISR.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_ISR.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_A/HAL_A.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/main.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Addresses.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_A/HAL_A.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_S.cpp"/>
-</editors>
-<item historyLabel="HAL_A.cpp" index="2">
-<position/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="708" y="37"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="1098" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="898" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="898" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="HAL_A.h" index="5">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="HAL_A.cpp" index="2">
-<position info="not_deleted" x="608" y="99"/>
-</item>
-<item historyLabel="HAL_A.h" index="5">
-<position info="not_deleted" x="283" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="898" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="146" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="1286" y="0"/>
-</item>
-<item historyLabel="HAL_S.cpp" index="6">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="1281" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="898" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="242" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="146" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="453" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="453" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="453" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="446" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3737" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1131" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="4231" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1131" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="4231" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3683" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1131" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="446" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3678" y="0"/>
-</item>
-<item historyLabel="main.cpp" index="3">
-<position info="not_deleted" x="1151" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1131" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="446" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3646" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1124" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="446" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3873" y="0"/>
-</item>
-<item historyLabel="Addresses.h" index="4">
-<position info="not_deleted" x="1124" y="0"/>
-</item>
-<item historyLabel="HAL_ISR.h" index="1">
-<position info="not_deleted" x="446" y="0"/>
-</item>
-<item active="true" historyLabel="HAL_ISR.cpp" index="0">
-<position info="not_deleted" x="3873" y="0"/>
-</item>
-</navigationHistory>
+<navigationHistory/>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -683,35 +523,14 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Addresses.h" tooltip="SE2P/Addresses.h">
 <persistable path="/SE2P/Addresses.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
-<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
-<persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.h" tooltip="SE2P/HAL_A/HAL_A.h">
-<persistable path="/SE2P/HAL_A/HAL_A.h"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
 <persistable path="/SE2P/main.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.cpp" tooltip="SE2P/HAL_S/HAL_ISR.cpp">
-<persistable path="/SE2P/HAL_S/HAL_ISR.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HWaccess.h" tooltip="SE2P/HWaccess.h">
 <persistable path="/SE2P/HWaccess.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.h" tooltip="SE2P/HAL_S/HAL_ISR.h">
-<persistable path="/SE2P/HAL_S/HAL_ISR.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="SE2P/Definitions.h">
-<persistable path="/SE2P/Definitions.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.h" tooltip="SE2P/HAWThread/HAWThread.h">
-<persistable path="/SE2P/HAWThread/HAWThread.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAWThread.cpp" tooltip="SE2P/HAWThread/HAWThread.cpp">
-<persistable path="/SE2P/HAWThread/HAWThread.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.cpp" tooltip="SE2P/HAL_S/HAL_ISR.cpp">
+<persistable path="/SE2P/HAL_S/HAL_ISR.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S_interrupt.cpp" tooltip="SE2P/HAL_S/HAL_S_interrupt.cpp">
 <persistable path="/SE2P/HAL_S/HAL_S_interrupt.cpp"/>
@@ -719,8 +538,29 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.h" tooltip="SE2P/HAL_S/HAL_S.h">
 <persistable path="/SE2P/HAL_S/HAL_S.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A_light.cpp" tooltip="SE2P/HAL_A/HAL_A_light.cpp">
-<persistable path="/SE2P/HAL_A/HAL_A_light.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.h" tooltip="SE2P/Regressionstest/Regressionstest.h">
+<persistable path="/SE2P/Regressionstest/Regressionstest.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_Test.h" tooltip="SE2P/Hal_Test/HAL_Test.h">
+<persistable path="/SE2P/Hal_Test/HAL_Test.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
+<persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.h" tooltip="SE2P/HAL_A/HAL_A.h">
+<persistable path="/SE2P/HAL_A/HAL_A.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_ISR.h" tooltip="SE2P/HAL_S/HAL_ISR.h">
+<persistable path="/SE2P/HAL_S/HAL_ISR.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="SE2P/Definitions.h">
+<persistable path="/SE2P/Definitions.h"/>
 </file>
 </mruList>
 </workbench>

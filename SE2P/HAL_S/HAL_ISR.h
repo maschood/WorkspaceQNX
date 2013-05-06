@@ -9,6 +9,7 @@
 #include "HWaccess.h"
 #include "HAL_A/HAL_A.h"
 #include "HAWThread/HAWThread.h"
+#include "HAL_S/HAL_S.h"
 
 using namespace thread;
 
@@ -34,6 +35,10 @@ private:
 	uint8_t portBstatus;
 	uint8_t portCstatus;
 	static HAL_ISR* instance;
+
+	HAL_A* hal ;
+	HAL_S* hal_s;
+
 protected:
 	virtual void execute(void* arg);
 	virtual void shutdown();

@@ -12,12 +12,13 @@ static int coid;
 const struct sigevent * intHandler(void *arg, int id) {
 	struct sigevent *event = (struct sigevent *) arg;
 	int iir;
-	uint8_t val;
+	uint16_t val;
 
 	/*
 	 * determine the source of the interrupt
 	 * by reading the Interrupt Identification Register
 	 */
+
 	iir = in8(DIO_BASE + OFFS_INT_STATUS) & (BIT_1 | BIT_3);
 	out8(DIO_BASE + OFFS_INT_STATUS, 0);
 
@@ -47,6 +48,8 @@ const struct sigevent * intHandler(void *arg, int id) {
 HAL_ISR* HAL_ISR::instance = NULL;
 
 HAL_ISR::HAL_ISR() {
+	HAL_A* hal = HAL_A::get_instance();
+	HAL_S* hal_s  = HAL_S::get_instance();
 	initInterrupt();
 }
 
@@ -55,7 +58,7 @@ HAL_ISR::~HAL_ISR() {
 }
 
 HAL_ISR* HAL_ISR::getInstance() {
-	HAL_A* hal = HAL_A::get_instance();
+
 	if (instance == NULL) {
 		instance = new HAL_ISR();
 	}
@@ -81,8 +84,7 @@ void HAL_ISR::initInterrupt() {
 	SIGEV_PULSE_INIT(&event, coid, SIGEV_PULSE_PRIO_INHERIT, 0, 0);
 
 	//ISR register
-	interruptId = InterruptAttach(HW_SERIAL_IRQ, intHandler, &event,
-			sizeof(event), 0);
+	interruptId = InterruptAttach(HW_SERIAL_IRQ, intHandler, &event, sizeof(event), 0);
 	if (interruptId == -1) {
 		perror("Fehler beim InterruptAttach");
 		exit(EXIT_FAILURE);
@@ -119,12 +121,6 @@ void HAL_ISR::shutdown() {
 }
 
 int HAL_ISR::getHeight() {
-	/*
-	 Bohrung oben	3506,3524,3528
-	 Bohrung unten	2470,2478,2480
-	 zu flach	2731,2737
-	 Bohrung oben oM	3492
-	 */
 	int hoehe = -1;
 	int i;
 
@@ -151,31 +147,36 @@ void HAL_ISR::execute(void* arg) {
 			exit(EXIT_FAILURE);
 		}
 
-		cout << "Hier: "<< pulse.value.sival_int << endl;
+//		cout << "Hier: "<< pulse.value.sival_int << endl;
 
 		switch(pulse.value.sival_int)
-		{	case BHANCHOD:
-			cout << "Puck am Band Anfang!"<< endl;
+		{	case PORT_B_0:
+			cout << "Einlauf Werkstück!"<< endl;
+//			hal_s->start(NULL);
 			break;
-//			case 201: std::cout << "falsch";
-//			break;
-//			case 207: std::cout << "wahr";
-//			break;
-//			case 195: std::cout << "falsch";
-//			break;
-//			case 219: std::cout << "wahr";
-//			break;
-//			case 235: std::cout << "falsch";
-//			break;
-//			case 139: std::cout << "wahr";
-//			break;
-//			case 75: std::cout << "falsch";
-//			break;
+			case PORT_B_1:
+			cout << "Werkstück in Höhenmessung!"<< endl;
+			break;
+			case PORT_B_2:
+			cout << "Höhenmessung!"<< endl;
+			break;
+			case PORT_B_3:
+			cout << "Werkstück in weiche!"<< endl;
+			break;
+			case PORT_B_4:
+			cout << "Werkstück Metall Prüfung!"<< endl;
+			break;
+			case PORT_B_5:
+			cout << "Weiche offen!"<< endl;
+			break;
+			case PORT_B_6:
+			cout << "Rutsche voll!"<< endl;
+			break;
+			case PORT_B_7:
+			cout << "Auslauf Werkstück!"<< endl;
+			break;
+
 	}
-//		printf("|   %X   |   %2X   |", pulse.code, pulse.value.sival_int);
-//		cout << endl;
-
-
 	}
 }
 
