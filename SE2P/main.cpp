@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
 #ifdef SIMULATION
 	cout << "Simulation aktiv" << endl;
 	cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen."
-			<< endl;
+	<< endl;
 	IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
@@ -72,6 +72,15 @@ int main(int argc, char *argv[]) {
 	//  hal_s->start_process();
 >>>>>>> Nil√ºfer
 
+	Regressionstest rt;
+	rt.TestLauf();
+	//rt.TestAktorik();
+
+	//  HAL_S* hal_s  = HAL_S::get_instance();
+	//  hal_s->start_process();
+
+	//HAL_A* hal_a = HAL_A::get_instance();
+	//hal_a->conveyor_stop();
 
 #ifdef SIMULATION
 	IOaccess_close(); // Schlieﬂe die Verbindung zur Simulation

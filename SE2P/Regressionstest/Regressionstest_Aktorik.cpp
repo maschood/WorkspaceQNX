@@ -170,7 +170,6 @@ bool Regressionstest::test_led_start_button_off() {
 }
 bool Regressionstest::test_led_reset_button_off() {
 	hal_a-> led_reset_button_off();
-	int i = 0;
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_C);
 	val = val & BIT_1;
 	if (val == BIT_1) {
@@ -203,64 +202,65 @@ void Regressionstest::TestAktorik() {
 	sleep(2);
 
 	erg = test_lamp_yellow_on();
-	cout << "lamp yellow on? " << erg << endl;
+	cout << "lamp yellow on? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_lamp_green_on();
-	cout << "lamp green on? " << erg << endl;
+	cout << "lamp green on? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_lamp_red_off();
-	cout << "lamp red off? " << erg << endl;
+	cout << "lamp red off? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_lamp_yellow_off();
-	cout << "lamp yellow off? " << erg << endl;
+	cout << "lamp yellow off? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_lamp_green_off();
-	cout << "lamp green off? " << erg << endl;
+	cout << "lamp green off? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_bar_open();
-	cout << "bar open? " << erg << endl;
+	cout << "bar open? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_bar_close();
-	cout << "bar closed? " << erg << endl;
+	cout << "bar closed? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_conveyor_move_right();
-	cout << "conveyor move right? " << erg << endl;
-	sleep(2);
-
-	erg = test_conveyor_move_left();
-	cout << "conveyor move left? " << erg << endl;
+	cout << "conveyor move right? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_conveyor_stop();
-	cout << "conveyor stoped? " << erg << endl;
+	cout << "conveyor stoped? " << (erg ? "True" : "False") << endl;
+	sleep(2);
+
+	erg = test_conveyor_move_left();
+	cout << "conveyor move left? " << (erg ? "True" : "False") << endl;
+	sleep(2);
+
+	erg = test_conveyor_stop();
+	cout << "conveyor stoped? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_led_start_button_on();
-	cout << "start button on? " << erg << endl;
+	cout << "start button on? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_led_reset_button_on();
-	cout << "reset button on? " << erg << endl;
+	cout << "reset button on? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_led_start_button_off();
-	cout << "start button off? " << erg << endl;
+	cout << "start button off? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
 	erg = test_led_reset_button_off();
-	cout << "reset button off? " << erg << endl;
+	cout << "reset button off? " << (erg ? "True" : "False") << endl;
 	sleep(2);
 
-	erg = test_general_switch_off();
-	cout << "OFF? " << erg << endl;
-	sleep(2);
 }
 <<<<<<< HEAD
 

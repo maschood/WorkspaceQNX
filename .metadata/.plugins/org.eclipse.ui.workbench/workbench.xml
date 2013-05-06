@@ -26,7 +26,11 @@
 <<<<<<< HEAD
 =======
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<<<<<<< HEAD
 <coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+>>>>>>> Nilüfer
+=======
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 >>>>>>> Nilüfer
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
@@ -36,10 +40,26 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" partName="main.cpp" path="D:/GitHub/WorkspaceQNX/SE2P/main.cpp" title="main.cpp" tooltip="SE2P/main.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/main.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="793" selectionTopPixel="511"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest_Aktorik.cpp" partName="Regressionstest_Aktorik.cpp" path="D:/GitHub/WorkspaceQNX/SE2P/Regressionstest/Regressionstest_Aktorik.cpp" title="Regressionstest_Aktorik.cpp" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="131" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" partName="Regressionstest.cpp" path="D:/GitHub/WorkspaceQNX/SE2P/Regressionstest/Regressionstest.cpp" title="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1326" selectionTopPixel="907"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
@@ -90,12 +110,18 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <<<<<<< HEAD
+<<<<<<< HEAD
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 =======
 <expanded>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="369" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
+>>>>>>> Nilüfer
+=======
+<expanded>&#x0A;<category IMemento.internal.id="Warnings"/>
+</expanded>
+<columnWidths org.eclipse.ui.ide.locationField="369" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="496"/>
 >>>>>>> Nilüfer
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -504,6 +530,7 @@
 </folder>
 </info>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.74958813" ratioLeft="455" ratioRight="152" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
@@ -519,6 +546,10 @@
 =======
 <info part="org.eclipse.ui.editorss" ratio="0.18081181" ratioLeft="245" ratioRight="1110" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.46612903" ratioLeft="289" ratioRight="331" relationship="4" relative="org.eclipse.ui.editorss">
+=======
+<info part="org.eclipse.ui.editorss" ratio="0.17933579" ratioLeft="243" ratioRight="1112" relationship="2" relative="topLeft"/>
+<info folder="true" part="bottom" ratio="0.67258066" ratioLeft="417" ratioRight="203" relationship="4" relative="org.eclipse.ui.editorss">
+>>>>>>> Nilüfer
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -547,7 +578,168 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_A/HAL_A.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" path="/SE2P/x86/o/SE2P"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/main.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+</editors>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="720" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="532" y="0"/>
+</item>
+<item historyLabel="HAL_A.cpp" index="3">
+<position info="not_deleted" x="290" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="619" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="2">
+<position info="not_deleted" x="4627" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="831" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="879" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="872" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="719" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="872" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="585" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="2">
+<position info="not_deleted" x="4627" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="895" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="635" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="710" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="793" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="2">
+<position info="not_deleted" x="1288" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="793" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="846" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="977" y="0"/>
+</item>
+<item historyLabel="SE2P" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="977" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="1">
+<position info="not_deleted" x="872" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="977" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="972" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="3789" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="972" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="3789" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="6">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="3608" y="11"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="5091" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="2447" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Regressionstest_Aktorik.cpp" index="5">
+<position info="not_deleted" x="131" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="6">
+<position info="not_deleted" x="740" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="981" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="6">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="0">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="main.cpp" index="6">
+<position info="not_deleted" x="724" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="7">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="7">
+<position info="not_deleted" x="1356" y="0"/>
+</item>
+<item historyLabel="Regressionstest.cpp" index="7">
+<position info="not_deleted" x="832" y="0"/>
+</item>
+<item active="true" historyLabel="Regressionstest.cpp" index="7">
+<position info="not_deleted" x="1158" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -567,14 +759,29 @@
 <mruList/>
 =======
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest_Aktorik.cpp" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik.cpp">
+<persistable path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="SE2P" tooltip="SE2P/x86/o/SE2P">
+<persistable path="/SE2P/x86/o/SE2P"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
+<persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HWaccess.h" tooltip="SE2P/HWaccess.h">
+<persistable path="/SE2P/HWaccess.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
+<persistable path="/SE2P/main.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S_interrupt.cpp" tooltip="SE2P/HAL_S/HAL_S_interrupt.cpp">
 <persistable path="/SE2P/HAL_S/HAL_S_interrupt.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Mutex.cpp" tooltip="SE2P/Mutex/Mutex.cpp">
 <persistable path="/SE2P/Mutex/Mutex.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest_Aktorik.cpp" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik.cpp">
-<persistable path="/SE2P/Regressionstest/Regressionstest_Aktorik.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="SE2P/Definitions.h">
 <persistable path="/SE2P/Definitions.h"/>
@@ -588,29 +795,14 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.h" tooltip="SE2P/Regressionstest/Regressionstest.h">
 <persistable path="/SE2P/Regressionstest/Regressionstest.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Regressionstest.cpp" tooltip="SE2P/Regressionstest/Regressionstest.cpp">
-<persistable path="/SE2P/Regressionstest/Regressionstest.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Regressionstest_Aktorik" tooltip="SE2P/Regressionstest/Regressionstest_Aktorik">
 <persistable path="/SE2P/Regressionstest/Regressionstest_Aktorik"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.cpp" tooltip="SE2P/main.cpp">
-<persistable path="/SE2P/main.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Addresses.h" tooltip="SE2P/Addresses.h">
 <persistable path="/SE2P/Addresses.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="SE2P" tooltip="SE2P/x86/o/SE2P">
-<persistable path="/SE2P/x86/o/SE2P"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A.cpp" tooltip="SE2P/HAL_A/HAL_A.cpp">
-<persistable path="/SE2P/HAL_A/HAL_A.cpp"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A_led.cpp" tooltip="SE2P/HAL_A/HAL_A_led.cpp">
 <persistable path="/SE2P/HAL_A/HAL_A_led.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_A_conveyor.cpp" tooltip="SE2P/HAL_A/HAL_A_conveyor.cpp">
-<persistable path="/SE2P/HAL_A/HAL_A_conveyor.cpp"/>
 </file>
 </mruList>
 >>>>>>> Nilüfer

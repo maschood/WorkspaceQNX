@@ -7,18 +7,22 @@ QCONFIG=qconfig.mk
 endif
 include $(QCONFIG)
 
+#===== USEFILE - the file containing the usage message for the application. 
 USEFILE=
 
 # Next lines are for C++ projects only
 
 EXTRA_SUFFIXES+=cxx cpp
 
+#===== LDFLAGS - add the flags to the linker command line.
 LDFLAGS+=-lang-c++
 
 VFLAG_g=-gstabs+
 
+#===== LIBS - a space-separated list of library items to be included in the link.
 LIBS+=ioaccess
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 #===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
 EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL  \
@@ -27,9 +31,13 @@ EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL  \
 	$(PROJECT_ROOT)/Hal_Test $(PROJECT_ROOT)/R232_1  \
 	$(PROJECT_ROOT)/Regressionstest
 =======
+=======
+#===== EXTRA_INCVPATH - a space-separated list of directories to search for include files.
+>>>>>>> Nilüfer
 EXTRA_INCVPATH+=$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/HAL
 >>>>>>> Nilüfer
 
+#===== EXTRA_SRCVPATH - a space-separated list of directories to search for source files.
 EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_Test  \
 	$(PROJECT_ROOT)/R232_1 $(PROJECT_ROOT)/HAL_A  \
 	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/Regressionstest  \
@@ -39,6 +47,7 @@ EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_Test  \
 =======
 	$(PROJECT_ROOT)/Versuchsordner
 >>>>>>> Erik
+
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL
