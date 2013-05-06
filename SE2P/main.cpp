@@ -17,6 +17,7 @@
 #include "HAWThread.h"
 #include "Mutex.h"
 #include "RS232_1.h"
+#include "HAL_S/HAL_ISR.h"
 
 
 int main(int argc, char *argv[]) {
@@ -26,8 +27,10 @@ int main(int argc, char *argv[]) {
     IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
-    HAL_S* hal_s  = HAL_S::get_instance();
-    hal_s->start_process();
+//    HAL_S* hal_s  = HAL_S::get_instance();
+//    hal_s->start_process();
+//
+
 
 //    HAL_A* hal_a = HAL_A::get_instance();
 //
@@ -38,6 +41,26 @@ int main(int argc, char *argv[]) {
 //        hal_a->lamp_green_off();
 //        sleep(1);
 //    }
+
+    cout << "Sensorik Intro" << endl;
+        cout << "=========================================================" << endl;
+        cout << endl;
+
+        HAL_ISR* sens = HAL_ISR::getInstance();
+        sens->start(NULL);
+
+        string quit;
+        do {
+            cin >> quit;
+        } while (quit != "q");
+
+        cout << "Quitting...";
+
+        sens->stop();
+        sens->join();
+
+        cout << " done." << endl;
+
 
 #ifdef SIMULATION
    IOaccess_close(); // Schließe die Verbindung zur Simulation

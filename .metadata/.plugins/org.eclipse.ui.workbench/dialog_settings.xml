@@ -11,4 +11,11 @@
 		<item key="DIALOG_Y_ORIGIN" value="-178"/>
 		<item key="DIALOG_WIDTH" value="706"/>
 	</section>
+	<section name="NewWizardAction">
+		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.qnx.tools.ide.target.ui.wizard.NewTarget"/>
+		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
+			<item value="org.eclipse.ui.Basic"/>
+			<item value="com.qnx.tools.ide.qnxResourceCreators"/>
+		</list>
+	</section>
 </section>

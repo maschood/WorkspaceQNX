@@ -1,29 +1,43 @@
 /*
  * HAL_ISR.h
  *
- *  Created on: 29.04.2013
+ *  Created on: 30.04.2013
  *      Author: maschood
  */
+
+#include "Addresses.h"
+#include "HWaccess.h"
+#include "HAL_A/HAL_A.h"
+#include "HAWThread/HAWThread.h"
+
+using namespace thread;
 
 #ifndef HAL_ISR_H_
 #define HAL_ISR_H_
 
-#include "HAWThread.h"
+const struct sigevent * ISR (void *arg, int id);
 
-class HAL_ISR : public thread::HAWThread{
-
+class HAL_ISR : public thread::HAWThread {
 public:
-
-	HAL_ISR();
 	virtual ~HAL_ISR();
-	int getChid();
-	int getCoid();
-	int hallo();
+	static HAL_ISR* getInstance();
+	void stop();
+	int getHeight();
 
 private:
+	HAL_ISR();
 	void initInterrupt();
 	int chid;
-	int coid;
+	struct sigevent event;
+	int interruptId;
+
+	uint8_t portBstatus;
+	uint8_t portCstatus;
+	static HAL_ISR* instance;
+protected:
+	virtual void execute(void* arg);
+	virtual void shutdown();
+
 };
 
 #endif /* HAL_ISR_H_ */

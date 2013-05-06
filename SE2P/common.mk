@@ -31,9 +31,6 @@ EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_Test  \
 	$(PROJECT_ROOT)/HAL_S $(PROJECT_ROOT)/Regressionstest  \
 	$(PROJECT_ROOT)/HAWThread $(PROJECT_ROOT)/Mutex
 
-#===== CCFLAGS - add the flags to the C compiler command line. 
-CCFLAGS+=-DSIMULATION
-
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL
 QNX_INTERNAL=$(PROJECT_ROOT)/.qnx_internal.mk
