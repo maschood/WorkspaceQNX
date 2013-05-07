@@ -51,10 +51,12 @@
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_ISR.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S_interrupt.cpp</element>
+<element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S_return.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/Mutex/Mutex.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/RS232/RS232_1.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/RS232/RS232_2.cpp</element>
+<element>D:/WorkspaceQNX/SEP2/Regressionstest/Regressionstest.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/Regressionstest/Regressionstest_Aktorik.cpp</element>
 </SRCS>
 </qdeBuildInfo>

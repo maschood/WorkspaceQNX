@@ -126,10 +126,9 @@ int HAL_ISR::getHeight() {
 	int i;
 
 	out8(AIO_PORT_A, AIO_GET_VAL);
-
+	//(1 << 7)
 	for (i = 0; i < 50; i++) {
-		//Bit 7 goes HIGH when an A/D conversion completes
-		if ((in8(AIO_BASE) & (1 << 7))) { // == (1<<7)
+		if ((in8(AIO_BASE) & BIT_7)) { // == (1<<7)
 			hoehe = in16(AIO_PORT_A);
 			break;
 		}
@@ -139,6 +138,7 @@ int HAL_ISR::getHeight() {
 
 void HAL_ISR::execute(void* arg) {
 	struct _pulse pulse;
+	int hoh = 0;
 	while (!isStopped()) {
 		if (-1 == MsgReceivePulse(chid, &pulse, sizeof(pulse), NULL)) {
 			if (isStopped()) {
@@ -156,7 +156,9 @@ void HAL_ISR::execute(void* arg) {
 //			hal_s->start(NULL);
 			break;
 			case PORT_B_1:
+			hoh = getHeight();
 			cout << "Werkstück in Höhenmessung!"<< endl;
+			cout << "Höhe: " << hoh  <<endl;
 			break;
 			case PORT_B_2:
 			cout << "Höhenmessung!"<< endl;

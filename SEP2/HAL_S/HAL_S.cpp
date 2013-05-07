@@ -68,6 +68,8 @@ void HAL_S::start_process(){
 			check_bar(val_b_current, val_b_last);
 			check_slide_full(val_b_current, val_b_last);
 			check_exit(val_b_current, val_b_last);
+			get_height(val_b_current);
+			get_metal(val_b_current);
 		}
 
 		if((val_c_current & 0xf0)-(val_c_last & 0xf0) != 0){

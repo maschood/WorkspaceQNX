@@ -24,6 +24,9 @@ class HAL_S : public thread::HAWThread{
 
 public:
 
+	int get_height(uint8_t val_b_current);
+	int get_metal(uint8_t val_b_current);
+
 	static HAL_S* get_instance(); // returns an pointer to the instance of the HAL_S.
 
 	void start_process(); // Starts a process that permanently checks all sensors.
@@ -64,6 +67,8 @@ private:
 	void check_reset_button(uint8_t val_c_current, uint8_t val_c_last); // checks if the reset button is pressed or not.
 
 	void check_quick_stop(uint8_t val_c_current, uint8_t val_c_last); // checks if the quick stop is pressed.
+
+
 
 	int last_state ;
 	int current_state;
