@@ -20,11 +20,14 @@
 
 using namespace thread;
 
-class HAL_S : public thread::HAWThread{
+class HAL_S: public thread::HAWThread {
 
 public:
 
-	int get_height(uint8_t val_b_current);
+	int get_height_digital(uint8_t val_b_current);
+
+	int get_height_analog();
+
 	int get_metal(uint8_t val_b_current);
 
 	static HAL_S* get_instance(); // returns an pointer to the instance of the HAL_S.
@@ -33,16 +36,22 @@ public:
 
 	~HAL_S();
 
-
 private:
+	int last_state;
+	int current_state;
+
+	uint8_t val_b_last;
+	uint8_t val_c_last;
+	uint8_t val_b_current;
+	uint8_t val_c_current;
+
+	HAL_S(); // Cunstuctor of the HAL_S.
+
+	static HAL_S* instance; // singelton of the HAL_S.
 
 	virtual void execute(void* arg);
 
 	virtual void shutdown();
-
-	static HAL_S* instance; // singelton of the HAL_S.
-
-	HAL_S(); // Cunstuctor of the HAL_S.
 
 	void check_entrance(uint8_t val_b_current, uint8_t val_b_last); // checks if a puk is at the entrence.
 
@@ -67,15 +76,4 @@ private:
 	void check_reset_button(uint8_t val_c_current, uint8_t val_c_last); // checks if the reset button is pressed or not.
 
 	void check_quick_stop(uint8_t val_c_current, uint8_t val_c_last); // checks if the quick stop is pressed.
-
-
-
-	int last_state ;
-	int current_state;
-
-	uint8_t val_b_last;
-	uint8_t val_c_last;
-	uint8_t val_b_current;
-	uint8_t val_c_current;
-
 };

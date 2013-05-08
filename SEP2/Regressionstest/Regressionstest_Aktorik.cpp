@@ -115,7 +115,7 @@ bool Regressionstest::test_conveyor_stop() {
 	hal_a->conveyor_stop();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
 	val = val && BIT_1 & BIT_0;
-	if (val == BIT_1 & BIT_0) {
+	if (val == (BIT_1 & BIT_0)) {
 		erg = true;
 	}
 	return erg;
@@ -162,7 +162,7 @@ bool Regressionstest::test_general_switch_off() {
 	hal_a->general_switch_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
 	val = val & BIT_0 & BIT_1 & BIT_2 & BIT_3;
-	if (val == BIT_0 & BIT_1 & BIT_2 & BIT_3) {
+	if (val == (CHECK_GENERAL_SWITCH)) {
 		erg = true;
 	}
 	return erg;
