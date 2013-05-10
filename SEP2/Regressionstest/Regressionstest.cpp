@@ -19,6 +19,9 @@ Regressionstest::~Regressionstest() {
 
 bool test = true;
 
+/*
+*Ein Testlauf bezüglich der Sensorik
+*/
 void Regressionstest::TestLauf() {
 
 	HAL_A* hal_a = HAL_A::get_instance();
