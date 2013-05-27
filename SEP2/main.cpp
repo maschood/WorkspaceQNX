@@ -28,7 +28,8 @@ int main(int argc, char *argv[]) {
 	IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
-	int mode = NORMAL;
+	mode = NORMAL;
+	station = 1; // definition der Laufbandnummer
 	HAL_ISR* isr;
 	string quit;
 	Regressionstest rt;
