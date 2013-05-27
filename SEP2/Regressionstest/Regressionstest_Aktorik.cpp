@@ -1,5 +1,6 @@
 /*
  * Regressionstest.cpp
+ * Testklasse um die Aktorik des Fließbandes zu testen.
  *
  *  Created on: 04.05.2013
  *      Author: NG
@@ -15,6 +16,9 @@ using namespace std;
 HAL_A* hal_a = HAL_A::get_instance();
 bool erg = false;
 
+/*
+* Prüft ob die rore Lampe an ist.
+*/
 bool Regressionstest::test_lamp_red_on() {
 	hal_a->lamp_red_on();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -25,6 +29,10 @@ bool Regressionstest::test_lamp_red_on() {
 	return erg;
 }
 
+
+/*
+* Prüft ob die gelbe Lampe an ist.
+*/
 bool Regressionstest::test_lamp_yellow_on() {
 	hal_a->lamp_yellow_on();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -35,6 +43,11 @@ bool Regressionstest::test_lamp_yellow_on() {
 	return erg;
 
 }
+
+
+/*
+* Prüft ob die grüne Lampe an ist.
+*/
 bool Regressionstest::test_lamp_green_on() {
 	hal_a->lamp_green_on();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -44,6 +57,11 @@ bool Regressionstest::test_lamp_green_on() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die rote Lampe aus ist.
+*/
 bool Regressionstest::test_lamp_red_off() {
 	hal_a->lamp_red_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -53,6 +71,11 @@ bool Regressionstest::test_lamp_red_off() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die gelbe Lampe aus ist.
+*/
 bool Regressionstest::test_lamp_yellow_off() {
 	hal_a->lamp_yellow_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -62,6 +85,12 @@ bool Regressionstest::test_lamp_yellow_off() {
 	}
 	return erg;
 }
+
+
+
+/*
+* Prüft ob die grüne Lampe aus ist.
+*/
 bool Regressionstest::test_lamp_green_off() {
 	hal_a->lamp_green_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -71,6 +100,11 @@ bool Regressionstest::test_lamp_green_off() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die Weiche offen ist.
+*/
 
 bool Regressionstest::test_bar_open() {
 	hal_a->bar_open();
@@ -82,6 +116,11 @@ bool Regressionstest::test_bar_open() {
 	return erg;
 
 }
+
+/*
+* Prüft ob die Weiche zu ist.
+*/
+
 bool Regressionstest::test_bar_close() {
 	hal_a->bar_close();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -93,6 +132,10 @@ bool Regressionstest::test_bar_close() {
 
 }
 
+
+/*
+* Prüft ob das Band nach rechts läuft
+*/
 bool Regressionstest::test_conveyor_move_right() {
 	hal_a->conveyor_move_right();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -102,6 +145,12 @@ bool Regressionstest::test_conveyor_move_right() {
 	}
 	return erg;
 }
+
+
+
+/*
+* Prüft ob das Band nach links läuft
+*/
 bool Regressionstest::test_conveyor_move_left() {
 	hal_a->conveyor_move_left();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -111,6 +160,11 @@ bool Regressionstest::test_conveyor_move_left() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob das Band gestoppt ist
+*/
 bool Regressionstest::test_conveyor_stop() {
 	hal_a->conveyor_stop();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -121,6 +175,11 @@ bool Regressionstest::test_conveyor_stop() {
 	return erg;
 }
 
+
+
+/*
+* Prüft ob die Start-Taste an ist
+*/
 bool Regressionstest::test_led_start_button_on() {
 	hal_a->led_start_button_on();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_C);
@@ -130,6 +189,11 @@ bool Regressionstest::test_led_start_button_on() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die Reset-Taste an ist
+*/
 bool Regressionstest::test_led_reset_button_on() {
 	hal_a->led_reset_button_on();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_C);
@@ -139,6 +203,11 @@ bool Regressionstest::test_led_reset_button_on() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die Start-Taste aus ist
+*/
 bool Regressionstest::test_led_start_button_off() {
 	hal_a->led_start_button_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -148,6 +217,11 @@ bool Regressionstest::test_led_start_button_off() {
 	}
 	return erg;
 }
+
+
+/*
+* Prüft ob die Reset-Taste aus ist
+*/
 bool Regressionstest::test_led_reset_button_off() {
 	hal_a-> led_reset_button_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_C);
@@ -158,6 +232,10 @@ bool Regressionstest::test_led_reset_button_off() {
 	return erg;
 }
 
+
+/*
+* Prüft das Not-Aus
+*/
 bool Regressionstest::test_general_switch_off() {
 	hal_a->general_switch_off();
 	uint8_t val = in8(DIO_BASE + DIO_OFFS_A);
@@ -168,12 +246,15 @@ bool Regressionstest::test_general_switch_off() {
 	return erg;
 }
 
+
+/*
+*Macht einen Testlauf der kompletten Aktorik
+*/
 void Regressionstest::TestAktorik() {
 	erg = test_lamp_red_on();
 	//	printf("lamp red on? %s \n" , erg );
 	cout << "lamp red on? " << (erg ? "True" : "False") << endl;
 	//	cout << "lamp red on? " << erg << endl;
-
 
 	sleep(2);
 

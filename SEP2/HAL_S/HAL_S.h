@@ -27,9 +27,11 @@ public:
 
 	int get_height_digital(uint8_t val_b_current);
 
-	int get_height_analog();
+	int get_height_analog(uint8_t val_b_current);
 
 	int get_metal(uint8_t val_b_current);
+
+	int get_bar_open(uint8_t val_b_current); // schecks if bar is open or not
 
 	static HAL_S* get_instance(); // returns an pointer to the instance of the HAL_S.
 
@@ -58,13 +60,7 @@ private:
 
 	void check_hight_determinism(uint8_t val_b_current, uint8_t val_b_last); // checks if a puk is at the mesure laser.
 
-	int hight_mesure(); // returns the hight of the puk.
-
 	void check_bar(uint8_t val_b_current, uint8_t val_b_last); // checks if a puk is inside the bar.
-
-	int check_metal(); // checks if the puk is contains metal or not.
-
-	int check_bar_open(); // checks if the bar is open or not.
 
 	void check_slide_full(uint8_t val_b_current, uint8_t val_b_last); // checks if the slide is full or not.
 

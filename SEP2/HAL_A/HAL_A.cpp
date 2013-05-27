@@ -55,6 +55,7 @@ int HAL_A::general_switch_off(){
 	val = val & ~BIT_2;
 	val = val & ~BIT_3;
 	out8(DIO_BASE + DIO_OFFS_C, val);
+	resu = 0;
 	halMutex->unlock();
 	return resu;
 }

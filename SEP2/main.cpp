@@ -32,6 +32,7 @@ int main(int argc, char *argv[]) {
 	IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
+<<<<<<< HEAD
 	  cout << "Dispatcher Intro" << endl;
 	    cout << "=========================================================" << endl;
 	    cout << endl;
@@ -95,6 +96,40 @@ int main(int argc, char *argv[]) {
 //	default:
 //		break;
 //	}
+=======
+	mode = NORMAL;
+	station = 1; // definition der Laufbandnummer
+	HAL_ISR* isr;
+	string quit;
+	Regressionstest rt;
+
+
+	switch (mode) {
+	case NORMAL:
+		isr = HAL_ISR::getInstance();
+		isr->start(NULL);
+		cout << "HAL Sensorik" << endl;
+		cout << "========================================================="
+				<< endl;
+		cout << endl;
+
+		do {
+			cin >> quit;
+		} while (quit != "q");
+		cout << "Quitting...";
+		isr->stop();
+		isr->join();
+		cout << " done." << endl;
+		break;
+	case TEST:
+		break;
+	case REGRESSION:
+		rt.TestLauf();
+		break;
+	default:
+		break;
+	}
+>>>>>>> 956a8e35f71e214d5be5ac5d7c3cfde00807c9f2
 
 #ifdef SIMULATION
 	IOaccess_close(); // Schliee die Verbindung zur Simulation
