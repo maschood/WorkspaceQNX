@@ -26,7 +26,8 @@ LIBS+=ioaccess cpt_terminal ph fonts
 EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_A $(PROJECT_ROOT)/HAL_S  \
 	$(PROJECT_ROOT)/HAWThread $(PROJECT_ROOT)/Hal_Test  \
 	$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/RS232  \
-	$(PROJECT_ROOT)/Regressionstest $(PROJECT_ROOT)/HAL_ISR
+	$(PROJECT_ROOT)/Regressionstest $(PROJECT_ROOT)/HAL_ISR  \
+	$(PROJECT_ROOT)/Dispatcher $(PROJECT_ROOT)/FSM
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL

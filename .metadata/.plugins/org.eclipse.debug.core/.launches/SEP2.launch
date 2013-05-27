@@ -10,7 +10,7 @@
 <booleanAttribute key="com.qnx.tools.ide.qde.core.LD_BIND_NOW" value="true"/>
 <intAttribute key="com.qnx.tools.ide.qde.core.NUM_UPLOAD_LIBS" value="0"/>
 <booleanAttribute key="com.qnx.tools.ide.qde.core.STRIP_BEFORE_UPLOAD" value="true"/>
-<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.100.100"/>
+<stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_ATTR" value="192.168.56.101"/>
 <stringAttribute key="com.qnx.tools.ide.qde.core.TARGET_DONTUSE_PTY" value="pickaptyforme"/>
 <booleanAttribute key="com.qnx.tools.ide.qde.core.TARGET_FILTER_ATTR" value="true"/>
 <intAttribute key="com.qnx.tools.ide.qde.core.TARGET_PRIO" value="10"/>

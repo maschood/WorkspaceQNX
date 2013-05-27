@@ -70,6 +70,8 @@ void HAL_S::start_process() {
 			check_exit(val_b_current, val_b_last);
 			get_height_digital(val_b_current);
 			get_metal(val_b_current);
+
+
 		}
 
 		if ((val_c_current & 0xf0) - (val_c_last & 0xf0) != 0) {

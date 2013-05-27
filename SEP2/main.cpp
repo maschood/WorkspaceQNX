@@ -19,6 +19,10 @@
 #include "RS232/RS232_1.h"
 #include "HAL_ISR/HAL_ISR.h"
 #include "Regressionstest/Regressionstest.h"
+#include "Dispatcher/DispatcherIntro.h"
+#include "Dispatcher/HALCallInterface.h"
+#include "FSM/MyController.h"
+#include "FSM/MyState.h"
 
 int main(int argc, char *argv[]) {
 #ifdef SIMULATION
@@ -28,37 +32,69 @@ int main(int argc, char *argv[]) {
 	IOaccess_open(); // Baue die Verbindung zur Simulation auf
 #endif
 
-	int mode = NORMAL;
-	HAL_ISR* isr;
-	string quit;
-	Regressionstest rt;
+	  cout << "Dispatcher Intro" << endl;
+	    cout << "=========================================================" << endl;
+	    cout << endl;
+
+	    HAL_ISR* sens = HAL_ISR::getInstance();
+	    sens->start(NULL);
+
+	    DispatcherIntro dispatcher;
+	    dispatcher.start(NULL);
+
+	    MyController controller;
+	    dispatcher.registerController(&controller, werks_einlauf, 0);
+	    dispatcher.registerController(&controller, werks_einlauf, 1);
 
 
-	switch (mode) {
-	case NORMAL:
-		isr = HAL_ISR::getInstance();
-		isr->start(NULL);
-		cout << "HAL Sensorik" << endl;
-		cout << "========================================================="
-				<< endl;
-		cout << endl;
+	    string quit;
+	    do {
+	        cin >> quit;
+	    } while (quit != "q");
 
-		do {
-			cin >> quit;
-		} while (quit != "q");
-		cout << "Quitting...";
-		isr->stop();
-		isr->join();
-		cout << " done." << endl;
-		break;
-	case TEST:
-		break;
-	case REGRESSION:
-		rt.TestLauf();
-		break;
-	default:
-		break;
-	}
+	    cout << "Quitting..." << endl;
+
+	    sens->stop();
+	    dispatcher.stop();
+
+	    sens->join();
+	    dispatcher.join();
+
+	    cout << "quit." << endl;
+
+
+
+//	int mode = NORMAL;
+//	HAL_ISR* isr;
+//	string quit;
+//	Regressionstest rt;
+//
+//
+//	switch (mode) {
+//	case NORMAL:
+//		isr = HAL_ISR::getInstance();
+//		isr->start(NULL);
+//		cout << "HAL Sensorik" << endl;
+//		cout << "========================================================="
+//				<< endl;
+//		cout << endl;
+//
+//		do {
+//			cin >> quit;
+//		} while (quit != "q");
+//		cout << "Quitting...";
+//		isr->stop();
+//		isr->join();
+//		cout << " done." << endl;
+//		break;
+//	case TEST:
+//		break;
+//	case REGRESSION:
+//		rt.TestLauf();
+//		break;
+//	default:
+//		break;
+//	}
 
 #ifdef SIMULATION
 	IOaccess_close(); // Schliee die Verbindung zur Simulation

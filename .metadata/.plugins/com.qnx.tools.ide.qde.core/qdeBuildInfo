@@ -13,6 +13,9 @@
 <element>D:/WorkspaceQNX/SEP2/Mutex</element>
 <element>D:/WorkspaceQNX/SEP2/RS232</element>
 <element>D:/WorkspaceQNX/SEP2/Regressionstest</element>
+<element>D:/WorkspaceQNX/SEP2/HAL_ISR</element>
+<element>D:/WorkspaceQNX/SEP2/Dispatcher</element>
+<element>D:/WorkspaceQNX/SEP2/FSM</element>
 </srcDirs>
 <libDirs>
 <element>D:/WorkspaceQNX/SEP2/x86/o-g</element>
@@ -34,6 +37,9 @@
 <element>D:/WorkspaceQNX/SEP2/Mutex</element>
 <element>D:/WorkspaceQNX/SEP2/RS232</element>
 <element>D:/WorkspaceQNX/SEP2/Regressionstest</element>
+<element>D:/WorkspaceQNX/SEP2/HAL_ISR</element>
+<element>D:/WorkspaceQNX/SEP2/Dispatcher</element>
+<element>D:/WorkspaceQNX/SEP2/FSM</element>
 </incDirs>
 <libs>
 <element>ioaccess</element>
@@ -48,7 +54,6 @@
 <element>D:/WorkspaceQNX/SEP2/HAL_A/HAL_A_conveyor.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_A/HAL_A_led.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_A/HAL_A_light.cpp</element>
-<element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_ISR.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S_interrupt.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/HAL_S/HAL_S_return.cpp</element>
@@ -58,6 +63,9 @@
 <element>D:/WorkspaceQNX/SEP2/RS232/RS232_2.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/Regressionstest/Regressionstest.cpp</element>
 <element>D:/WorkspaceQNX/SEP2/Regressionstest/Regressionstest_Aktorik.cpp</element>
+<element>D:/WorkspaceQNX/SEP2/HAL_ISR/HAL_ISR.cpp</element>
+<element>D:/WorkspaceQNX/SEP2/Dispatcher/DispatcherIntro.cpp</element>
+<element>D:/WorkspaceQNX/SEP2/FSM/MyController.cpp</element>
 </SRCS>
 </qdeBuildInfo>
 </QdeProjectsBuildInfo>

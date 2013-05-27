@@ -11,6 +11,7 @@
 #include <stdint.h>
 #include <iostream>
 #include <unistd.h>
+#include <string.h>
 
 #include "Addresses.h"
 #include "HWaccess.h"

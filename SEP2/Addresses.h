@@ -51,5 +51,20 @@
 #define PORT_B_6 0x8B
 #define PORT_B_7 0x4B
 
+/*
+ * sensorspecific
+ */
+#define WERKS_EINLAUF           0x01
+#define WERKS_IN_HOEHENMESSUNG  0x02
+#define HOEHE_BEREICH_1         0x04
+#define WERKS_IN_WEICHE         0x08
+#define RUTSCHE_VOLL            0x40
+#define WERKS_AUSLAUF           0x80
+#define TASTE_START             0x10
+#define TASTE_STOP              0x20
+#define TASTE_RESET             0x40
+#define TASTE_E_STOP            0x80
+#define BEGINN_HOEHENMESSUNG    0x10
+
 
 #endif /* ADDRESSES_H_ */

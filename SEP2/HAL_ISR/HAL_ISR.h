@@ -23,12 +23,16 @@ public:
 	virtual ~HAL_ISR();
 	static HAL_ISR* getInstance();
 	void stop();
+	int getSignalChid(void);
 private:
 	HAL_ISR();
 	void initInterrupt();
 	int chid;
 	struct sigevent event;
 	int interruptId;
+
+	int signalChid;
+	int signalCoid;
 
 	uint8_t portBstatus;
 	uint8_t portCstatus;

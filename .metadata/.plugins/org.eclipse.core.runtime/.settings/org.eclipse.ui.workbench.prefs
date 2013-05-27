@@ -1,3 +1,4 @@
-#Mon May 06 22:51:37 CEST 2013
+#Mon May 27 13:23:17 CEST 2013
+RUN_IN_BACKGROUND=true
 eclipse.preferences.version=1
 ENABLED_DECORATORS=com.qnx.tools.ide.builder.ui.SystemBuilderResourceDecorator\:true,org.eclipse.cdt.ui.coreFile\:true,com.qnx.tools.ide.target.qconn.ui.decorator.system\:true,org.eclipse.cdt.ui.indexedFiles\:false,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.team.svn.ui.decorator.wrapper.ProjectDecoratorWrapper\:true,org.eclipse.team.svn.ui.decorator.wrapper.ResourceDecoratorWrapper\:true,org.eclipse.team.svn.ui.decorator.wrapper.WorkingSetDecoratorWrapper\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,
