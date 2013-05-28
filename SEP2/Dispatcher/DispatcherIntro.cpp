@@ -49,8 +49,8 @@ void DispatcherIntro::execute(void *arg)
 
         // code and value are -1 if not used
         if (pulse.code >= 0 && pulse.value.sival_int >= 0) {
-        	cout<<"Message erhalten"<<endl;
             signal(2*pulse.code + pulse.value.sival_int);
+            cout << "Code: " << (2*pulse.code + pulse.value.sival_int) << endl;
         }
     }
 }

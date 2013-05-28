@@ -38,7 +38,6 @@ private:
 	uint8_t portCstatus;
 	static HAL_ISR* instance;
 
-	HAL_A* hal ;
 	HAL_S* hal_s;
 
 protected:

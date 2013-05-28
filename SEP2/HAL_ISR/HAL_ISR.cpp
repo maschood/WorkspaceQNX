@@ -155,23 +155,45 @@ void HAL_ISR::execute(void* arg) {
 			exit(EXIT_FAILURE);
 		}
 
-		if (pulse.value.sival_int == PORT_B_1){
-				cout << "Höhe ist: " << hal_s->get_height_analog() << endl;
-		}
 
 		int sendCode = -1;
 		int sendVal = -1;
 
-		// only port b and WERKS_EINLAUF
+		// only port b
 		if (pulse.code & PB_STATUS) {
 			if ((pulse.value.sival_int & WERKS_EINLAUF) != (portBstatus
 					& WERKS_EINLAUF)) {
-				cout <<"Bin drinnen" << endl;
 				sendCode = werks_einlauf;
 				sendVal = (pulse.value.sival_int & WERKS_EINLAUF);
 			}
+
+			if((pulse.value.sival_int & WERKS_IN_HOEHENMESSUNG) != (portBstatus
+					& WERKS_IN_HOEHENMESSUNG)){
+
+				sendCode = werks_in_hoehenmessung;
+				sendVal = (pulse.value.sival_int & WERKS_IN_HOEHENMESSUNG) ? 1 : 0;
+			}
+
+			if((pulse.value.sival_int & WERKS_IN_WEICHE) != (portBstatus
+					& WERKS_IN_WEICHE)){
+
+				sendCode = werks_in_weiche;
+				sendVal = (pulse.value.sival_int & WERKS_IN_WEICHE) ? 1 : 0;
+			}
+
+			if((pulse.value.sival_int & WERKS_AUSLAUF) != (portBstatus
+					& WERKS_AUSLAUF)){
+
+				sendCode = werks_auslauf;
+				sendVal = (pulse.value.sival_int & WERKS_AUSLAUF) ? 1 : 0;
+			}
+
 			portBstatus = pulse.value.sival_int;
 		}
+
+		cout << "sendCode: " << sendCode <<endl;
+		cout << "sendVal: " << sendVal <<endl;
+
 
 		MsgSendPulse(signalCoid, SIGEV_PULSE_PRIO_INHERIT, sendCode, sendVal);
 

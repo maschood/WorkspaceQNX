@@ -27,11 +27,10 @@ EXTRA_SRCVPATH+=$(PROJECT_ROOT)/HAL_A $(PROJECT_ROOT)/HAL_S  \
 	$(PROJECT_ROOT)/HAWThread $(PROJECT_ROOT)/Hal_Test  \
 	$(PROJECT_ROOT)/Mutex $(PROJECT_ROOT)/RS232  \
 	$(PROJECT_ROOT)/Regressionstest $(PROJECT_ROOT)/HAL_ISR  \
-<<<<<<< HEAD
 	$(PROJECT_ROOT)/Dispatcher $(PROJECT_ROOT)/FSM
-=======
-	$(PROJECT_ROOT)/Puk
->>>>>>> 956a8e35f71e214d5be5ac5d7c3cfde00807c9f2
+
+#===== CCFLAGS - add the flags to the C compiler command line. 
+CCFLAGS+=-DDEBUG_MESSAGES
 
 include $(MKFILES_ROOT)/qmacros.mk
 ifndef QNX_INTERNAL

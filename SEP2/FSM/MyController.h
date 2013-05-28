@@ -8,10 +8,14 @@
 #include "Dispatcher/HALCallInterface.h"
 #include "FSM/MyState.h"
 
+
+#define HOEHENWERT 2750
+
 class MyController: public HALCallInterface {
 private:
     MyState* state;
 public:
+    static int hoehe;
     MyController(void);
     virtual ~MyController(void);
 
@@ -50,4 +54,88 @@ public:
     void WERKS_EINLAUF_1(void);
 };
 
+
+class MyState_3 : public MyState {
+public:
+	int hoehe;
+    MyState_3(void);
+
+    // transitions
+    void WERKS_IN_HOEHENMESSUNG_0(void);
+};
+
+class MyState_4 : public MyState {
+public:
+	int hoehe;
+
+	MyState_4(void);
+
+    // transitions
+    void WERKS_IN_HOEHENMESSUNG_1(void);
+
+};
+
+class MyState_5 : public MyState {
+public:
+	int hoehe;
+    MyState_5(void);
+
+    // transitions
+    void WERKS_IN_WEICHE_0(void);
+};
+
+class MyState_6 : public MyState {
+public:
+	int hoehe;
+
+	MyState_6(void);
+
+    // transitions
+    void WERKS_IN_WEICHE_1(void);
+
+};
+
+class MyState_7 : public MyState {
+public:
+	int hoehe;
+    MyState_7(void);
+
+    // transitions
+    void RUTSCHE_VOLL_0(void);
+};
+
+class MyState_8 : public MyState {
+public:
+	int hoehe;
+	MyState_8(void);
+
+    // transitions
+    void RUTSCHE_VOLL_1(void);
+
+};
+
+class MyState_9 : public MyState {
+public:
+	int hoehe;
+	MyState_9(void);
+
+    // transitions
+    void WERKS_AUSLAUF_0(void);
+
+};
+
+class MyState_10 : public MyState {
+public:
+	int hoehe;
+	MyState_10(void);
+
+    // transitions
+    void WERKS_AUSLAUF_1(void);
+
+};
+
+
 #endif /* MYCONTROLLER_H_ */
+
+
+

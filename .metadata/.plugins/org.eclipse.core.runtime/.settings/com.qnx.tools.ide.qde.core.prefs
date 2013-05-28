@@ -1,5 +1,6 @@
-#Mon May 06 22:57:11 CEST 2013
+#Mon May 27 16:20:27 CEST 2013
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mudflapth=false
+depchk.clean=true
 prompt_for_rebuild=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.active_configurations=_x86_g ;_x86_r
 open_project_properties_height=710

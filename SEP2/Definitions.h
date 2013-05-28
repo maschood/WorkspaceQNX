@@ -17,6 +17,3 @@
 #define NORMAL 1
 #define TEST 2
 #define REGRESSION 3
-
-extern int mode;
-extern int station;
