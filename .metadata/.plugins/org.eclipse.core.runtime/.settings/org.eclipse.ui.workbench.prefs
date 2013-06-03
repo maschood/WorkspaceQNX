@@ -1,4 +1,8 @@
-#Mon May 27 13:23:17 CEST 2013
+#Thu May 30 15:10:21 CEST 2013
+ColorsAndFontsPreferencePage.expandedCategories=Torg.eclipse.cdt.ui.presentation
 RUN_IN_BACKGROUND=true
 eclipse.preferences.version=1
+org.eclipse.cdt.ui.buildconsole.ConsoleFont=1|Courier New|9.75|0|WINDOWS|1|-13|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
+terminal.views.view.font.definition=1|Courier New|12.0|0|WINDOWS|1|-16|0|0|0|400|0|0|0|0|3|2|1|49|Courier New;
 ENABLED_DECORATORS=com.qnx.tools.ide.builder.ui.SystemBuilderResourceDecorator\:true,org.eclipse.cdt.ui.coreFile\:true,com.qnx.tools.ide.target.qconn.ui.decorator.system\:true,org.eclipse.cdt.ui.indexedFiles\:false,org.eclipse.team.cvs.ui.decorator\:true,org.eclipse.team.svn.ui.decorator.wrapper.ProjectDecoratorWrapper\:true,org.eclipse.team.svn.ui.decorator.wrapper.ResourceDecoratorWrapper\:true,org.eclipse.team.svn.ui.decorator.wrapper.WorkingSetDecoratorWrapper\:true,org.eclipse.ui.LinkedResourceDecorator\:true,org.eclipse.ui.ContentTypeDecorator\:true,
+ColorsAndFontsPreferencePage.selectedElement=Fterminal.views.view.font.definition

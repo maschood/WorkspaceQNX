@@ -7,18 +7,104 @@
 
 #include "RS232_1.h"
 
-RS232_1::RS232_1() {
+RS232_1* RS232_1::instance = NULL;
+Mutex* RS232_1::RS232InstanceMutex = new Mutex();
 
-	if ((fd = open(DEV_SER1, O_RDWR)) < 0) {
-		printf("opening devfile1 failed\n");
+RS232_1::RS232_1()
+{
+	recvbuf = 0;
+	struct termios ts;
+
+	if((fd = open(DEV_SER1, O_RDWR)) < 0)
+	{
+		printf("Debug RS232_1: opening devfile1 failed\n");
 		exit(EXIT_FAILURE);
 	} else {
-		printf("opening devfile1 SUCCESSED\n");
+#ifdef DEBUG_RS232
+		printf("Debug RS232_1: opening devfile1 SUCCESSED\n");
+#endif
+	}
+
+	// flushes data received but not read and
+	// data written but not transmitted
+	tcflush(fd, TCIOFLUSH);
+
+	sleep(1);
+
+	// Einstellung der Schnittstelle holen
+	tcgetattr(fd, &ts);
+
+	// Input/Output Datenrate setzen
+	cfsetispeed(&ts, B19200);
+	cfsetospeed(&ts, B19200);
+
+	// Schnittstelle konfigurieren
+	ts.c_cflag &= ~CSIZE;	// clear number of data bits
+	ts.c_cflag &= ~CSTOPB;	// 2 stop bits
+	ts.c_cflag &= ~PARENB;	// no parity bit
+	ts.c_cflag |= CS8;		// 8 Data bits
+	ts.c_cflag |= CREAD;	// enable receiving characters
+	ts.c_cflag |= CLOCAL;	// local connection, no modem contol
+
+	// Einstellungen sofort uebernehmen
+	tcsetattr(fd, TCSANOW, &ts);
+}
+
+RS232_1::~RS232_1()
+{
+	delete instance;
+	instance = NULL;
+	RS232InstanceMutex->~Mutex();
+	if(close(fd) < 0){
+		printf("error closing (RS232_1) fd\n");
 	}
 }
 
-RS232_1::~RS232_1() {
-	// TODO Auto-generated destructor stub
+RS232_1* RS232_1::getInstance()
+{
+	if (!instance) {
+		RS232InstanceMutex->lock();
+		if (!instance) {
+			instance = new RS232_1;
+#ifdef DEBUG_RS232
+			printf("Debug RS232_1: New RS232_1 instance created\n");
+#endif
+		}
+		RS232InstanceMutex->unlock();
+	}
+	return instance;
+}
+
+void RS232_1::execute(void* arg)
+{
+	int lenRead = 0;
+	while (!isStopped()) {
+		if ((lenRead = readMsg(&recvbuf)) < 0) {
+			printf("recieving from devfile1 failed\n");
+		}
+
+		switch (recvbuf) {
+		case MSG_TEST:
+			printf("Testmessage recved on devfile1: %c\n", recvbuf);
+			break;
+		case MSG_TIMEOUT:
+#ifdef DEBUG_RS232
+			printf("Debug RS232_1: Timeout recved\n");
+#endif
+			break;
+		default:
+#ifdef DEBUG_RS232
+			printf("Debug RS232_1: Unknown msg recved: %c\n", recvbuf);
+#endif
+			break;
+		}
+
+		recvbuf = 0;
+	}
+}
+
+void RS232_1::shutdown()
+{
 }
 
 int RS232_1::sendMsg(char msg) {
@@ -28,20 +114,26 @@ int RS232_1::sendMsg(char msg) {
 		printf("writing on devfile1 failed\n");
 		return -1;
 	}
+
 	return rc;
 }
 
 int RS232_1::readMsg(char* rbuf) {
 	int rc = readcond(fd, rbuf, sizeof(rbuf), 1, 0, 10);
 
-	if (rc <= 0) {
-		if (errno == EAGAIN || rc == 0) {
-			printf("Debug RS232_1: Timeout \n");
+	if(rc <= 0) {
+		if(errno == EAGAIN || rc == 0){
+#ifdef DEBUG_RS232
+			printf("Debug RS232_1: Timeout or EAGAIN\n");
+#endif
 			return 0;
 		} else {
 			printf("recieving from devfile1 failed\n");
 			return -1;
 		}
 	}
+
 	return rc;
 }
+
+

@@ -1,10 +1,11 @@
-#Mon May 27 16:20:27 CEST 2013
+#Thu May 30 14:38:49 CEST 2013
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mudflapth=false
-depchk.clean=true
 prompt_for_rebuild=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.active_configurations=_x86_g ;_x86_r
 open_project_properties_height=710
+com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.def_config=_x86_g
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.mod_lib_refs=true
+remove_launch_configs=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.use_shared_storage=false
 com.qnx.tools.ide.qde.core\:com.qnx.tools.ide.qde.core.mkinfo.profiling=false
 eclipse.preferences.version=1

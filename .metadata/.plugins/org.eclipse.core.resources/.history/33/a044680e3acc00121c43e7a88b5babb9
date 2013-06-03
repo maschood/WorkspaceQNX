@@ -1,0 +1,28 @@
+/*
+ * Controller.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "Controller.h"
+
+Controller::Controller(void) :
+state(new MyState_1){
+
+}
+
+Controller::~Controller(void) {
+	delete state;
+
+}
+
+MyState_1::MyState_1(void) {
+}
+
+void MyState_1::WERKS_EINLAUF_0(void) {
+#ifdef DEBUG_MESSAGES
+	cout << "MyState_1: WERKS_EINLAUF_0 / lampeRotAn --> MyState_2" << endl;
+#endif
+	HAL_A::get_instance()->conveyor_move_right();
+}

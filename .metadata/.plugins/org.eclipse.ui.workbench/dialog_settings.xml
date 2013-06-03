@@ -7,8 +7,8 @@
 		</list>
 	</section>
 	<section name="WorkbenchPreferenceDialogSettings">
-		<item key="DIALOG_X_ORIGIN" value="651"/>
-		<item key="DIALOG_Y_ORIGIN" value="179"/>
+		<item key="DIALOG_X_ORIGIN" value="580"/>
+		<item key="DIALOG_Y_ORIGIN" value="126"/>
 	</section>
 	<section name="NewWizardAction">
 		<item key="NewWizardSelectionPage.STORE_SELECTED_ID" value="com.qnx.tools.ide.target.ui.wizard.NewTarget"/>

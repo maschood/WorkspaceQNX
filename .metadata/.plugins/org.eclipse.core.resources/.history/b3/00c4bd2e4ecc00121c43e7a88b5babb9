@@ -1,0 +1,17 @@
+/*
+ * B1S02_Seq1.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "B1S02_Seq1.h"
+
+B1S02_Seq1::B1S02_Seq1() {
+	// TODO Auto-generated constructor stub
+
+}
+
+B1S02_Seq1::~B1S02_Seq1() {
+	// TODO Auto-generated destructor stub
+}

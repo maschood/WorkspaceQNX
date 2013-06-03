@@ -1,0 +1,3 @@
+BasicState.o: D:/WorkspaceQNX/SEP2/FSM/BasicState.cpp \
+ D:/WorkspaceQNX/SEP2/FSM/BasicState.h \
+ D:/WorkspaceQNX/SEP2/DISPATCHER/HALCallInterface.h

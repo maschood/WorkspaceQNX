@@ -1,0 +1,3 @@
+Comport2.o: D:/WorkspaceQNX/SEP2/COM/Comport2.cpp \
+ D:/WorkspaceQNX/SEP2/COM/Comport2.h \
+ D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.h

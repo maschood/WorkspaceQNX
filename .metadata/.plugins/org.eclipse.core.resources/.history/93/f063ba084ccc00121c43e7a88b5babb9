@@ -1,0 +1,17 @@
+/*
+ * B1S02_Seq1.h
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#ifndef B1S02_SEQ1_H_
+#define B1S02_SEQ1_H_
+
+class B1S02_Seq1 {
+public:
+	B1S02_Seq1();
+	virtual ~B1S02_Seq1();
+};
+
+#endif /* B1S02_SEQ1_H_ */

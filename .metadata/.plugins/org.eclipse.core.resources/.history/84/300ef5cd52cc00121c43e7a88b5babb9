@@ -1,0 +1,20 @@
+/*
+ * BasicState.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "BasicState.h"
+
+
+
+BasicState::BasicState(Puk* puk) {
+		hal_a = HAL_A::get_instance();
+		this->puk = puk;
+
+}
+
+BasicState::~BasicState() {
+	// TODO Auto-generated destructor stub
+}

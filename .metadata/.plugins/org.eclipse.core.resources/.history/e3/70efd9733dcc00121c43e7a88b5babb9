@@ -1,0 +1,30 @@
+/*
+ * Controller.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "Controller.h"
+
+Controller::Controller(void) :
+state(new B1S01_Entry){
+
+}
+
+Controller::~Controller(void) {
+	delete state;
+
+}
+
+B1S01_Entry::B1S01_Entry(void){
+
+}
+
+void B1S01_Entry::START_BTN_PRESSED(void){
+#ifdef DEBUG_MESSAGES
+	cout << "MyState_1: START_BTN_PRESSED / lampeGrünAn" << endl;
+#endif
+	HAL_A* hal_a = HAL_A::get_instance();
+	hal_a->lamp_green_on();
+}

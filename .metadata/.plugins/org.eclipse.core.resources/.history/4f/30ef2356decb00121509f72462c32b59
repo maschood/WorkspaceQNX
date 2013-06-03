@@ -1,0 +1,7 @@
+HAL_ISR.o: D:/WorkspaceQNX/SEP2/HAL_ISR/HAL_ISR.cpp \
+ D:/WorkspaceQNX/SEP2/HAL_ISR/HAL_ISR.h D:/WorkspaceQNX/SEP2/Addresses.h \
+ D:/WorkspaceQNX/SEP2/HWaccess.h D:/WorkspaceQNX/SEP2/HAL_A/HAL_A.h \
+ D:/WorkspaceQNX/SEP2/Mutex/Mutex.h \
+ D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.h \
+ D:/WorkspaceQNX/SEP2/HAL_S/HAL_S.h D:/WorkspaceQNX/SEP2/Definitions.h \
+ D:/WorkspaceQNX/SEP2/SignalType.h

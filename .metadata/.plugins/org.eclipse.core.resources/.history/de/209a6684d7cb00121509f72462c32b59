@@ -1,0 +1,3 @@
+Seriell.o: D:/WorkspaceQNX/SEP2/RS232/Seriell.cpp \
+ D:/WorkspaceQNX/SEP2/RS232/Seriell.h \
+ D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.h

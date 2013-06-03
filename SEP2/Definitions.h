@@ -17,3 +17,5 @@
 #define NORMAL 1
 #define TEST 2
 #define REGRESSION 3
+#define DISPATCHER 4
+#define RS232 5

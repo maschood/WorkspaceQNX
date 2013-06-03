@@ -1,0 +1,65 @@
+/*
+ * Controller.h
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#ifndef CONTROLLER_H_
+#define CONTROLLER_H_
+
+
+#include "DISPATCHER/HALCallInterface.h"
+#include "BasicState.h"
+
+class Controller : public HALCallInterface  {
+private:
+    BasicState* state;
+public:
+	Controller();
+	virtual ~Controller();
+
+	virtual void PART_IN_0(void) {state->PART_IN_0();}
+	virtual void PART_IN_1(void) {state->PART_IN_1();}
+
+	virtual void PART_HEIGHT_0(void) {state->PART_HEIGHT_0();}
+	virtual void PART_HEIGHT_1(void) {state->PART_HEIGHT_1();}
+
+	virtual void PART_IN_GATE_0(void) {state->PART_IN_GATE_0();}
+	virtual void PART_IN_GATE_1(void) {state->PART_IN_GATE_1();}
+
+	virtual void PART_METALL(void) {state->PART_METALL();}
+
+	virtual void GATE_STATUS_0(void) {state->GATE_STATUS_0();}
+	virtual void GATE_STATUS_1(void) {state->GATE_STATUS_1();}
+
+	virtual void SLIDE_FULL_0(void) {state->SLIDE_FULL_0();}
+	virtual void SLIDE_FULL_1(void) {state->SLIDE_FULL_1();}
+
+	virtual void PART_OUT_0(void) {state->PART_OUT_0();}
+	virtual void PART_OUT_1(void) {state->PART_OUT_1();}
+
+	//Port C
+	virtual void START_BTN_PRESSED(void) {state->START_BTN_PRESSED();}
+	virtual void START_BTN_RELEASED(void) {state->START_BTN_RELEASED();}
+
+	virtual void STOP_BTN_PRESSED(void) {state->STOP_BTN_PRESSED();}
+	virtual void STOP_BTN_RELEASED(void) {state->STOP_BTN_RELEASED();}
+
+	virtual void RESET_BTN_PRESSED(void) {state->RESET_BTN_PRESSED();}
+	virtual void RESET_BTN_RELEASED(void) {state->RESET_BTN_RELEASED();}
+
+	virtual void ESTOP_BTN_PRESSED(void) {state->ESTOP_BTN_PRESSED();}
+	virtual void ESTOP_BTN_RELEASED(void) {state->ESTOP_BTN_RELEASED();}
+};
+
+class B1S01_Entry : public BasicState {
+public:
+    B1S01_Entry(void);
+
+    // transitions
+    void START_BTN_PRESSED(void);
+};
+
+
+#endif /* CONTROLLER_H_ */

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SEP2/FSM/B1S02_Seq1.cpp&apos; to &apos;B1S01_Entry.cpp&apos;" description="Rename resource &apos;B1S02_Seq1.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="FSM/B1S02_Seq1.cpp" name="B1S01_Entry.cpp" stamp="1369726541286" updateReferences="true"/>
+</session>

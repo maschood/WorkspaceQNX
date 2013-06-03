@@ -64,10 +64,20 @@ HAL_ISR::HAL_ISR() {
 }
 
 HAL_ISR::~HAL_ISR() {
-
+	delete instance;
+	instance = NULL;
+	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
+	out8(DIO_BASE + DIO_OFFS_A, 0x00);
+	out8(DIO_BASE + DIO_OFFS_C, 0x00);
 }
 
 HAL_ISR* HAL_ISR::getInstance() {
+#ifdef HW
+	if (-1 == ThreadCtl(_NTO_TCTL_IO, 0)) {
+		perror("ThreadCtl access failed\n");
+		return NULL;
+	}
+#endif
 
 	if (instance == NULL) {
 		instance = new HAL_ISR();
@@ -155,7 +165,6 @@ void HAL_ISR::execute(void* arg) {
 			exit(EXIT_FAILURE);
 		}
 
-
 		int sendCode = -1;
 		int sendVal = -1;
 
@@ -163,56 +172,82 @@ void HAL_ISR::execute(void* arg) {
 		if (pulse.code & PB_STATUS) {
 			if ((pulse.value.sival_int & WERKS_EINLAUF) != (portBstatus
 					& WERKS_EINLAUF)) {
-				sendCode = werks_einlauf;
+				sendCode = part_in;
 				sendVal = (pulse.value.sival_int & WERKS_EINLAUF);
 			}
 
 			if((pulse.value.sival_int & WERKS_IN_HOEHENMESSUNG) != (portBstatus
 					& WERKS_IN_HOEHENMESSUNG)){
 
-				sendCode = werks_in_hoehenmessung;
+				sendCode = part_height;
 				sendVal = (pulse.value.sival_int & WERKS_IN_HOEHENMESSUNG) ? 1 : 0;
 			}
 
 			if((pulse.value.sival_int & WERKS_IN_WEICHE) != (portBstatus
 					& WERKS_IN_WEICHE)){
 
-				sendCode = werks_in_weiche;
+				sendCode = part_in_gate;
 				sendVal = (pulse.value.sival_int & WERKS_IN_WEICHE) ? 1 : 0;
+			}
+
+			if((pulse.value.sival_int & RUTSCHE_VOLL) != (portBstatus
+					& RUTSCHE_VOLL)){
+
+				sendCode = slide_full;
+				sendVal = (pulse.value.sival_int & RUTSCHE_VOLL) ? 1 : 0;
 			}
 
 			if((pulse.value.sival_int & WERKS_AUSLAUF) != (portBstatus
 					& WERKS_AUSLAUF)){
 
-				sendCode = werks_auslauf;
+				sendCode = part_out;
 				sendVal = (pulse.value.sival_int & WERKS_AUSLAUF) ? 1 : 0;
 			}
 
 			portBstatus = pulse.value.sival_int;
 		}
 
+
+		// only port c
+		if (pulse.code & PC_STATUS) {
+				if ((pulse.value.sival_int & TASTE_START) != (portCstatus
+						& TASTE_START)) {
+					sendCode = start_btn;
+					sendVal = (pulse.value.sival_int & TASTE_START)? 1 : 0;
+				}
+
+				if((pulse.value.sival_int & TASTE_STOP) != (portCstatus
+						& TASTE_STOP)){
+
+					sendCode = reset_btn;
+					sendVal = (pulse.value.sival_int & TASTE_STOP) ? 1 : 0;
+				}
+
+				if((pulse.value.sival_int & TASTE_RESET ) != (portCstatus
+						& TASTE_RESET)){
+
+					sendCode = reset_btn;
+					sendVal = (pulse.value.sival_int & TASTE_RESET) ? 1 : 0;
+				}
+
+				if((pulse.value.sival_int & TASTE_E_STOP) != (portCstatus
+						& TASTE_E_STOP)){
+
+					sendCode = start_btn;
+					sendVal = (pulse.value.sival_int & TASTE_E_STOP) ? 1 : 0;
+				}
+
+				portCstatus = pulse.value.sival_int;
+			}
+
+
+
+#ifdef DEBUG_MESSAGES
 		cout << "sendCode: " << sendCode <<endl;
 		cout << "sendVal: " << sendVal <<endl;
-
+#endif
 
 		MsgSendPulse(signalCoid, SIGEV_PULSE_PRIO_INHERIT, sendCode, sendVal);
-
-		//		if (-1 == MsgReceivePulse(chid, &pulse, sizeof(pulse), NULL)) {
-		//			if (isStopped()) {
-		//				break; // channel destroyed, Thread ending
-		//			}
-		//			perror("SensorCtrl: MsgReceivePulse");
-		//			exit( EXIT_FAILURE);
-		//		}
-		//
-		//		if (pulse.value.sival_int == PORT_B_1){
-		//			cout << "Höhe ist: " << hal_s->get_height_analog() << endl;
-		//		}
-		//
-		//		if ((pulse.code == 2) || (pulse.code == 8)) {
-		//			hal_s->start_process();
-
-		//		}
 	}
 }
 

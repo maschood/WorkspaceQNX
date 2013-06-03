@@ -1,0 +1,13 @@
+/*
+ * SignalTyp.h
+ */
+
+enum SignalType{
+    werks_einlauf           = 0,
+    werks_in_hoehenmessung  = 1,
+    werks_in_weiche			= 2,
+    werks_metall			= 3,
+    weiche_status			= 4,
+    rutsche_voll            = 5,
+    werks_auslauf         	= 6,
+};

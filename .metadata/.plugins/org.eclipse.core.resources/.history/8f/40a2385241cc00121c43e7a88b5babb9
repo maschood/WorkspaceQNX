@@ -1,0 +1,17 @@
+/*
+ * B1S01_Entry.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "B1S01_Entry.h"
+
+B1S01_Entry::B1S01_Entry() {
+	// TODO Auto-generated constructor stub
+
+}
+
+B1S01_Entry::~B1S01_Entry() {
+	// TODO Auto-generated destructor stub
+}

@@ -1,0 +1,9 @@
+Receiver.o: D:/WorkspaceQNX/SEP2/RS232/Receiver.cpp \
+ D:/WorkspaceQNX/SEP2/RS232/Receiver.h \
+ D:/WorkspaceQNX/SEP2/Dispatcher/DispatcherIntro.h \
+ D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.h \
+ D:/WorkspaceQNX/SEP2/Dispatcher/HALCallInterface.h \
+ D:/WorkspaceQNX/SEP2/SignalType.h D:/WorkspaceQNX/SEP2/Mutex/Mutex.h \
+ D:/WorkspaceQNX/SEP2/RS232/RS232_1.h D:/WorkspaceQNX/SEP2/HWaccess.h \
+ D:/WorkspaceQNX/SEP2/HAWThread/HAWThread.h \
+ D:/WorkspaceQNX/SEP2/Mutex/Mutex.h D:/WorkspaceQNX/SEP2/Addresses.h

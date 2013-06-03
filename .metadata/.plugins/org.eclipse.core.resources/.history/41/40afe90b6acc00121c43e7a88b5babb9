@@ -1,0 +1,17 @@
+/*
+ * BasicState.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "BasicState.h"
+
+
+
+BasicState::BasicState(){
+
+}
+
+BasicState::~BasicState() {
+}

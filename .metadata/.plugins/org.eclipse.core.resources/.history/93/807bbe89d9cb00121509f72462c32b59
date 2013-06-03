@@ -1,0 +1,17 @@
+/*
+ * BasicStates.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "BasicStates.h"
+
+BasicStates::BasicStates() {
+	// TODO Auto-generated constructor stub
+
+}
+
+BasicStates::~BasicStates() {
+	// TODO Auto-generated destructor stub
+}

@@ -29,11 +29,12 @@ HAL_S::~HAL_S() {
 }
 
 HAL_S* HAL_S::get_instance() {
-	// Requesting access to HW
+#ifdef HW
 	if (-1 == ThreadCtl(_NTO_TCTL_IO, 0)) {
 		perror("ThreadCtl access failed\n");
 		return NULL;
 	}
+#endif
 
 	if (instance == NULL) {
 		instance = new HAL_S();

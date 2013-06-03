@@ -1,0 +1,20 @@
+/*
+ * Controller.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "Controller.h"
+#include "B1S01_Entry.h"
+
+
+Controller::Controller(void) :
+state(new B1S01_Entry1){
+
+}
+
+Controller::~Controller(void) {
+	delete state;
+
+}

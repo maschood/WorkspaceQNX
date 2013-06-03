@@ -1,0 +1,29 @@
+/*
+ * Seriell.cpp
+ *
+ *  Created on: 17.04.2013
+ *      Author: Asmatullah Noor
+ */
+
+#include "Seriell.h"
+
+Seriell::Seriell() {
+	fd = (open(SCHNITTSTELLE2, O_RDWR));
+}
+
+Seriell::~Seriell() {
+
+	close(fd);
+}
+
+int Seriell::sendMsg(char msg){
+
+	return write(fd,&msg,sizeof(msg));
+
+}
+
+int Seriell::readMsg(char* buff){
+
+	return readcond(fd,buff, sizeof(buff),1,0,10);
+
+}

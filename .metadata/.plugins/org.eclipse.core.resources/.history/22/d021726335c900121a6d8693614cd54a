@@ -1,0 +1,17 @@
+/*
+ * Comport1.cpp
+ *
+ *  Created on: 30.05.2013
+ *      Author: maschood
+ */
+
+#include "Comport1.h"
+
+Comport1::Comport1() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Comport1::~Comport1() {
+	// TODO Auto-generated destructor stub
+}

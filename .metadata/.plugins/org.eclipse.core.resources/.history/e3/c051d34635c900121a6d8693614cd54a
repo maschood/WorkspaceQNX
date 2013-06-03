@@ -1,0 +1,17 @@
+/*
+ * Comport2.cpp
+ *
+ *  Created on: 30.05.2013
+ *      Author: maschood
+ */
+
+#include "Comport2.h"
+
+Comport2::Comport2() {
+	// TODO Auto-generated constructor stub
+
+}
+
+Comport2::~Comport2() {
+	// TODO Auto-generated destructor stub
+}

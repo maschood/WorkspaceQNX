@@ -1378,3 +1378,752 @@ java.net.ConnectException: Connection refused: connect
 	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
 	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2013-05-28 09:01:57.982 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-28 09:01:59.464
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-28 09:02:08.933
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-28 09:02:08.933
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+!SESSION 2013-05-28 13:05:12.949 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-28 13:05:14.329
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-28 13:05:21.301
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-28 13:05:21.301
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+!SESSION 2013-05-28 14:46:56.811 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\WorkspaceQNX
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-28 14:46:58.231
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-28 14:47:06.565
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-28 14:47:06.565
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@129c445),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@129c445)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@129c445),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@129c445)),sourcePriority=16640)
+!SESSION 2013-05-28 16:20:21.266 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\WorkspaceQNX
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-28 16:20:22.498
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-28 16:20:30.673
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-28 16:20:30.673
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-28 16:21:45.225
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2013-05-28 19:23:29.976
+!MESSAGE Error
+!STACK 0
+java.lang.NullPointerException
+	at org.eclipse.cdt.internal.core.dom.parser.ASTQueries.findTypeRelevantDeclarator(ASTQueries.java:105)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.isValidTypeIDForUnaryExpression(AbstractGNUSourceCodeParser.java:2163)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTypeidInParenthesisOrUnaryExpression(AbstractGNUSourceCodeParser.java:2079)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.unaryExpression(GNUCPPSourceParser.java:899)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.castExpression(AbstractGNUSourceCodeParser.java:985)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.pmExpression(GNUCPPSourceParser.java:681)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.multiplicativeExpression(AbstractGNUSourceCodeParser.java:1259)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.additiveExpression(AbstractGNUSourceCodeParser.java:1230)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.shiftExpression(AbstractGNUSourceCodeParser.java:1218)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.relationalExpression(AbstractGNUSourceCodeParser.java:896)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.equalityExpression(AbstractGNUSourceCodeParser.java:1185)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.andExpression(AbstractGNUSourceCodeParser.java:1169)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.exclusiveOrExpression(AbstractGNUSourceCodeParser.java:1157)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.inclusiveOrExpression(AbstractGNUSourceCodeParser.java:1145)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.logicalAndExpression(AbstractGNUSourceCodeParser.java:1129)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.logicalOrExpression(AbstractGNUSourceCodeParser.java:1109)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.conditionalExpression(AbstractGNUSourceCodeParser.java:1298)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.assignmentExpression(GNUCPPSourceParser.java:614)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.expression(AbstractGNUSourceCodeParser.java:872)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.expression(GNUCPPSourceParser.java:578)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseDeclarationOrExpressionStatement(AbstractGNUSourceCodeParser.java:1718)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.statement(GNUCPPSourceParser.java:3487)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.compoundStatement(AbstractGNUSourceCodeParser.java:799)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseCompoundStatement(AbstractGNUSourceCodeParser.java:2008)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.statement(GNUCPPSourceParser.java:3454)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseSwitchBody(AbstractGNUSourceCodeParser.java:1855)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.parseSwitchStatement(GNUCPPSourceParser.java:3719)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.statement(GNUCPPSourceParser.java:3459)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.compoundStatement(AbstractGNUSourceCodeParser.java:799)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseCompoundStatement(AbstractGNUSourceCodeParser.java:2008)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.statement(GNUCPPSourceParser.java:3454)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.parseWhileStatement(GNUCPPSourceParser.java:3529)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.statement(GNUCPPSourceParser.java:3462)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.compoundStatement(AbstractGNUSourceCodeParser.java:799)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.functionBody(AbstractGNUSourceCodeParser.java:1384)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.functionBody(GNUCPPSourceParser.java:3699)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.handleFunctionBody(AbstractGNUSourceCodeParser.java:1364)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.functionDefinition(GNUCPPSourceParser.java:1842)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.simpleDeclaration(GNUCPPSourceParser.java:1768)
+	at org.eclipse.cdt.internal.core.dom.parser.cpp.GNUCPPSourceParser.declaration(GNUCPPSourceParser.java:1603)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.declarationList(AbstractGNUSourceCodeParser.java:1067)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parseTranslationUnit(AbstractGNUSourceCodeParser.java:1007)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.translationUnit(AbstractGNUSourceCodeParser.java:1002)
+	at org.eclipse.cdt.internal.core.dom.parser.AbstractGNUSourceCodeParser.parse(AbstractGNUSourceCodeParser.java:594)
+	at org.eclipse.cdt.core.dom.parser.AbstractCLikeLanguage.getCompletionNode(AbstractCLikeLanguage.java:154)
+	at org.eclipse.cdt.internal.core.model.TranslationUnit.getCompletionNode(TranslationUnit.java:948)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CContentAssistInvocationContext.getCompletionNode(CContentAssistInvocationContext.java:153)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ParsingBasedProposalComputer.computeCompletionProposals(ParsingBasedProposalComputer.java:47)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalComputerDescriptor.computeCompletionProposals(CompletionProposalComputerDescriptor.java:300)
+	at org.eclipse.cdt.internal.ui.text.contentassist.CompletionProposalCategory.computeCompletionProposals(CompletionProposalCategory.java:261)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.collectProposals(ContentAssistProcessor.java:267)
+	at org.eclipse.cdt.internal.ui.text.contentassist.ContentAssistProcessor.computeCompletionProposals(ContentAssistProcessor.java:220)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.computeCompletionProposals(ContentAssistant.java:1832)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.computeProposals(CompletionProposalPopup.java:556)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.access$16(CompletionProposalPopup.java:553)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup$14.run(CompletionProposalPopup.java:1541)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.jface.text.contentassist.CompletionProposalPopup.incrementalComplete(CompletionProposalPopup.java:1535)
+	at org.eclipse.jface.text.contentassist.ContentAssistant.showPossibleCompletions(ContentAssistant.java:1659)
+	at org.eclipse.cdt.internal.ui.editor.CEditor$AdaptedSourceViewer.doOperation(CEditor.java:320)
+	at org.eclipse.ui.texteditor.ContentAssistAction$1.run(ContentAssistAction.java:82)
+	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:70)
+	at org.eclipse.ui.texteditor.ContentAssistAction.run(ContentAssistAction.java:80)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:498)
+	at org.eclipse.ui.commands.ActionHandler.execute(ActionHandler.java:185)
+	at org.eclipse.ui.internal.handlers.LegacyHandlerWrapper.execute(LegacyHandlerWrapper.java:109)
+	at org.eclipse.core.commands.Command.executeWithChecks(Command.java:476)
+	at org.eclipse.core.commands.ParameterizedCommand.executeWithChecks(ParameterizedCommand.java:508)
+	at org.eclipse.ui.internal.handlers.HandlerService.executeCommand(HandlerService.java:169)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.executeCommand(WorkbenchKeyboard.java:470)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.press(WorkbenchKeyboard.java:824)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.processKeyEvent(WorkbenchKeyboard.java:880)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.filterKeySequenceBindings(WorkbenchKeyboard.java:569)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard.access$3(WorkbenchKeyboard.java:510)
+	at org.eclipse.ui.internal.keys.WorkbenchKeyboard$KeyDownFilter.handleEvent(WorkbenchKeyboard.java:125)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1208)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1002)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1027)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1012)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1040)
+	at org.eclipse.swt.widgets.Widget.sendKeyEvent(Widget.java:1036)
+	at org.eclipse.swt.widgets.Widget.wmChar(Widget.java:1368)
+	at org.eclipse.swt.widgets.Control.WM_CHAR(Control.java:4053)
+	at org.eclipse.swt.widgets.Canvas.WM_CHAR(Canvas.java:346)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:3946)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:342)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4619)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessageW(Native Method)
+	at org.eclipse.swt.internal.win32.OS.DispatchMessage(OS.java:2411)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3501)
+	at org.eclipse.ui.internal.Workbench.runEventLoop(Workbench.java:2405)
+	at org.eclipse.ui.internal.Workbench.runUI(Workbench.java:2369)
+	at org.eclipse.ui.internal.Workbench.access$4(Workbench.java:2221)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:500)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:493)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:113)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:194)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:368)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:179)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:559)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:514)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1311)
+!SESSION 2013-05-29 13:08:09.909 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-29 13:08:11.340
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-29 13:08:19.715
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-29 13:08:19.715
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+!SESSION 2013-05-29 16:00:16.744 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-29 16:00:18.124
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-29 16:00:27.682
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-29 16:00:27.682
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1c45731),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1c45731)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 16:23:50.819
+!MESSAGE Launch cleaning error
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 16:23:50.819
+!MESSAGE Attempt to delete remote file '/tmp/SEP2maschood13698373659997' failed:
+!STACK 0
+java.io.IOException: EOF
+	at com.qnx.tools.utils.target.TargetBinary.receiveResponse(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch$1.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 16:26:01.151
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 17:40:27.505
+!MESSAGE Launch cleaning error
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 17:40:27.505
+!MESSAGE Attempt to delete remote file '/tmp/SEP2maschood136984066543019' failed:
+!STACK 0
+java.io.IOException: EOF
+	at com.qnx.tools.utils.target.TargetBinary.receiveResponse(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch$1.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-05-29 18:22:54.552
+!MESSAGE Indexed 'TAKE' (1 sources, 37 headers) in 1,06 sec: 1.293 declarations; 1.297 references; 5 unresolved inclusions; 0 syntax errors; 3 unresolved names (0,12 %)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 18:23:10.487
+!MESSAGE Launch cleaning error
+!SUBENTRY 1 com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 18:23:10.487
+!MESSAGE Attempt to delete remote file '/tmp/SEP2maschood136984228786721' failed:
+!STACK 0
+java.io.IOException: EOF
+	at com.qnx.tools.utils.target.TargetBinary.receiveResponse(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.command(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.rm(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch$1.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-05-29 19:48:13.246
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2013-05-29 20:32:26.793 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-29 20:32:27.995
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-29 20:32:34.718
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-29 20:32:34.718
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+!SESSION 2013-05-30 14:05:35.984 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-30 14:05:37.325
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-30 14:05:47.091
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-30 14:05:47.091
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+
+!ENTRY org.eclipse.cdt.ui 4 4 2013-05-30 16:25:48.932
+!MESSAGE Error
+!STACK 1
+C Model Exception: Core Exception [code 77] 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:46)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.internal.resources.ResourceException: 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	... 6 more
+!SUBENTRY 1 org.eclipse.cdt.core 4 966 2013-05-30 16:25:48.932
+!MESSAGE 'Com1.h' is an invalid name on this platform.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2013-05-30 16:25:48.932
+!MESSAGE 'Com1.h' is an invalid name on this platform.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2013-05-30 16:26:02.879
+!MESSAGE Error
+!STACK 1
+C Model Exception: Core Exception [code 77] 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:46)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.internal.resources.ResourceException: 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	... 6 more
+!SUBENTRY 1 org.eclipse.cdt.core 4 966 2013-05-30 16:26:02.879
+!MESSAGE 'Com1.h' is an invalid name on this platform.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: 'Com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2013-05-30 16:26:02.879
+!MESSAGE 'Com1.h' is an invalid name on this platform.
+
+!ENTRY org.eclipse.cdt.ui 4 4 2013-05-30 16:26:13.877
+!MESSAGE Error
+!STACK 1
+C Model Exception: Core Exception [code 77] 'com1.h' is an invalid name on this platform.
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:46)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+Caused by: org.eclipse.core.internal.resources.ResourceException: 'com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	... 6 more
+!SUBENTRY 1 org.eclipse.cdt.core 4 966 2013-05-30 16:26:13.877
+!MESSAGE 'com1.h' is an invalid name on this platform.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException: 'com1.h' is an invalid name on this platform.
+	at org.eclipse.core.internal.resources.Resource.checkValidPath(Resource.java:422)
+	at org.eclipse.core.internal.resources.File.create(File.java:117)
+	at org.eclipse.core.internal.resources.File.create(File.java:191)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createFile(NewSourceFileGenerator.java:94)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createNewFile(NewSourceFileGenerator.java:83)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createEmptyFile(NewSourceFileGenerator.java:55)
+	at org.eclipse.cdt.internal.ui.wizards.filewizard.NewSourceFileGenerator.createHeaderFile(NewSourceFileGenerator.java:46)
+	at org.eclipse.cdt.internal.ui.wizards.classwizard.NewClassCodeGenerator.createClass(NewClassCodeGenerator.java:174)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1921)
+	at org.eclipse.cdt.ui.wizards.NewClassCreationWizardPage.createClass(NewClassCreationWizardPage.java:1867)
+	at org.eclipse.cdt.internal.ui.wizards.NewClassCreationWizard.finishPage(NewClassCreationWizard.java:60)
+	at org.eclipse.cdt.internal.ui.wizards.NewElementWizard$2.run(NewElementWizard.java:100)
+	at org.eclipse.cdt.internal.core.model.BatchOperation.executeOperation(BatchOperation.java:35)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1800)
+	at org.eclipse.cdt.core.model.CoreModel.run(CoreModel.java:1234)
+	at org.eclipse.cdt.internal.ui.actions.WorkbenchRunnableAdapter.run(WorkbenchRunnableAdapter.java:63)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 2 org.eclipse.core.resources 4 77 2013-05-30 16:26:13.877
+!MESSAGE 'com1.h' is an invalid name on this platform.
+!SESSION 2013-05-31 15:28:51.379 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-05-31 15:28:53.655
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-05-31 15:29:05.023
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-05-31 15:29:05.023
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1275a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1275a34)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1275a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1275a34)),sourcePriority=16640)
+!SESSION 2013-06-02 12:20:46.554 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-06-02 12:20:47.974
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-06-02 12:20:56.242
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-06-02 12:20:56.242
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+!SESSION 2013-06-02 22:30:33.646 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-06-02 22:30:35.096
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-06-02 22:30:43.508
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-06-02 22:30:43.508
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-06-02 22:41:47.933
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+!SESSION 2013-06-03 02:08:28.859 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-06-03 02:08:31.783
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-06-03 02:08:40.596
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-06-03 02:08:40.596
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1275a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1275a34)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@1275a34),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@1275a34)),sourcePriority=16640)
+!SESSION 2013-06-03 02:12:12.795 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86 -data D:\WorkspaceQNX
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-06-03 02:12:14.611
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-06-03 02:12:24.484
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-06-03 02:12:24.484
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@114a947),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@114a947)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@114a947),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@114a947)),sourcePriority=16640)
+!SESSION 2013-06-03 11:58:15.218 -----------------------------------------------
+eclipse.buildId=201006232051
+java.version=1.5.0_11
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=de_DE
+Command-line arguments:  -os win32 -ws win32 -arch x86
+
+!ENTRY org.eclipse.equinox.p2.repository 4 0 2013-06-03 11:58:17.184
+!MESSAGE ProvisioningEventBus could not be obtained. Metadata caches may not be cleaned up properly.
+
+!ENTRY org.eclipse.ui.workbench 2 0 2013-06-03 11:58:27.012
+!MESSAGE A handler conflict occurred.  This may disable some commands.
+!SUBENTRY 1 org.eclipse.ui.workbench 2 0 2013-06-03 11:58:27.012
+!MESSAGE Conflict for 'AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction':
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+HandlerActivation(commandId=AUTOGEN:::org.eclipse.ui.cheatsheets.actionSet/org.eclipse.ui.cheatsheets.actions.CheatSheetHelpMenuAction,
+	handler=ActionDelegateHandlerProxy(null,org.eclipse.ui.cheatsheets.CheatSheetExtensionFactory:helpMenuAction),
+	expression=AndExpression(ActionSetExpression(org.eclipse.ui.cheatsheets.actionSet,org.eclipse.ui.internal.WorkbenchWindow@ad483),WorkbenchWindowExpression(org.eclipse.ui.internal.WorkbenchWindow@ad483)),sourcePriority=16640)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-06-03 12:44:12.461
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY com.qnx.tools.ide.qde.debug.core 4 0 2013-06-03 13:34:01.496
+!MESSAGE Connection refused: connect
+!STACK 0
+java.net.ConnectException: Connection refused: connect
+	at java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.net.PlainSocketImpl.doConnect(Unknown Source)
+	at java.net.PlainSocketImpl.connectToAddress(Unknown Source)
+	at java.net.PlainSocketImpl.connect(Unknown Source)
+	at java.net.SocksSocketImpl.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.connect(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at java.net.Socket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.QConnSocket.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetBinary.<init>(Unknown Source)
+	at com.qnx.tools.utils.target.TargetServiceFile.<init>(Unknown Source)
+	at com.qnx.tools.ide.qde.debug.internal.core.QDELaunch.getFileService(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate.prepareAndDownloadBinaries(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$1.doRun(Unknown Source)
+	at com.qnx.tools.ide.qde.internal.ui.launch.QDELaunchConfigurationDelegate$QDELaunchJob.run(Unknown Source)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
+
+!ENTRY org.eclipse.debug.ui 4 120 2013-06-03 14:00:35.308
+!MESSAGE Error logged from Debug UI: 
+!STACK 0
+java.io.IOException
+	at org.eclipse.debug.internal.core.StreamsProxy.write(StreamsProxy.java:111)
+	at org.eclipse.debug.internal.ui.views.console.ProcessConsole$InputReadJob.run(ProcessConsole.java:678)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
