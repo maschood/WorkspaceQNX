@@ -1,0 +1,200 @@
+/**
+ * @file LightController.cpp
+  Created on: 09.06.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ */
+
+
+#include "LightController.h"
+
+LightController* LightController::instance = NULL;
+Mutex* LightController::lightInstanceMutex = new Mutex();
+
+LightController::LightController() {
+	hal_a = HAL_A::getInstance();
+
+	function = &LightController::off;
+	start(0);
+	hold();
+}
+
+LightController::~LightController() {
+	if (instance != NULL) {
+		delete instance;
+		instance = NULL;
+		lightInstanceMutex->~Mutex();
+	}
+}
+
+LightController* LightController::getInstance() {
+	if (!instance) {
+		lightInstanceMutex->lock();
+		if (!instance) {
+			instance = new LightController();
+#ifdef DEBUG_LIGHTCONTROLLER
+			printf("Debug LightController: New LC instance created\n");
+#endif
+		}
+		lightInstanceMutex->unlock();
+	}
+
+	return instance;
+}
+
+void LightController::execute(void*) {
+	while (!isStopped()) {
+		(this->*function)();
+	}
+}
+
+void LightController::shutdown() {
+}
+
+void LightController::operatingNormal() {
+	lightsOff();
+	hal_a->lightGreen(true);
+}
+
+void LightController::ledStart(bool isOn) {
+	if(isOn){
+		hal_a->ledStart(true);
+	} else {
+		hal_a->ledStart(false);
+	}
+}
+
+void LightController::ledReset(bool isOn) {
+	if(isOn){
+		hal_a->ledReset(true);
+	} else {
+		hal_a->ledReset(false);
+	}
+}
+
+void LightController::manualTurnover() {
+	lightsOff();
+	function = &LightController::blinkYellow;
+	cont();
+}
+
+void LightController::upcomingNotReceiptedTimerMin() {
+	lightsOff();
+	function = &LightController::blinkRedSlowDouble;
+	cont();
+}
+
+void LightController::upcomingNotReceiptedTimerMax() {
+	lightsOff();
+	function = &LightController::blinkRedSlowTripple;
+	cont();
+}
+
+void LightController::upcomingNotReceipted() {
+	lightsOff();
+	function = &LightController::blinkRedSlow;
+	cont();
+}
+
+void LightController::upcomingReceipted() {
+	lightsOff();
+	hal_a->lamp_red(true);
+}
+
+void LightController::goneUnreceipted() {
+	lightsOff();
+	function = &LightController::blinkRedFast;
+	cont();
+}
+
+void LightController::bandHalted() {
+	lightsOff();
+	function = &LightController::blinkGreenFast;
+	cont();
+}
+
+void LightController::eStop() {
+	lightsOff();
+	function = &LightController::blinkAllFast;
+	cont();
+}
+
+void LightController::blinkYellow() {
+	hal_a->lightYellow(true);
+	sleep(1);
+	hal_a->lightYellow(false);
+	sleep(1);
+}
+
+void LightController::blinkRedFast() {
+	hal_a->lamp_red(true);
+	sleep(1);
+	hal_a->lamp_red(false);
+	sleep(1);
+}
+
+void LightController::blinkGreenFast() {
+	hal_a->lightGreen(true);
+	usleep(500000);
+	hal_a->lightGreen(false);
+	usleep(500000);
+}
+
+void LightController::blinkAllFast() {
+	hal_a->lamp_red(true);
+	usleep(100000);
+	hal_a->lamp_red(false);
+	hal_a->lightYellow(true);
+	usleep(100000);
+	hal_a->lightYellow(false);
+	hal_a->lightGreen(true);
+	usleep(100000);
+	hal_a->lightGreen(false);
+	usleep(200000);
+}
+
+void LightController::blinkRedSlow() {
+	hal_a->lamp_red(true);
+	usleep(500000);
+	hal_a->lamp_red(false);
+	usleep(500000);
+}
+
+void LightController::blinkRedSlowDouble() {
+	hal_a->lamp_red(true);
+	usleep(150000);
+	hal_a->lamp_red(false);
+	usleep(100000);
+	hal_a->lamp_red(true);
+	usleep(150000);
+	hal_a->lamp_red(false);
+	usleep(800000);
+}
+
+void LightController::blinkRedSlowTripple() {
+	hal_a->lamp_red(true);
+	usleep(150000);
+	hal_a->lamp_red(false);
+	usleep(100000);
+	hal_a->lamp_red(true);
+	hal_a->lightYellow(true);
+	usleep(150000);
+	hal_a->lamp_red(false);
+	hal_a->lightYellow(false);
+	usleep(100000);
+	hal_a->lamp_red(true);
+	usleep(150000);
+	hal_a->lamp_red(false);
+	usleep(800000);
+}
+
+void LightController::lightsOff() {
+	hal_a->lightsOff();
+	off();
+}
+
+void LightController::off() {
+	hold();
+}

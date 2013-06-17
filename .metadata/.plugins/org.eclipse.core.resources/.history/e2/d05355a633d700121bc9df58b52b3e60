@@ -1,0 +1,39 @@
+/*
+ * B1S06_Slide.cpp
+ *
+ *  Created on: 03.06.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ *
+ */
+
+#include "B1S06_Slide.h"
+
+B1S06_Slide::B1S06_Slide(Controller* controller) : BaseState(controller) {
+	this->controller = controller;
+
+	this->controller->slideTimer = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_SLIDE_FULL_SEC, TIME_VALUE_SLIDE_FULL_MSEC, TIMER_SLIDE_FULL);
+	this->controller->slideTimer->start();
+
+#ifdef DEBUG_STATE_PRINTF
+	printf("DEBUG STATE: Puck%d -> B1S06_Slide \n", this->controller->getID());
+#endif
+}
+
+B1S06_Slide::~B1S06_Slide() {
+}
+
+void B1S06_Slide::sbSlideClosed(){
+	puckHandler->removePuckFromBand(controller);
+	if(puckHandler->isBandEmpty()){
+		hal_a->engineStop();
+	}
+	controller->resetController();
+}
+
+void B1S06_Slide::timerSlideFull(){
+	new (this) B1S10_ERR_SlideFull(controller);
+}
+

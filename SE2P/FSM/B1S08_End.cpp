@@ -1,0 +1,78 @@
+/*
+ * B1S08_End.cpp
+ *
+ *  Created on: 03.06.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ *
+ */
+
+#include "B1S08_End.h"
+
+B1S08_End::B1S08_End(Controller* controller) : BaseState(controller) {
+	this->controller = controller;
+
+#ifdef DEBUG_STATE_PRINTF
+	printf("DEBUG STATE: Puck%d -> B1S08_End \n", this->controller->getID());
+#endif
+
+	if(this->controller->puckType == PUCK_TURNOVER || this->controller->puckType == PUCK_METAL_TURNOVER){
+		new (this) B1S09_ERR_TurnOver(this->controller);
+	} else if(this->controller->puckType == PUCK_ACCEPTED){
+		new (this) B1S11_ReadyWait(this->controller);
+	}
+}
+
+B1S08_End::~B1S08_End() {
+}
+
+void B1S08_End::rs232PuckArrivedOnBand2(){
+
+	controller->setPuckArrivedOnBand2(true);
+
+	puckHandler->removePuckFromBand(controller);
+	if(puckHandler->isBandEmpty()){
+		hal_a->engine_stop();
+	}
+	controller->resetController();
+}
+
+void B1S08_End::timerHandOver(){
+	if(controller->isPuckArrivedOnBand2()){
+		controller->setPuckArrivedOnBand2(false);
+
+	} else {
+
+		puckHandler->removePuckFromBand(controller);
+		if(puckHandler->isBandEmpty()){
+			hal_a->engine_stop();
+		}
+		controller->resetController();
+
+		printf("Debug State <B1S08_End>: ERROR<ERR_STATE_ERROR_MAX> called by puck%d\n", controller->getID());
+
+		int errorfsmChid = errfsm->getErrorFSMChid();
+		int errorfsmCoid;
+		int rc;
+
+		if ((errorfsmCoid = ConnectAttach(0, 0, errorfsmChid, _NTO_SIDE_CHANNEL, 0)) == -1) {
+			printf("B1S08_End: Error in ConnectAttach\n");
+		}
+
+		rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_ERROR_MAX);
+		if (rc < 0) {
+			printf("B1S08_End: Error in MsgSendPulse");
+		}
+
+		if (ConnectDetach(errorfsmCoid) == -1) {
+			printf("B1S08_End: Error in ConnectDetach\n");
+		}
+	}
+}
+
+void B1S08_End::sbEndClosed(){
+	puckHandler->resetAllSenseorFuncCounters();
+}
+

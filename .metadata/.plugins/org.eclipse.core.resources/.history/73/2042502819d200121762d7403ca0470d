@@ -1,0 +1,24 @@
+/*
+ * SignalTyp.h
+ */
+
+#ifndef SIGNALTYPE_H_
+#define SIGNALTYPE_H_
+
+
+enum SignalType{
+    part_in           	= 0,
+    part_height		  	= 1,
+    part_in_gate		= 2,
+    gate_status			= 3,
+    slide_full          = 4,
+    part_out 	       	= 5,
+
+    start_btn			= 6,
+    stop_btn			= 7,
+    reset_btn			= 8,
+    estop_btn			= 9,
+    part_metall			= 10
+};
+
+#endif

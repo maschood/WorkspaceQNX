@@ -1,0 +1,101 @@
+/**
+ *
+ *  Created on: 04.05.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ *
+ */
+
+
+#include "BaseState.h"
+
+BaseState::BaseState(Controller* controller) {
+	hal_a = HAL_A::getInstance();
+	hal_s = HAL_S::getInstance();
+	puckHandler = PuckHandler::getInstance();
+	errfsm = ErrorFSM::getInstance();
+	rs232_1 = RS232_1::getInstance();
+	timerHandler = TimerHandler::getInstance();
+	this->controller = controller;
+}
+
+BaseState::~BaseState() {
+}
+
+void BaseState::sbStartOpen(){}
+void BaseState::sbStartClosed(){}
+void BaseState::sbHeightcontrolOpen(){}//puckHandler->incrementSenseorFuncCounter(SB_HEIGHTCONTROL_OPEN);}
+void BaseState::sbHeightcontrolClosed(){}
+void BaseState::sbGateOpen(){}//puckHandler->incrementSenseorFuncCounter(SB_GATE_OPEN);
+void BaseState::sbGateClosed(){}
+void BaseState::msMetalTrue(){}
+void BaseState::sbSlideOpen(){}
+void BaseState::sbSlideClosed(){}
+void BaseState::sbEndOpen(){/*printf("Puck is incrementing --> SB_END_OPEN!!!111\n");*/puckHandler->incrementSenseorFuncCounter(SB_END_OPEN);}
+void BaseState::sbEndClosed(){}
+void BaseState::btnStartPressed(){}
+void BaseState::btnStartReleased(){}
+void BaseState::btnStopPressed(){}
+void BaseState::btnStopReleased(){}
+void BaseState::btnResetPressed(){}
+void BaseState::btnResetReleased(){}
+void BaseState::btnEstopPressed(){}
+void BaseState::btnEstopReleased(){}
+
+void BaseState::rs232Band2Ack(){}
+void BaseState::rs232Band2Ready(){}
+void BaseState::rs232Band1Waiting(){}
+void BaseState::rs232PuckArrivedOnBand2(){}
+
+void BaseState::timerGateClose(){}
+void BaseState::timerSlideFull(){}
+void BaseState::timerSeg1Min(){}
+void BaseState::timerSeg1Max(){}
+void BaseState::timerSeg2Min(){}
+void BaseState::timerSeg2Max(){}
+void BaseState::timerSeg3Min(){}
+void BaseState::timerSeg3Max(){}
+void BaseState::timerHandOver(){
+#ifdef BAND_2
+
+	puckHandler->removePuckFromBand(controller);
+	hal_a->engineStop();
+
+	int replyChid = errfsm->getReplyChid();
+	int errorfsmChid = errfsm->getErrorFSMChid();
+	int errorfsmCoid;
+	int rc;
+
+	struct _pulse pulse;
+
+	if ((errorfsmCoid = ConnectAttach(0, 0, errorfsmChid, _NTO_SIDE_CHANNEL, 0)) == -1) {
+		printf("B2S07_Seg3: Error in ConnectAttach\n");
+	}
+
+	//rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_CRITICAL_ERROR);
+	rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_ERROR_MAX);
+	if (rc < 0) {
+		printf("B2S07_Seg3: Error in MsgSendPulse");
+	}
+
+	rc = MsgReceivePulse(replyChid, &pulse, sizeof(pulse), NULL);
+	if (rc < 0) {
+		printf("B2S07_Seg3: Error in recv pulse\n");
+	}
+
+	if (ConnectDetach(errorfsmCoid) == -1) {
+		printf("B2S07_Seg3: Error in ConnectDetach\n");
+	}
+
+	if(controller->isBand1Waiting()){
+		rs232_1->sendMsg(RS232_BAND2_READY);
+		HAL_A::getInstance()->engine_right(false);
+		HAL_A::getInstance()->engineUnstop();
+	}
+	controller->resetController();
+#endif
+}
+void BaseState::timerBand2Ack(){}
+

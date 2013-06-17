@@ -1,0 +1,3 @@
+Timer.o: D:/WorkspaceQNX/CHRIS/Timer/Timer.cpp \
+ D:/WorkspaceQNX/CHRIS/Timer/Timer.h D:/WorkspaceQNX/CHRIS/HWaccess.h \
+ D:/WorkspaceQNX/CHRIS/address.h

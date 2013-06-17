@@ -1,0 +1,88 @@
+/**
+ * BaseState
+ *
+ * Represents a state in the used state pattern. All used states
+ * are derived from this class.
+ *
+ */
+
+#ifndef BASESTATE_H_
+#define BASESTATE_H_
+
+#include "HAL_A.h"
+#include "HAL_S.h"
+#include "RS232_1.h"
+#include "Controller.h"
+#include <iostream.h>
+
+#define DEBUG_STATE_PRINTF
+
+class BaseState: public HALCallInterface {
+public:
+	/**
+	 * Standard constructor, all private defined variables are
+	 * instanciated here.
+	 */
+	BaseState(Controller* controller);
+
+	/**
+	 * BasteState is derived from CallInterface, all methods already commented
+	 * in CallInterface.h
+	 * All methods are implemented in this class as empty method stubs. If one is called
+	 * and not overwritten by the substate its corresponding call from this superclass
+	 * is a NOOP.
+	 */
+
+	virtual void PART_IN_0();
+	virtual void PART_IN_1();
+	virtual void PART_HEIGHT_0();
+	virtual void PART_HEIGHT_1();
+	virtual void PART_IN_GATE_0();
+	virtual void PART_IN_GATE_1();
+	virtual void PART_METALL();
+	virtual void GATE_STATUS_0();
+	virtual void GATE_STATUS_1();
+	virtual void SLIDE_FULL_0();
+	virtual void SLIDE_FULL_1();
+	virtual void PART_OUT_0();
+	virtual void PART_OUT_1();
+	virtual void START_BTN_PRESSED();
+	virtual void START_BTN_RELEASED();
+	virtual void STOP_BTN_PRESSED();
+	virtual void STOP_BTN_RELEASED();
+	virtual void RESET_BTN_PRESSED();
+	virtual void RESET_BTN_RELEASED();
+	virtual void ESTOP_BTN_PRESSED();
+	virtual void ESTOP_BTN_RELEASED();
+	/**
+	 * Standard destructor
+	 */
+	virtual ~BaseState();
+
+protected:
+	/**
+	 * Instance of the ActorHAL to work with
+	 */
+	HAL_A* hal_a;
+
+	/**
+	 * Instance of the SensorHAL to work with
+	 */
+	HAL_S* hal_s;
+	/**
+	 * Instance of the Controller to work with
+	 */
+	Controller* controller;
+
+	/**
+	 * Instance of the RS232 port 1 to work with
+	 */
+	RS232_1* rs232_1;
+	/**
+	 * Instance of the PuckHandler to work with
+	 */
+	PuckHandler* puckHandler;
+
+};
+
+#endif /* BASESTATE_H_ */

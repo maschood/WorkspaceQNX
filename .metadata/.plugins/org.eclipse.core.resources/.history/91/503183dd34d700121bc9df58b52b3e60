@@ -1,0 +1,10 @@
+/*
+ * HAL_A_light.cpp
+ *
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ */
+
+#include "HAL_A.h"

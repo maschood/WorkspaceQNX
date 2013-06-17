@@ -1,0 +1,3 @@
+HAL_A_bar.o: D:/WorkspaceQNX/CHRIS/HAL/HAL_A_bar.cpp \
+ D:/WorkspaceQNX/CHRIS/HAL/HAL_A.h D:/WorkspaceQNX/CHRIS/Addresses.h \
+ D:/WorkspaceQNX/CHRIS/HWaccess.h D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

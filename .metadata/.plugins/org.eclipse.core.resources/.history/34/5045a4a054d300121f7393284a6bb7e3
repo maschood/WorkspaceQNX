@@ -1,0 +1,4 @@
+HALTest.o: D:/WorkspaceQNX/CHRIS/Tests/HALTest.cpp \
+ D:/WorkspaceQNX/CHRIS/Tests/HALTest.h D:/WorkspaceQNX/CHRIS/HAL/HAL_A.h \
+ D:/WorkspaceQNX/CHRIS/Addresses.h D:/WorkspaceQNX/CHRIS/HWaccess.h \
+ D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

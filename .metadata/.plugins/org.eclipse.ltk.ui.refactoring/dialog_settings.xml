@@ -1,9 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="RefactoringWizard.preview">
-		<item key="width" value="610"/>
-		<item key="height" value="410"/>
+		<item key="width" value="930"/>
+		<item key="height" value="589"/>
+	</section>
+	<section name="RefactoringWizard.Refactoring">
+		<item key="width" value="600"/>
+		<item key="height" value="524"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
+	</section>
+	<section name="RefactoringPropertyPage">
+		<item key="org.eclipse.ltk.ui.refactoring.sortRefactorings" value="true"/>
 	</section>
 </section>

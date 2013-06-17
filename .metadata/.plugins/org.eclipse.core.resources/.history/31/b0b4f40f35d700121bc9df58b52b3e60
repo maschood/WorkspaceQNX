@@ -1,0 +1,247 @@
+/**
+ * 
+ * @file HAL.cpp
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ * 
+ */
+
+#include "HAL_A.h"
+
+HAL_A* HAL_A::instance = NULL;
+Mutex* HAL_A::halMutex = new Mutex();
+Mutex* HAL_A::halInstanceMutex = new Mutex();
+
+HAL_A::HAL_A() {
+#ifdef SIMULATION
+	std::cout << "Simulation aktiv" << std::endl;
+	std::cout << "Zum Aufbau der Verbindung muss Die Festo Simulation schon laufen." << std::endl;
+	IOaccess_open(); // Baue die Verbindung zur Simulation auf
+#endif
+
+	// Zugriffsrechte fuer den Zugriff auf die HW holen
+	if (-1 == ThreadCtl(_NTO_TCTL_IO, 0)) {
+		printf("ThreadCtl access failed\n");
+		exit(EXIT_FAILURE);
+	}
+
+	// Initialisierung der Digitalen IO Karte
+	//out8(DIO_BASE + DIO_CONTROL_BLA, 0x8A);
+	out8(PORT_CTRL, DIO_INIT);
+
+	//-->nicht nötig aber sicherer
+	out8(PORT_A, 0x00);
+	out8(PORT_C, 0x00);
+
+	fullStop = false;
+}
+
+HAL_A::~HAL_A() {
+	if (instance != NULL) {
+		delete instance;
+		instance = NULL;
+		halMutex->~Mutex();
+		halInstanceMutex->~Mutex();
+	}
+}
+
+HAL_A* HAL_A::getInstance() {
+	if (!instance) {
+		halInstanceMutex->lock();
+		if (!instance) {
+			instance = new HAL_A;
+		}
+		halInstanceMutex->unlock();
+	}
+
+	return instance;
+}
+
+void HAL_A::lamp_red(bool isOn) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isOn) {
+		out8(PORT_A, val | LIGHT_RED);
+	} else {
+		out8(PORT_A, val & ~(LIGHT_RED));
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::lamp_yellow(bool isOn) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isOn) {
+		out8(PORT_A, val | LIGHT_YELLOW);
+	} else {
+		out8(PORT_A, val & ~(LIGHT_YELLOW));
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::lamp_green(bool isOn) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isOn) {
+		out8(PORT_A, val | LIGHT_GREEN);
+	} else {
+		out8(PORT_A, val & ~(LIGHT_GREEN));
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::lights_off() {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	out8(PORT_A, val & ~(LIGHT_GREEN + LIGHT_YELLOW + LIGHT_RED));
+
+	halMutex->unlock();
+}
+
+void HAL_A::engine_right(bool isSlow) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isSlow) {
+		out8(PORT_A, val | ENGINE_SLOW_RIGHT);
+	} else {
+		out8(PORT_A, (val | ENGINE_RIGHT) & ~(ENGINE_SLOW));;
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::revoke_engine_right() {
+	uint8_t val = in8(PORT_A);
+	halMutex->lock();
+
+	out8(PORT_A, val & ~(ENGINE_SLOW_RIGHT));
+
+	halMutex->unlock();
+}
+
+void HAL_A::revoke_engineLeft() {
+	uint8_t val = in8(PORT_A);
+	halMutex->lock();
+	out8(PORT_A, val & ~(ENGINE_SLOW_LEFT));
+	halMutex->unlock();
+}
+
+
+
+void HAL_A::engine_left(bool isSlow) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isSlow) {
+		out8(PORT_A, val | ENGINE_SLOW_LEFT);
+	} else {
+		out8(PORT_A, (val | ENGINE_LEFT) & ~(ENGINE_SLOW));
+
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::engine_stop() {
+	halMutex->lock();
+	if (!fullStop) {
+		uint8_t val = in8(PORT_A);
+
+		out8(PORT_A, val | ENGINE_STOP);
+	}
+	halMutex->unlock();
+}
+
+bool HAL_A::is_engine_stopped() {
+	halMutex->lock();
+	uint8_t val = in8(PORT_A);
+	halMutex->unlock();
+	val = (val >> 3) & 1;
+	return val;
+}
+
+void HAL_A::engine_unstop() {
+	halMutex->lock();
+	if (!fullStop) {
+		uint8_t val = in8(PORT_A);
+		out8(PORT_A, val & ~(ENGINE_STOP));
+	}
+	halMutex->unlock();
+}
+
+void HAL_A::engine_full_stop() {
+	halMutex->lock();
+	fullStop = true;
+	uint8_t val = in8(PORT_A);
+
+	out8(PORT_A, val | ENGINE_STOP);
+	halMutex->unlock();
+}
+
+void HAL_A::engine_full_unstop() {
+	halMutex->lock();
+	fullStop = false;
+	uint8_t val = in8(PORT_A);
+
+	out8(PORT_A, val & ~(ENGINE_STOP));
+	halMutex->unlock();
+}
+
+void HAL_A::gate(bool isOpen) {
+	uint8_t val = in8(PORT_A);
+
+	halMutex->lock();
+
+	if (isOpen) {
+		out8(PORT_A, val | GATE);
+	} else {
+		out8(PORT_A, val & ~(GATE));
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::led_start(bool isOn) {
+	uint8_t val = in8(PORT_C);
+
+	halMutex->lock();
+
+	if (isOn) {
+		out8(PORT_C, val | LED_START);
+	} else {
+		out8(PORT_C, val & ~(LED_START));
+	}
+
+	halMutex->unlock();
+}
+
+void HAL_A::led_reset(bool isOn) {
+	uint8_t val = in8(PORT_C);
+
+	halMutex->lock();
+
+	if (isOn) {
+		out8(PORT_C, val | LED_RESET);
+	} else {
+		out8(PORT_C, val & ~(LED_RESET));
+	}
+
+	halMutex->unlock();
+}
+

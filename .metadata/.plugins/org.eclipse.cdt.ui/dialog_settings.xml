@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
+	<item key="LastUsedSourceTemplate" value="Default C++ source template"/>
 	<item key="LastUsedHeaderTemplate" value="Default C++ header template"/>
+	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="MAX_PUCKS"/>
+		</list>
+	</section>
+	<section name="CRenameRefactoringInputPage">
+		<item key="workingset" value=""/>
+		<item key="macroDefinition" value="false"/>
+		<item key="scope" value="4"/>
+		<item key="comment" value="false"/>
+		<item key="references_inv" value="false"/>
+	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="completion_proposal_size">

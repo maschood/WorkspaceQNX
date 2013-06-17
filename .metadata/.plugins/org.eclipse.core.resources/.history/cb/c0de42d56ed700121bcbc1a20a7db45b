@@ -1,0 +1,344 @@
+/**
+ *  Created on: 04.05.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ *
+ */
+
+#ifndef CONTROLLER_H_
+#define CONTROLLER_H_
+
+#include "CallInterface.h"
+class BaseState;
+#include <stdio.h>
+#include "puckTypes.h"
+#include "bandselection.h"
+#include "TimerHandler.h"
+
+class Controller: public CallInterface {
+public:
+
+	int chid;
+	/**
+	 * Parameterized constructor for a Controller
+	 *
+	 * @param id [1-12]
+	 */
+	Controller(int id);
+
+	/**
+	 * Controller is derived from CallInterface, these functions
+	 * are already documented there
+	 */
+	void sbStartOpen();
+	void sbStartClosed();
+	void sbHeightcontrolOpen();
+	void sbHeightcontrolClosed();
+	void sbGateOpen();
+	void sbGateClosed();
+	void msMetalTrue();
+	void sbSlideOpen();
+	void sbSlideClosed();
+	void sbEndOpen();
+	void sbEndClosed();
+	void btnStartPressed();
+	void btnStartReleased();
+	void btnStopPressed();
+	void btnStopReleased();
+	void btnResetPressed();
+	void btnResetReleased();
+	void btnEstopPressed();
+	void btnEstopReleased();
+
+	void rs232Band2Ack();
+	void rs232Band2Ready();
+	void rs232Band1Waiting();
+	void rs232PuckArrivedOnBand2();
+
+	void timerGateClose();
+	void timerSlideFull();
+	void timerSeg1Min();
+	void timerSeg1Max();
+	void timerSeg2Min();
+	void timerSeg2Max();
+	void timerSeg3Min();
+	void timerSeg3Max();
+	void timerHandOver();
+	void timerBand2Ack();
+
+	/**
+	 * Each controller (puck) is held in a specific queue. For each
+	 * segment there are queues. If a puck is the first one in its segment,
+	 * corresponding bool is set. Function to determine, whether if puck is
+	 * first or not is in the PuckHandler.
+	 *
+	 * @param isFirst [true if yes, else false]
+	 */
+	void setFirstElementInSegment(bool isFirst);
+
+	/**
+	 * Returns whether puck is first in segment or not
+	 *
+	 * @return [true if yes, else false]
+	 */
+	bool isFirstElementInSegment();
+
+	/**
+	 * Returns ID of this controller (puck)
+	 *
+	 * @return controller id
+	 */
+	int getID();
+
+	/**
+	 * Return if this controller (puck) is activated or not.
+	 * It means if this puck is actually lying on the band
+	 * conveyor
+	 *
+	 * @return active [true if yes, else false]
+	 */
+	bool isActive();
+
+	/**
+	 * Activates a controller (puck), if it is placed on the band
+	 * conveyor
+	 */
+	void activate();
+
+	/**
+	 * Resets the controller (puck) to its start values.
+	 * If controller (puck) is being removed from the band
+	 * conveyor it needs to be resetted, so it can be activated
+	 * for a new puck being placed on the band conveyor.
+	 */
+	void resetController();
+
+	/**
+	 * Empty standard destructor
+	 */
+	virtual ~Controller();
+
+	/**
+	 * Returns if band1 is currently waiting to transfer a puck
+	 *
+	 * @return [true if band1 is waiting, else false]
+	 */
+	bool isBand1Waiting();
+
+	/**
+	 * Sets bool if the minimum puckruntime timer has fired
+	 *
+	 * @param [true if yes, else false]
+	 */
+	void setSegTimerMinCalled(bool boolean);
+
+	/**
+	 * Returns if the current segTimerMin has already been called
+	 *
+	 * @return [true if segTimerMin called, else false]
+	 */
+	bool isSegTimerMinCalled();
+
+	/**
+	 * Sets bool if the puck has arrived 0n 8and2
+	 *
+	 * @param [true if yes, else false]
+	 */
+	void setPuckArrivedOnBand2(bool boolean);
+
+	/**
+	 * Returns if the puck h4s arrived 0n 8and2
+	 *
+	 * @return [true if segTimerMin called, else false]
+	 */
+	bool isPuckArrivedOnBand2();
+
+	/**
+	 * Resets both timer (min/max runtime) and corresponding boolean (segTimerMinCalled)
+	 */
+	void resetSegTimers();
+
+	/**
+	 * Returns if an error is pending
+	 *
+	 * @return [true if yes, else false]
+	 */
+	bool isError();
+
+	/**
+	 * Sets error status
+	 *
+	 * @param [true if an error occured, false if not]
+	 */
+	void setError(bool error);
+
+	/**
+	 *
+	 *
+	 *
+	 */
+
+	void setInOrder(bool boolean);
+	/**
+	 *
+	 */
+
+	bool isInOrder();
+	/**
+	 *
+	 */
+
+
+    int getHeightB1() const
+    {
+        return heightB1;
+    }
+
+    int getHeightB2() const
+    {
+        return heightB2;
+    }
+
+    string getPuckTyp() const
+    {
+        return puckTyp;
+    }
+
+    void setHeightB1(int heightB1)
+    {
+        this->heightB1 = heightB1;
+    }
+
+    void setHeightB2(int heightB2)
+    {
+        this->heightB2 = heightB2;
+    }
+
+    void setPuckTyp(string puckTyp)
+    {
+        this->puckTyp = puckTyp;
+    }
+
+
+	/**
+	 * Type of the puck, valid types are defined in puckTypes.h
+	 */
+	int puckType;
+
+	/**
+	 * Timer for closing the gate, if it was opened to let a puck pass
+	 */
+	Timer* gateTimer;
+
+	/**
+	 * Timer for the slide, if slide lightbarrier does not close after a given time,
+	 * it is assumed that the slide is full and needs to be emptied
+	 */
+	Timer* slideTimer;
+
+	/**
+	 * Timer for minimum puck runtime per segment. With this timer random spawned
+	 * pucks can be spotted
+	 */
+	Timer* segTimerMin;
+
+	/**
+	 * Timer for maximum puck runtime per segment. With this timer lost pucks can be
+	 * spotted
+	 */
+	Timer* segTimerMax;
+
+	/**
+	 * Timer for maximum puck runtime if handing over. With this timer lost
+	 * hand-over-pucks can be spotted
+	 */
+	Timer* handOverTimer;
+
+	/**
+	 * Maximum wating time for ack from band2
+	 */
+	Timer* band2AckTimer;
+
+private:
+
+	/**
+	 * TimerHandler instance to work wtih
+	 */
+	TimerHandler* th;
+
+	/**
+	 * Corresponding id of this controller (puck), can be number between
+	 * 1 and MAX_PUCKS_BAND (defined in PuckHandler.h)
+	 */
+	int id;
+
+	/**
+	 * Each controller can be in a state derived or from type BaseState.
+	 */
+	BaseState* state;
+
+	/**
+	 * If controller (puck) is first element in its segment true, else false.
+	 */
+	bool firstElementInSegment;
+
+	/**
+	 * If a puck is placed on band conveyor, the Dispatcher activates a puck
+	 * through the PuckHandler.
+	 * [false if not in use and not on band conveyor, true if placed on conveyor]
+	 */
+	bool active;
+
+	/**
+	 * A puck is in use, if it was activated and got the dispatched signal
+	 * sbStartOpen(). inUse is set to true. Otherwise everytime the signal
+	 * is issued again (new puck on band) the state would be reset!
+	 */
+	bool startable;
+
+	/**
+	 * Defines if band1 is waiting to transfer a puck to band2
+	 */
+	bool band1Waiting;
+
+	/**
+	 * Was the current segTimerMin already been called
+	 */
+	bool segTimerMinCalled;
+
+	/**
+	 * is the HandOverPuck already Arrived On Band2
+	 */
+	bool puckArrivedOnBand2;
+
+	/**
+	 * Indicates if an error is pending or not
+	 */
+	bool error;
+
+	/*
+	 *For the correct Order
+	 */
+	bool order_metall;
+	/*
+	 *
+	 */
+	int heightB1;
+
+	/*
+	 *
+	 */
+
+	int heightB2;
+
+	/*
+	 *
+	 */
+	string puckTyp;
+
+
+};
+
+#endif /* CONTROLLER_H_ */

@@ -1,4 +1,0 @@
-Controller.o: D:/WorkspaceQNX/SEP2/FSM_SHUDI/Controller.cpp \
- D:/WorkspaceQNX/SEP2/FSM_SHUDI/Controller.h \
- D:/WorkspaceQNX/SEP2/DISPATCHER/HALCallInterface.h \
- D:/WorkspaceQNX/SEP2/FSM_SHUDI/BasicState.h

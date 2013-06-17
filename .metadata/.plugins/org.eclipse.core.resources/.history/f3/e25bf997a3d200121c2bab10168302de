@@ -1,0 +1,2 @@
+HAWThread.o: D:/WorkspaceQNX/CHRIS/HAWThread.cpp \
+ D:/WorkspaceQNX/CHRIS/HAWThread.h

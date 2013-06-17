@@ -1,0 +1,260 @@
+/**
+ * SE2 WiSe 2012
+ * Festo Dispatcher
+ *
+ * Dispatcher forwards Pulse Messages received from the ISRHandler and RS232 to
+ * all registered Controllers. Each Controller represents a puck on the band conveyor.
+ * Controllers need the messages to do their transitions to get into another state.
+ * The Dispatcher is part of the controller/reactor mechanism for the state pattern
+ *
+ * @file Dispatcher.cpp
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-11-28
+ * @version 0.4
+ *
+ */
+
+#include "PuckHandler.h"
+
+Dispatcher* Dispatcher::instance = NULL;
+Mutex* Dispatcher::dispatcherInstanceMutex = new Mutex();
+
+Dispatcher::Dispatcher() {
+	//Create channel for pulse notification
+	if ((chid = ChannelCreate(0)) == -1) {
+		printf("Dispatcher: Error in ChannelCreate\n");
+	}
+
+	// Initialize *fp Array, set up all possible signals
+	sensorFuncArr = new callFuncs[SENSOR_MESSAGES_SIZE];
+	rs232FuncArr = new callFuncs[RS232_MESSAGES_SIZE];
+	timerFuncArr = new callFuncs[TIMER_MESSAGES_SIZE];
+	int i = 0;
+
+	sensorFuncArr[i++] = &CallInterface::sbStartOpen;
+	sensorFuncArr[i++] = &CallInterface::sbStartClosed;
+	sensorFuncArr[i++] = &CallInterface::sbHeightcontrolOpen;
+	sensorFuncArr[i++] = &CallInterface::sbHeightcontrolClosed;
+	sensorFuncArr[i++] = &CallInterface::sbGateOpen;
+	sensorFuncArr[i++] = &CallInterface::sbGateClosed;
+	sensorFuncArr[i++] = &CallInterface::msMetalTrue;
+	sensorFuncArr[i++] = &CallInterface::sbSlideOpen;
+	sensorFuncArr[i++] = &CallInterface::sbSlideClosed;
+	sensorFuncArr[i++] = &CallInterface::sbEndOpen;
+	sensorFuncArr[i++] = &CallInterface::sbEndClosed;
+	sensorFuncArr[i++] = &CallInterface::btnStartPressed;
+	sensorFuncArr[i++] = &CallInterface::btnStartReleased;
+	sensorFuncArr[i++] = &CallInterface::btnStopPressed;
+	sensorFuncArr[i++] = &CallInterface::btnStopReleased;
+	sensorFuncArr[i++] = &CallInterface::btnResetPressed;
+	sensorFuncArr[i++] = &CallInterface::btnResetReleased;
+	sensorFuncArr[i++] = &CallInterface::btnEstopPressed;
+	sensorFuncArr[i++] = &CallInterface::btnEstopReleased;
+
+	i = 0;
+	rs232FuncArr[i++] = &CallInterface::rs232Band2Ack;
+	rs232FuncArr[i++] = &CallInterface::rs232Band2Ready;
+	rs232FuncArr[i++] = &CallInterface::rs232Band1Waiting;
+	rs232FuncArr[i++] = &CallInterface::rs232PuckArrivedOnBand2;
+
+	i = 0;
+	timerFuncArr[i++] = &CallInterface::timerGateClose;
+	timerFuncArr[i++] = &CallInterface::timerSlideFull;
+	timerFuncArr[i++] = &CallInterface::timerSeg1Min;
+	timerFuncArr[i++] = &CallInterface::timerSeg1Max;
+	timerFuncArr[i++] = &CallInterface::timerSeg2Min;
+	timerFuncArr[i++] = &CallInterface::timerSeg2Max;
+	timerFuncArr[i++] = &CallInterface::timerSeg3Min;
+	timerFuncArr[i++] = &CallInterface::timerSeg3Max;
+	timerFuncArr[i++] = &CallInterface::timerHandOver;
+	timerFuncArr[i++] = &CallInterface::timerBand2Ack;
+
+	lc = LightController::getInstance();
+	eStop = false;
+	error = false;
+}
+
+Dispatcher::~Dispatcher() {
+	if (instance != NULL) {
+		delete[] sensorFuncArr;
+		delete[] rs232FuncArr;
+		delete[] timerFuncArr;
+		delete instance;
+		instance = NULL;
+		dispatcherInstanceMutex->~Mutex();
+	}
+}
+
+Dispatcher* Dispatcher::getInstance() {
+	if (!instance) {
+		dispatcherInstanceMutex->lock();
+		if (!instance) {
+			instance = new Dispatcher;
+#ifdef DEBUG_DISPATCHER
+			printf("Debug Dispatcher: New Dispatcher instance created\n");
+#endif
+		}
+		dispatcherInstanceMutex->unlock();
+	}
+
+	return instance;
+}
+
+void Dispatcher::execute(void*) {
+	int rc;
+	running = false;
+#ifdef BAND_2
+	Timer* handOverTimer = NULL;
+#endif
+
+	struct _pulse pulse;
+
+	while(!isStopped()){
+		rc = MsgReceivePulse(chid, &pulse, sizeof(pulse), NULL);
+		if (rc < 0) {
+			printf("Dispatcher: Error in recv pulse\n");
+			if (isStopped()) {
+				break;
+			}
+		}
+
+		int funcIdx = pulse.value.sival_int;
+
+		if (pulse.code == PULSE_FROM_ISRHANDLER) {
+
+			if(funcIdx == BTN_START_PRESSED && !running && !eStop && !error){
+				running = true;
+				lc->operatingNormal();
+			} else if(funcIdx == BTN_STOP_PRESSED && running && !eStop && !error){
+				running = false;
+			}
+
+			if(running && !eStop && !error){
+#ifdef DEBUG_DISPATCHER
+				printf("--------------------------------------------\n");
+				printf("Dispatcher received ISR pulse: %d\n", pulse.value);
+#endif
+
+				if (funcIdx == SB_START_OPEN && !error) {
+					PuckHandler::getInstance()->activatePuck();
+#ifdef BAND_2
+					if(handOverTimer != NULL){
+						TimerHandler::getInstance()->deleteTimer(handOverTimer);
+						handOverTimer = NULL;
+					}
+#endif
+#ifdef DEBUG_DISPATCHER
+					printf("Dispatcher called activatePuck \n");
+#endif
+				}
+
+				for (uint32_t i = 0; i < controllersForSensorFunc[funcIdx].size(); i++) {
+					(controllersForSensorFunc[funcIdx].at(i)->*sensorFuncArr[funcIdx])();
+				}
+#ifdef DEBUG_DISPATCHER
+				printf("Dispatcher called func%d \n", funcIdx);
+#endif
+
+#ifdef BAND_1
+				PuckHandler::getInstance()->reInitFirstElemInSegBools();
+
+#endif
+			}
+		} else if(pulse.code == PULSE_FROM_RS232){
+
+			if(running && !eStop){
+#ifdef DEBUG_DISPATCHER
+				printf("--------------------------------------------\n");
+				printf("Dispatcher received RS232 pulse: %d\n", pulse.value);
+#endif
+#ifdef BAND_2
+				if(funcIdx == RS232_BAND1_WAITING && PuckHandler::getInstance()->isBandEmpty()){
+					RS232_1::getInstance()->sendMsg(RS232_BAND2_READY);
+
+					handOverTimer = TimerHandler::getInstance()->createTimer(chid, TIME_VALUE_HAND_OVER_SEC, TIME_VALUE_HAND_OVER_MSEC, TIMER_HAND_OVER);
+					handOverTimer->start();
+
+					HAL_A::getInstance()->engine_right(false);
+					HAL_A::getInstance()->engine_unstop();
+				} else if(funcIdx == RS232_BAND1_WAITING) {
+					RS232_1::getInstance()->sendMsg(RS232_BAND2_ACK);
+#endif
+
+#ifdef BAND_1
+				if(!error) {
+#endif
+					for (uint32_t i = 0; i < controllersForRS232Func[funcIdx].size(); i++) {
+						(controllersForRS232Func[funcIdx].at(i)->*rs232FuncArr[funcIdx])();
+					}
+#ifdef BAND_1
+				}
+#endif
+#ifdef BAND_2
+				}
+#endif
+
+#ifdef DEBUG_DISPATCHER
+				printf("Dispatcher called func%d \n", funcIdx);
+#endif
+			}
+		} else if(pulse.code == PULSE_FROM_TIMER) {
+#ifdef DEBUG_DISPATCHER
+			printf("Dispatcher received TIMER pulse: %d\n", pulse.value);
+#endif
+
+#ifdef BAND_2
+			if(funcIdx == TIMER_HAND_OVER && handOverTimer != NULL){
+				TimerHandler::getInstance()->deleteTimer(handOverTimer);
+				handOverTimer = NULL;
+			}
+#endif
+			for (uint32_t i = 0; i < controllersForTimerFunc[funcIdx].size(); i++) {
+				(controllersForTimerFunc[funcIdx].at(i)->*timerFuncArr[funcIdx])();
+			}
+		}
+	}
+}
+
+void Dispatcher::registerContextForAllFuncs(CallInterface* callInterface) {
+	for (int i = 0; i < SENSOR_MESSAGES_SIZE; i++) {
+		controllersForSensorFunc[i].push_back(callInterface);
+	}
+
+	for (int i = 0; i < RS232_MESSAGES_SIZE; i++) {
+		controllersForRS232Func[i].push_back(callInterface);
+	}
+
+	for (int i = 0; i < TIMER_MESSAGES_SIZE; i++) {
+		controllersForTimerFunc[i].push_back(callInterface);
+	}
+}
+
+void Dispatcher::stop() {
+	HAWThread::stop();
+
+	if (ChannelDestroy(chid) == -1) {
+		printf("Dispatcher: Error in ChannelDestroy\n");
+	}
+}
+
+void Dispatcher::shutdown() {
+}
+
+int Dispatcher::getChid() {
+	return chid;
+}
+
+void Dispatcher::setEstop(bool eStop) {
+	this->eStop = eStop;
+}
+
+void Dispatcher::setError(bool error) {
+	this->error = error;
+}
+
+bool Dispatcher::isRunning(){
+	return running;
+}

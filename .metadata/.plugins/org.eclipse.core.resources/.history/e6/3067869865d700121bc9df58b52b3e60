@@ -1,0 +1,73 @@
+/**
+ *
+ * Dispatcher forwards Pulse Messages received from the ISRHandler and RS232 to
+ * all registered Controllers. Each Controller represents a puck on the band conveyor.
+ * Controllers need the messages to do their transitions to get into another state.
+ * The Dispatcher is part of the controller/reactor mechanism for the state pattern
+ *
+ * @file Dispatcher.h
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ */
+
+#ifndef DISPATCHER_H_
+#define DISPATCHER_H_
+
+#include <vector>
+#include <stdint.h>
+#include "HAWThread.h"
+#include "HWaccess.h"
+#include "messages.h"
+#include "Addresses.h"
+#include "Mutex.h"
+#include "CallInterface.h"
+#include "LightController.h"
+#include "RS232_1.h"
+
+//#define DEBUG_DISPATCHER
+
+typedef void (CallInterface::*callFuncs)();
+
+class Dispatcher: public thread::HAWThread {
+public:
+    static Dispatcher *getInstance();
+    virtual void execute(void *arg);
+    virtual void shutdown();
+    void stop();
+    virtual ~Dispatcher();
+    void registerContextForAllFuncs(CallInterface *context);
+    int getChid();
+    void setEstop(bool eStop);
+    void setError(bool error);
+    bool isRunning();
+    int getPuckTyp() const
+    {
+        return PuckTyp;
+    }
+
+    void setPuckTyp(int PuckTyp)
+    {
+        this->PuckTyp = PuckTyp;
+    }
+
+private:
+    int PuckTyp;
+    Dispatcher();
+    static Dispatcher *instance;
+    static Mutex *dispatcherInstanceMutex;
+    int chid;
+    bool eStop;
+    bool error;
+    bool running;
+    LightController *lc;
+    callFuncs *sensorFuncArr;
+    callFuncs *rs232FuncArr;
+    callFuncs *timerFuncArr;
+    vector<CallInterface*> controllersForSensorFunc[SENSOR_MESSAGES_SIZE];
+    vector<CallInterface*> controllersForRS232Func[RS232_MESSAGES_SIZE];
+    vector<CallInterface*> controllersForTimerFunc[TIMER_MESSAGES_SIZE];
+};
+
+#endif /* DISPATCHER_H_ */

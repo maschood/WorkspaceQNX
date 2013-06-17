@@ -1,0 +1,5 @@
+RS232Test.o: D:/WorkspaceQNX/CHRIS/Tests/RS232Test.cpp \
+ D:/WorkspaceQNX/CHRIS/Tests/RS232Test.h \
+ D:/WorkspaceQNX/CHRIS/RS232/RS232_1.h D:/WorkspaceQNX/CHRIS/HAWThread.h \
+ D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h \
+ D:/WorkspaceQNX/CHRIS/RS232/RS232_2.h

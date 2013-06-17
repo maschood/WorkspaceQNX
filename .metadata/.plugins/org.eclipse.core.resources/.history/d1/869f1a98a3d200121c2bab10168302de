@@ -1,0 +1,2 @@
+Mutex.o: D:/WorkspaceQNX/CHRIS/Mutex/Mutex.cpp \
+ D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

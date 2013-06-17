@@ -1,0 +1,185 @@
+/**
+ * SE2 WiSe 2012
+ * Controller
+ *
+ * Each puck on the band conveyor is an object of this class.
+ *
+ * @file Controller.h
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-11-28
+ * @version 0.4
+ *
+ */
+
+#include "Controller.h"
+#include "B1S01_Entry.h"
+
+
+Controller::Controller(int id) {
+	this->id = id;
+	state = new B1S01_Entry(this);
+}
+
+Controller::~Controller() {
+
+}
+
+int Controller::getID(){
+	return id;
+}
+
+bool Controller::isActive() {
+	return active;
+}
+
+void Controller::activate() {
+	active = true;
+}
+
+void Controller::resetController() {
+	active = false;
+	startable = true;
+	band1Waiting = false;
+	puckType = -1;
+	firstElementInSegment = false;
+	puckArrivedOnBand2 = false;
+	error= false;
+
+	state = new BaseState(this);
+}
+
+
+void Controller::PART_IN_0(){
+	state->PART_IN_0();
+}
+
+void Controller::PART_IN_1(){
+	state->PART_HEIGHT_1();
+}
+
+void Controller::PART_HEIGHT_0(){
+	state->PART_HEIGHT_0();
+}
+
+void Controller::PART_HEIGHT_1(){
+	state->PART_HEIGHT_1();
+}
+
+void Controller::PART_IN_GATE_0(){
+	state->PART_IN_GATE_0();
+}
+
+void Controller::PART_IN_GATE_1(){
+	state->PART_IN_GATE_1();
+}
+
+void Controller::PART_METALL(){
+	state->PART_METALL();
+}
+
+void Controller::GATE_STATUS_0(){
+	state->GATE_STATUS_0();
+}
+
+void Controller::GATE_STATUS_1(){
+	state->GATE_STATUS_1();
+}
+
+void Controller::SLIDE_FULL_0(){
+	state->SLIDE_FULL_0();
+}
+
+void Controller::SLIDE_FULL_1(){
+	state->SLIDE_FULL_1();
+}
+
+void Controller::PART_OUT_0(){
+	state->PART_OUT_0();
+}
+
+void Controller::PART_OUT_1(){
+	state->PART_OUT_1();
+}
+
+
+void Controller::START_BTN_PRESSED(){
+	if(active && startable){
+	printf("------------------------------------\n"
+		   "----------- NEW PUCK (%d) -----------\n"
+		   "------------------------------------\n",getID());
+		startable = false;
+#ifdef BAND_1
+		state = new B1S01_Entry(this);
+#endif
+#ifdef BAND_2
+		state = new B2S01_Entry(this);
+#endif
+#ifdef BAND_TEST
+		state = new State_Test01_Entry(this);
+#endif
+		state->START_BTN_PRESSED();
+	}
+}
+
+void Controller::START_BTN_RELEASED(){
+	state->START_BTN_RELEASED();
+}
+
+void Controller::STOP_BTN_PRESSED(){
+	state->STOP_BTN_PRESSED();
+}
+
+void Controller::STOP_BTN_RELEASED(){
+	state->STOP_BTN_RELEASED();
+}
+
+void Controller::RESET_BTN_PRESSED(){
+	state->RESET_BTN_PRESSED();
+}
+
+void Controller::RESET_BTN_RELEASED(){
+	state->RESET_BTN_RELEASED();
+}
+
+void Controller::ESTOP_BTN_PRESSED(){
+	state->ESTOP_BTN_PRESSED();
+}
+
+void Controller::ESTOP_BTN_RELEASED(){
+	state->ESTOP_BTN_RELEASED();
+}
+
+void Controller::setFirstElementInSegment(bool isFirst) {
+	firstElementInSegment = isFirst;
+}
+
+bool Controller::isFirstElementInSegment() {
+	return firstElementInSegment;
+}
+
+bool Controller::isBand1Waiting(){
+	return band1Waiting;
+}
+
+
+void Controller::setPuckArrivedOnBand2(bool boolean){
+	puckArrivedOnBand2 = boolean;
+}
+
+bool Controller::isPuckArrivedOnBand2(){
+	return puckArrivedOnBand2;
+}
+
+bool Controller::isError(){
+	return error;
+}
+
+void Controller::setError(bool error){
+	this->error = error;
+}
+
+
+

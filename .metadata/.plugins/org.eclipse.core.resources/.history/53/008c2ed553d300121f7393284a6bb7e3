@@ -1,0 +1,40 @@
+/**
+ * SE2 WiSe 2012
+ * Test class for HAL actors
+ *
+ *
+ * \file HALTest.h
+ * \author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * \date 2012-10-18
+ * \version 0.9
+ *
+ */
+
+#ifndef HALTEST_H_
+#define HALTEST_H_
+
+#include "ActorHAL.h"
+
+class HALTest {
+public:
+	/**
+	 * empty standard constructor
+	 */
+	HALTest();
+
+	/**
+	 * empty standard destructor
+	 */
+	virtual ~HALTest();
+
+	/**
+	 * function executes standard test plan for all actors of the
+	 * festo system
+	 */
+	void testHal();
+};
+
+#endif /* HALTEST_H_ */

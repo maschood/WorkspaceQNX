@@ -1,0 +1,123 @@
+/**
+ * @file HAL_S.h
+  Created on: 30.04.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ */
+
+#ifndef SENSOR_H_
+#define SENSOR_H_
+
+#include <stdlib.h>
+#include <iostream>
+#include "sys/siginfo.h"
+#include "FestoSelection.h"
+
+#include "Addresses.h"
+#include "HWaccess.h"
+#include "Mutex.h"
+#include "puckTypes.h"
+
+//#define DEBUG_SENSORHAL
+
+class HAL_S {
+public:
+	/**
+	 * standard destructor
+	 */
+	virtual ~HAL_S();
+
+	/**
+	 * Returns an instance for the sensor hal to work with.
+	 * @return sensor hal instance
+	 */
+	static HAL_S* getInstance();
+
+	/**
+	 * Channel ID for the ISR pulse messages
+	 * @return channelid
+	 */
+	int getChid();
+
+	/**
+	 * Connection ID for the connection to the channel used
+	 * for ISR pulse messages
+	 * @return connectionid
+	 */
+	int getCoid();
+
+	/**
+	 * Returns the type of a puck that is currently lying in
+	 * the height measurement on the band conveyor.
+	 * Valid types are defined in puckTypes.h
+	 *
+	 * @return pucktype
+	 */
+	int getHeightPuckType();
+
+	/**
+	 * Returns an integer value representing measured height
+	 * from the height sensor.
+	 * @return height
+	 */
+	int getHeight();
+
+	/**
+	 * Called if ISR is no longer needed. Unbinds ISR from IRQ,
+	 * disconnects from channel, closes channel.
+	 * If used in a thread, thread's stop() method should be
+	 * overwritten and if thread is called to stop, this function
+	 * should be called afterwards for a clean shutdown.
+	 */
+	void stopInterrupt();
+
+private:
+	/**
+	 * Standard constructor, initializes the IRQs and ISR
+	 */
+	HAL_S();
+
+	/**
+	 * Initializes the IRQs and ISR, called by constructor
+	 */
+	void initInterrupt();
+
+
+	/**
+	 * Channel ID for channel used by kernel for pulse messages
+	 * from the ISR
+	 */
+	int chid;
+
+	/**
+	 * Connection ID for connection to the channel used by kernel for
+	 * pulse messages from the ISR.
+	 */
+	int coid;
+
+	/**
+	 * Interrupt ID for the ISR binded to IRQ 11
+	 */
+	int interruptId;
+
+	/**
+	 * Event structure for pulse messages to be send by kernel after
+	 * ISR was called
+	 */
+	struct sigevent event;
+
+	/**
+	 * Instance for using Sensor HAL (Singleton)
+	 */
+	static HAL_S* instance;
+
+	/**
+	 * Mutex for securing access to hal instance
+	 */
+	static Mutex* sensorInstanceMutex;
+
+};
+
+#endif /* SENSOR_H_ */

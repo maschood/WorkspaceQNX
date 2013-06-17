@@ -1,0 +1,34 @@
+/*
+ * B1S01_Entry.cpp
+ *
+ *  Created on: 03.06.2013
+ *      Author: maschood
+ */
+
+#include "B1S01_Entry.h"
+
+
+B1S01_Entry::B1S01_Entry(Controller* controller):BaseState(controller){
+	this->controller = controller;
+}
+
+B1S01_Entry::~B1S01_Entry() {
+
+}
+
+void B1S01_Entry::START_BTN_PRESSED(void){
+#ifdef DEBUG_MESSAGES
+	cout << "BS1S01_Entry: START_BTN_PRESSED / lampeGrünAn" << endl;
+#endif
+}
+
+void B1S01_Entry::START_BTN_RELEASED(){
+#ifdef DEBUG_MESSAGES
+	cout << "BS1S01_Entry: START_BTN_RELEASED / lampeGrünAn --> B1S02_Seq1" << endl;
+#endif
+	HAL_A* hal_a = HAL_A::get_instance();
+	hal_a->lamp_green_on();
+	cout << "ID: " <<controller->getID() << endl;
+	new (this) B1S02_Seq1(controller);
+
+}

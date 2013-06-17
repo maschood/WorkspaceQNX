@@ -1,0 +1,3 @@
+RS232_2.o: D:/WorkspaceQNX/CHRIS/RS232/RS232_2.cpp \
+ D:/WorkspaceQNX/CHRIS/RS232/RS232_2.h D:/WorkspaceQNX/CHRIS/HAWThread.h \
+ D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

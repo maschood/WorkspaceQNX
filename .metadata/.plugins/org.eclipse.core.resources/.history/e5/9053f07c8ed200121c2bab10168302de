@@ -1,0 +1,121 @@
+/**
+ * SE2 WiSe 2012
+ * Controller
+ *
+ * Each puck on the band conveyor is an object of this class.
+ *
+ * @file Controller.h
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-11-28
+ * @version 0.4
+ *
+ */
+
+#ifndef CONTROLLER_H_
+#define CONTROLLER_H_
+
+#include "HALCallInterface.h"
+class BaseState;
+#include <stdio.h>
+
+class Controller: public HALCallInterface {
+public:
+	/**
+	 * Parameterized constructor for a Controller
+	 *
+	 * @param id [1-12]
+	 */
+	Controller(int id);
+	void PART_IN_0();
+	void PART_IN_1();
+
+	void PART_HEIGHT_0();
+	void PART_HEIGHT_1();
+
+	void PART_IN_GATE_0();
+	void PART_IN_GATE_1();
+
+	void PART_METALL();
+
+	void GATE_STATUS_0();
+	void GATE_STATUS_1();
+
+	void SLIDE_FULL_0();
+	void SLIDE_FULL_1();
+
+	void PART_OUT_0();
+	void PART_OUT_1();
+
+	//Port C
+	void START_BTN_PRESSED();
+	void START_BTN_RELEASED();
+
+	void STOP_BTN_PRESSED();
+	void STOP_BTN_RELEASED();
+
+	void RESET_BTN_PRESSED();
+	void RESET_BTN_RELEASED();
+
+	void ESTOP_BTN_PRESSED();
+	void ESTOP_BTN_RELEASED();
+
+	/**
+	 * Each controller (puck) is held in a specific queue. For each
+	 * segment there are queues. If a puck is the first one in its segment,
+	 * corresponding bool is set. Function to determine, whether if puck is
+	 * first or not is in the PuckHandler.
+	 *
+	 * @param isFirst [true if yes, else false]
+	 */
+	void setFirstElementInSegment(bool isFirst);
+
+	/**
+	 * Returns whether puck is first in segment or not
+	 *
+	 * @return [true if yes, else false]
+	 */
+	bool isFirstElementInSegment();
+
+	/**
+	 * Returns ID of this controller (puck)
+	 *
+	 * @return controller id
+	 */
+	int getID();
+
+	/**
+	 * Return if this controller (puck) is activated or not.
+	 * It means if this puck is actually lying on the band
+	 * conveyor
+	 *
+	 * @return active [true if yes, else false]
+	 */
+
+	/**
+	 * Empty standard destructor
+	 */
+	virtual ~Controller();
+
+private:
+	/**
+	 * Corresponding id of this controller (puck), can be number between
+	 * 1 and MAX_PUCKS_BAND (defined in PuckHandler.h)
+	 */
+	int id;
+
+	/**
+	 * Each controller can be in a state derived or from type BaseState.
+	 */
+	BaseState* state;
+	/**
+	 * If controller (puck) is first element in its segment true, else false.
+	 */
+	bool firstElementInSegment;
+
+
+};
+
+#endif /* CONTROLLER_H_ */

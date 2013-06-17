@@ -1,0 +1,132 @@
+/**
+ * SE2 WiSe 2012
+ * main class
+ *
+ * @file main.cpp
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-10-18
+ * @version 5.01
+ * 
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/neutrino.h>
+
+#include "Test/HALTest.h"
+#include "Test/RS232Test.h"
+#include "LightController.h"
+#include "Test/LightControllerTest.h"
+#include "HAL_S.h"
+#include "ISRTest.h"
+
+#include "ISRHandler.h"
+#include "PuckHandler.h"
+#include "Controller.h"
+#include "ErrorFSM.h"
+#include "Timer.h"
+#include "Receiver.h"
+
+int main(int argc, char *argv[]) {
+
+	//MyObject* myObject = new MyObject();
+	//myObject->myMethod();
+	//delete myObject;
+
+	//thread::MyThread thread;
+	//thread.start(NULL);
+
+	//Testing Milestone 2
+	//HALTest halTest;
+	//halTest.testHal();
+
+	//RS232Test rs232Test;
+	//rs232Test.testRS232();
+
+	// Testing Milestone 3
+	//LightControllerTest lctest;
+	//lctest.testLightController();
+
+	//ISRTest isrtest;
+	//isrtest.start(0);
+
+	// Testing Milestone 4
+	//weil wichtig fuer sim ioacces_open
+	HAL_A* hal_a = HAL_A::getInstance();
+	HAL_S::getInstance();
+
+	LightController* lc = LightController::getInstance();
+
+	ErrorFSM* errfsm = ErrorFSM::getInstance();
+	errfsm->start(0);
+
+	Dispatcher* disp = Dispatcher::getInstance();
+	disp->start(0);
+
+	ISRHandler* isrhandler = ISRHandler::getInstance();
+	isrhandler->start(0);
+
+	PuckHandler::getInstance()->initializePucks();
+
+	Receiver* recv = Receiver::getInstance();
+	recv->start(0);
+
+	/*
+
+	// Testing Milestone 5
+	// http://www.c-plusplus.de/forum/295269-full
+	struct _pulse pulse;
+	int chid = ChannelCreate(0);
+	Timer timer(chid, 10, 0);
+	timer.start();
+	sleep(5);
+	timer.pause();
+	//sleep(5);
+	//timer.start();
+	MsgReceivePulse(chid, &pulse, sizeof(pulse), NULL);
+	if(pulse.code == PULSE_FROM_TIMER){
+		printf("recved timer timeout pulse\n");
+	}
+	// wait 10secs without sleeping! if pause didnt work pulse would be lying in queue until MsgReceivePulse is called!
+	// we wouldnt realize if it wont work ;> in the next test run add timer.start()
+
+	 */
+
+	/*START CLEANUP*/
+	char breakWhile = 0;
+	while(1){
+		//tastatureiongabe lesen, dann thread stoppen, irqs stoppen, join, profit
+		std::cin >> breakWhile;
+		if(breakWhile == 'q'){
+			break;
+		}
+	}
+	printf("main was stopped, cleaning up ....\n");
+	disp->stop();
+	isrhandler->stop();
+	hal_a->engineStop();
+	hal_a->gate(false);
+	errfsm->stop();
+	lc->lightsOff();
+	lc->cont();
+	lc->stop();
+	recv->stop();
+
+
+	disp->join();
+	isrhandler->join();
+	lc->join();
+	errfsm->join();
+	recv->join();
+	/*END CLEANUP*/
+
+
+	printf("EXIT_SUCCESS \n");
+
+	return EXIT_SUCCESS;
+}

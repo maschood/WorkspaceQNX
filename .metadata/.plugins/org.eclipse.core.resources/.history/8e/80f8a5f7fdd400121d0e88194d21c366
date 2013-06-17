@@ -1,0 +1,17 @@
+/*
+ * B2S11_ERR_MetalRerverse.h
+ *
+ *  Created on: 14.06.2013
+ *      Author: maschood
+ */
+
+#ifndef B2S11_ERR_METALRERVERSE_H_
+#define B2S11_ERR_METALRERVERSE_H_
+
+class B2S11_ERR_MetalRerverse {
+public:
+	B2S11_ERR_MetalRerverse();
+	virtual ~B2S11_ERR_MetalRerverse();
+};
+
+#endif /* B2S11_ERR_METALRERVERSE_H_ */

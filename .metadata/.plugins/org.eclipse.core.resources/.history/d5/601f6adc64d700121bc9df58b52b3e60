@@ -1,0 +1,47 @@
+/**
+ * @file Receiver.h
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ */
+
+#ifndef RECEIVER_H_
+#define RECEIVER_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <sys/neutrino.h>
+
+#include "Dispatcher.h"
+#include "ErrorFSM.h"
+#include "Mutex.h"
+#include "RS232_1.h"
+#include "Addresses.h"
+#include "Controller.h"
+
+
+class Receiver: public thread::HAWThread {
+public:
+	virtual void execute(void* arg);
+	virtual void shutdown();
+	void stop();
+	static Receiver* getInstance();
+	virtual ~Receiver();
+
+private:
+	Receiver();
+
+	static Receiver* instance;
+	static Mutex* receiverInstanceMutex;
+	
+	int dispatcherChid;
+	int dispatcherCoid;
+
+	int errfsmChid;
+	int errfsmCoid;
+
+	RS232_1* rs232_1;
+};
+
+#endif /* RECEIVER_H_ */

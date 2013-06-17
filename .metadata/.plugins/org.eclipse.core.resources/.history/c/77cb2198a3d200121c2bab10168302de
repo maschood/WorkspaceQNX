@@ -1,0 +1,4 @@
+TimerHandler.o: D:/WorkspaceQNX/CHRIS/Timer/TimerHandler.cpp \
+ D:/WorkspaceQNX/CHRIS/Timer/TimerHandler.h \
+ D:/WorkspaceQNX/CHRIS/Timer/Timer.h D:/WorkspaceQNX/CHRIS/HWaccess.h \
+ D:/WorkspaceQNX/CHRIS/address.h D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

@@ -1,0 +1,359 @@
+/*
+ *
+ */
+
+#include "HAL_ISR/HAL_ISR.h"
+#include "SignalType.h"
+#include "messages.h"
+
+static int coid;
+
+const struct sigevent * intHandler(void *arg, int id) {
+	struct sigevent *event = (struct sigevent *) arg;
+	int iir;
+	uint16_t val;
+
+	/*
+	 * determine the source of the interrupt
+	 * by reading the Interrupt Identification Register
+	 */
+
+	iir = in8(DIO_BASE + OFFS_INT_STATUS) & (BIT_1 | BIT_3);
+	out8(DIO_BASE + OFFS_INT_STATUS, 0);
+
+	switch (iir) {
+	case (BIT_1 | BIT_3):
+		val = (in8(DIO_BASE + DIO_OFFS_B) << 8) | (in8(DIO_BASE + DIO_OFFS_C));
+		SIGEV_PULSE_INIT(event, coid, SIGEV_PULSE_PRIO_INHERIT, PB_STATUS
+				| PC_STATUS, val);
+		break;
+	case BIT_1:
+		val = in8(DIO_BASE + DIO_OFFS_B);
+		SIGEV_PULSE_INIT(event, coid, SIGEV_PULSE_PRIO_INHERIT, PB_STATUS, val);
+		break;
+	case BIT_3:
+		val = in8(DIO_BASE + DIO_OFFS_C);
+		SIGEV_PULSE_INIT(event, coid, SIGEV_PULSE_PRIO_INHERIT, PC_STATUS, val);
+		break;
+	default:
+		break;
+		event = NULL;
+	}
+	return event;
+}
+
+HAL_ISR* HAL_ISR::instance = NULL;
+
+HAL_ISR::HAL_ISR() {
+	HAL_A::get_instance();
+	initInterrupt();
+
+	// create channel for dispatcher
+	signalChid = ChannelCreate(0);
+	if (signalChid == -1) {
+		perror("Dispatcher: ChannelCreate signalChid failed");
+		exit(EXIT_FAILURE);
+	}
+
+	// attach to signal channel
+	signalCoid = ConnectAttach(0, 0, signalChid, _NTO_SIDE_CHANNEL, 0);
+	if (signalCoid == -1) {
+		perror("SensorCtrl: ConnectAttach signalCoid failed");
+		exit(EXIT_FAILURE);
+	}
+
+}
+
+HAL_ISR::~HAL_ISR() {
+	delete instance;
+	instance = NULL;
+	out8(DIO_BASE + DIO_OFFS_CTRL, 0x8A);
+	out8(DIO_BASE + DIO_OFFS_A, 0x00);
+	out8(DIO_BASE + DIO_OFFS_C, 0x00);
+}
+
+HAL_ISR* HAL_ISR::getInstance() {
+#ifdef HW
+	if (-1 == ThreadCtl(_NTO_TCTL_IO, 0)) {
+		perror("ThreadCtl access failed\n");
+		return NULL;
+	}
+#endif
+
+	if (instance == NULL) {
+		instance = new HAL_ISR();
+	}
+	return instance;
+}
+
+int HAL_ISR::getSignalChid(void) {
+	return signalChid;
+}
+
+void HAL_ISR::initInterrupt() {
+	// create channel to receive pulse messages from the ISR
+	chid = ChannelCreate(0);
+	if (chid == -1) {
+		perror("SensorikIntro: ChannelCreate Chid failed");
+		exit(EXIT_FAILURE);
+	}
+
+	//Connect to Channel
+	coid = ConnectAttach(0, 0, chid, _NTO_SIDE_CHANNEL, 0);
+	if (coid == -1) {
+		perror("SensorikIntro: ConnectAttach coid failed");
+		exit(EXIT_FAILURE);
+	}
+
+	//Iinit Sigevent for Pulse
+	SIGEV_PULSE_INIT(&event, coid, SIGEV_PULSE_PRIO_INHERIT, 0, 0);
+
+	//ISR register
+	interruptId = InterruptAttach(HW_SERIAL_IRQ, intHandler, &event,
+			sizeof(event), 0);
+	if (interruptId == -1) {
+		perror("Fehler beim InterruptAttach");
+		exit(EXIT_FAILURE);
+	}
+	//Reset IRQs status Register
+	out8(DIO_BASE + OFFS_INT_STATUS, 0);
+
+	// disable interrupts for all ports (Bit 0-5)
+	uint8_t int_ctrl = in8(DIO_BASE + OFFS_INT_CTRL);
+	out8(DIO_BASE + OFFS_INT_CTRL, int_ctrl | 0b00111111);
+
+	// enable interrupt for portB und portC (Bit 1 und 2) (S. 18)
+	int_ctrl = in8(DIO_BASE + OFFS_INT_CTRL);
+	out8(DIO_BASE + OFFS_INT_CTRL, int_ctrl & ~(PB_CTRL | PC_CTRL));
+
+	// read out port B and C valies
+	portBstatus = in8(DIO_BASE + DIO_OFFS_B);
+	portCstatus = in8(DIO_BASE + DIO_OFFS_B);
+
+}
+
+void HAL_ISR::stop() {
+	HAWThread::stop(); // super.stop();
+
+	if (-1 == ConnectDetach(coid)) {
+		perror("SensorCtrl: ConnectDetach coid failed");
+	}
+	if (-1 == ChannelDestroy(chid)) {
+		perror("SensorCtrl: ChannelDestroy chid failed");
+	}
+
+	if (-1 == ConnectDetach(signalCoid)) {
+		perror("SensorCtrl: ConnectDetach ConnectDetach failed");
+	}
+	if (-1 == ChannelDestroy(signalChid)) {
+		perror("SensorCtrl: ChannelDestroy signalChid failed");
+	}
+
+}
+
+void HAL_ISR::shutdown() {
+}
+
+void HAL_ISR::execute(void* arg) {
+	struct _pulse pulse;
+	int oldVector = DEFAULT_ISR_VAL;
+	int newVector = 0;
+	int rc;
+	int action = -1;
+
+	while (!isStopped()) {
+		if (-1 == MsgReceivePulse(chid, &pulse, sizeof(pulse), NULL)) {
+			if (isStopped()) {
+				break; // channel destroyed, Thread ending
+			}
+			perror("SensorCtrl: MsgReceivePulse");
+			exit(EXIT_FAILURE);
+		}
+
+		newVector = pulse.value.sival_int;
+			int i;
+			bool newVal;
+
+			for (i = 0; i < 12; i++) {
+				if (((newVector >> i) & 1) != ((oldVector >> i) & 1)) {
+					newVal = (newVector >> i) & 1;
+
+					switch (i) {
+					case 0:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Kein Werkstueck im Einlauf\n");
+	#endif
+							action = SB_START_CLOSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Werkstueck im Einlauf\n");
+	#endif
+							action = SB_START_OPEN;
+						}
+						break;
+					case 1:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Kein Werkstueck in Hoehenmessung\n");
+	#endif
+							action = SB_HEIGHTCONTROL_CLOSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Werkstueck in Hoehenmessung\n");
+	#endif
+							action = SB_HEIGHTCONTROL_OPEN;
+						}
+						break;
+					case 2:
+						// Check type/height of pucks only over A/D, no IRQ forwarded!
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("no pulse! Werkstueck im Toleranzbereich\n");
+	#endif
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("no pulse! Werkstueck zu klein/gross\n");
+	#endif
+						}
+						break;
+					case 3:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Kein Werkstueck in Weiche\n");
+	#endif
+							action = SB_GATE_CLOSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Werkstueck in Weiche\n", i);
+	#endif
+							action = SB_GATE_OPEN;
+						}
+						break;
+					case 4:
+						// Only IRQ needed is, if puck contains metal; other one not forwarded
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Werkstueck Metall\n");
+	#endif
+							action = MS_METAL_TRUE;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("no pulse! Werkstueck kein Metall\n");
+	#endif
+						}
+						break;
+					case 5:
+						// IRQs not needed, so will not be forwarded
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("no pulse! Weiche offen\n");
+	#endif
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("no pulse! Weiche geshlossen\n");
+	#endif
+						}
+						break;
+					case 6:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Rutsche nicht voll\n");
+	#endif
+							action = SB_SLIDE_CLOSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Rutsche voll\n");
+	#endif
+							action = SB_SLIDE_OPEN;
+						}
+						break;
+					case 7:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("kein Werkstueck im Auslauf\n");
+	#endif
+							action = SB_END_CLOSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Werkstueck im Auslauf\n");
+	#endif
+							action = SB_END_OPEN;
+						}
+						break;
+					case 8:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Starttste gedrueck\n");
+	#endif
+							lc->ledStart(true);
+							action = BTN_START_PRESSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Starttste losgelassen\n");
+	#endif
+							lc->ledStart(false);
+							action = BTN_START_RELEASED;
+						}
+						break;
+					case 9:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Stoptaste losgelassen\n");
+	#endif
+							action = BTN_STOP_RELEASED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Stoptaste gedrueckt\n");
+	#endif
+							action = BTN_STOP_PRESSED;
+						}
+						break;
+					case 10:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("Resettaste gedrueckt\n");
+	#endif
+							lc->ledReset(true);
+							action = BTN_RESET_PRESSED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("Resettaste losgelassen\n");
+	#endif
+							lc->ledReset(false);
+							action = BTN_RESET_RELEASED;
+						}
+						break;
+					case 11:
+						if (newVal) {
+	#ifdef DEBUG_ISRHandler
+							printf("E-Stoptaste geloest\n");
+	#endif
+							action = BTN_ESTOP_RELEASED;
+						} else {
+	#ifdef DEBUG_ISRHandler
+							printf("E-Stoptaste gedrueckt\n");
+	#endif
+							action = BTN_ESTOP_PRESSED;
+						}
+						break;
+					default:
+						printf("no pulse! ISRTest switch def value\n");
+					}
+
+					if(action != -1){
+						rc = MsgSendPulse(signalCoid, SIGEV_PULSE_PRIO_INHERIT, sendCode, sendVal);
+						if (rc < 0) {
+							printf("ISRHandler: Error in MsgSendPulse");
+						}
+
+						action = -1;
+					}
+				}
+			}
+			oldVector = newVector;
+
+
+
+}
+

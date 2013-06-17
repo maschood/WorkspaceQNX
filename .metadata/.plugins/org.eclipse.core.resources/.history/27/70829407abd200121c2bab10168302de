@@ -1,0 +1,74 @@
+/*
+ * DispatcherIntro.h
+ *
+ *  Created on: 06.05.2013
+ *
+ */
+
+#ifndef DISPATCHERINTRO_H_
+#define DISPATCHERINTRO_H_
+
+
+#include "HAWThread.h"
+using namespace thread;
+
+#include "DISPATCHER/HALCallInterface.h"
+#include "SignalType.h"
+#include "Mutex.h"
+#include <stdint.h>
+#include <unistd.h>
+#include <list>
+#include <vector>
+#include "Definitions.h"
+
+typedef void (HALCallInterface::*callFuncs)();
+
+class Dispatcher : public HAWThread {
+public:
+    static Dispatcher* getInstance();
+
+    virtual ~Dispatcher();
+
+    /**
+     * Register a controller for a specified signal.
+     *
+     * @param   controller  the controller to be registered
+     * @param   sensor      the sensor to be observed
+     * @param   val         the value of the sensor for notification
+     */
+    void registerController(HALCallInterface* controller, SignalType signalType, int val);
+
+    int getChid();
+	void registerContextForAllFuncs(HALCallInterface* context);
+
+
+private:
+    Dispatcher();
+    static Dispatcher* instance;
+
+    static Mutex* dispatcherInstanceMutex;
+    list<HALCallInterface*> controllers[N_SIGNALE]; // registered controllers
+    int signalChid;
+
+    // typedef to use array of member methods
+    typedef void (HALCallInterface::*FP)(void);
+    FP funcArr[N_SIGNALE];
+
+
+
+
+    /**
+     * Signal all controllers.
+     */
+    void signal(int signal);
+
+    callFuncs* FuncArr;
+
+    vector<HALCallInterface*> controllersFuncArr[SENSOR_MESSAGES_SIZE];
+
+protected:
+    void execute(void* arg);
+    void shutdown(void);
+};
+
+#endif /* DISPATCHERINTRO_H_ */

@@ -1,0 +1,84 @@
+/**
+ * SE2 WiSe 2012
+ * main class
+ *
+ * @file main.cpp
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-10-18
+ * @version 5.01
+ * 
+ */
+
+#include <cstdlib>
+#include <iostream>
+#include <unistd.h>
+#include <stdio.h>
+#include <sys/neutrino.h>
+
+
+#include "LightController.h"
+#include "HAL_S.h"
+#include "HAL_ISR.h"
+#include "PuckHandler.h"
+#include "Controller.h"
+#include "ErrorFSM.h"
+#include "Timer.h"
+#include "Receiver.h"
+
+int main(int argc, char *argv[]) {
+
+	HAL_A* hal_a = HAL_A::getInstance();
+	HAL_S::getInstance();
+
+	LightController* lc = LightController::getInstance();
+
+	ErrorFSM* errfsm = ErrorFSM::getInstance();
+	errfsm->start(0);
+
+	Dispatcher* disp = Dispatcher::getInstance();
+	disp->start(0);
+
+	HAL_ISR* isrhandler = HAL_ISR::getInstance();
+	isrhandler->start(0);
+
+	PuckHandler::getInstance()->initializePucks();
+
+	Receiver* recv = Receiver::getInstance();
+	recv->start(0);
+
+	/*START CLEANUP*/
+	char breakWhile = 0;
+	while(1){
+		//tastatureiongabe lesen, dann thread stoppen, irqs stoppen, join, profit
+		std::cin >> breakWhile;
+		if(breakWhile == 'q'){
+			break;
+		}
+	}
+	printf("main was stopped, cleaning up ....\n");
+	disp->stop();
+	isrhandler->stop();
+	hal_a->engineStop();
+	hal_a->gate(false);
+	errfsm->stop();
+	lc->lightsOff();
+	lc->cont();
+	lc->stop();
+	recv->stop();
+
+
+	disp->join();
+	isrhandler->join();
+	lc->join();
+	errfsm->join();
+	recv->join();
+	/*END CLEANUP*/
+
+
+	printf("EXIT_SUCCESS \n");
+
+	return EXIT_SUCCESS;
+}

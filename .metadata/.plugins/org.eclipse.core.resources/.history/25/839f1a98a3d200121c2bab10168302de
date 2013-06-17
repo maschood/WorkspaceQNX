@@ -1,0 +1,7 @@
+LightControllerTest.o: \
+ D:/WorkspaceQNX/CHRIS/Tests/LightControllerTest.cpp \
+ D:/WorkspaceQNX/CHRIS/Tests/LightControllerTest.h \
+ D:/WorkspaceQNX/CHRIS/HAL/LightController.h \
+ D:/WorkspaceQNX/CHRIS/HAL/ActorHAL.h D:/WorkspaceQNX/CHRIS/address.h \
+ D:/WorkspaceQNX/CHRIS/HWaccess.h D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h \
+ D:/WorkspaceQNX/CHRIS/HAWThread.h

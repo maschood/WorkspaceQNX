@@ -1,0 +1,29 @@
+/*
+ * B2S04_Seg2.h
+ *
+ *  Created on: 08.06.2013
+ * @author Erik Matthiessen
+ *         Denis Rycka
+ *         Nilüfer Güngör
+ *         Maschhood Ahmad
+ *
+ */
+
+#ifndef B2S04_SEG2_H_
+#define B2S04_SEG2_H_
+
+#include "BaseState.h"
+#include "B2S05_Gate.h"
+
+class B2S04_Seg2: public BaseState {
+public:
+	B2S04_Seg2(Controller* controller);
+	void msMetalTrue();
+	virtual ~B2S04_Seg2();
+
+	void sbGateOpen();
+	void timerSeg2Min();
+	void timerSeg2Max();
+};
+
+#endif /* B2S04_SEG2_H_ */

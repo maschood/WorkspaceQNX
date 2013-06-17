@@ -1,0 +1,133 @@
+/**
+ * SE2 WiSe 2012
+ * Controller
+ *
+ * Each puck on the band conveyor is an object of this class.
+ *
+ * @file Controller.h
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-11-28
+ * @version 0.4
+ *
+ */
+
+#ifndef CONTROLLER_H_
+#define CONTROLLER_H_
+
+#include "CallInterface.h"
+class BaseState;
+#include <stdio.h>
+#include "puckTypes.h"
+#include "bandselection.h"
+#include "TimerHandler.h"
+
+class Controller: public CallInterface {
+public:
+    Controller(int id);
+    void sbStartOpen();
+    void sbStartClosed();
+    void sbHeightcontrolOpen();
+    void sbHeightcontrolClosed();
+    void sbGateOpen();
+    void sbGateClosed();
+    void msMetalTrue();
+    void sbSlideOpen();
+    void sbSlideClosed();
+    void sbEndOpen();
+    void sbEndClosed();
+    void btnStartPressed();
+    void btnStartReleased();
+    void btnStopPressed();
+    void btnStopReleased();
+    void btnResetPressed();
+    void btnResetReleased();
+    void btnEstopPressed();
+    void btnEstopReleased();
+    void rs232Band2Ack();
+    void rs232Band2Ready();
+    void rs232Band1Waiting();
+    void rs232PuckArrivedOnBand2();
+    void timerGateClose();
+    void timerSlideFull();
+    void timerSeg1Min();
+    void timerSeg1Max();
+    void timerSeg2Min();
+    void timerSeg2Max();
+    void timerSeg3Min();
+    void timerSeg3Max();
+    void timerHandOver();
+    void timerBand2Ack();
+    void setFirstElementInSegment(bool isFirst);
+    bool isFirstElementInSegment();
+    int getID();
+    bool isActive();
+    void activate();
+    void resetController();
+    virtual ~Controller();
+    bool isBand1Waiting();
+    void setSegTimerMinCalled(bool boolean);
+    bool isSegTimerMinCalled();
+    void setPuckArrivedOnBand2(bool boolean);
+    bool isPuckArrivedOnBand2();
+    void resetSegTimers();
+    bool isError();
+    void setError(bool error);
+    int getHeightB1() const
+    {
+        return heightB1;
+    }
+
+    int getHeightB2() const
+    {
+        return heightB2;
+    }
+
+    string getPuckTyp() const
+    {
+        return puckTyp;
+    }
+
+    void setHeightB1(int heightB1)
+    {
+        this->heightB1 = heightB1;
+    }
+
+    void setHeightB2(int heightB2)
+    {
+        this->heightB2 = heightB2;
+    }
+
+    void setPuckTyp(string puckTyp)
+    {
+        this->puckTyp = puckTyp;
+    }
+
+    int puckType;
+    Timer *gateTimer;
+    Timer *slideTimer;
+    Timer *segTimerMin;
+    Timer *segTimerMax;
+    Timer *handOverTimer;
+    Timer *band2AckTimer;
+private:
+    TimerHandler *th;
+    int id;
+    BaseState *state;
+    bool firstElementInSegment;
+    bool active;
+    bool startable;
+    bool band1Waiting;
+    bool segTimerMinCalled;
+    bool puckArrivedOnBand2;
+    bool error;
+    int heightB1;
+    int heightB2;
+    string puckTyp;
+
+
+};
+
+#endif /* CONTROLLER_H_ */

@@ -1,0 +1,103 @@
+/*
+ * B2S02_Seg1.cpp
+ *
+ *  Created on: 24.11.2012
+ *      Author: martin
+ */
+
+#include "B2S02_Seg1.h"
+
+B2S02_Seg1::B2S02_Seg1(Controller* controller) : BaseState(controller) {
+	this->controller = controller;
+
+#ifdef DEBUG_STATE_PRINTF
+	printf("DEBUG STATE: Puck%d -> B2S02_Seg1 \n", this->controller->getID());
+#endif
+}
+
+B2S02_Seg1::~B2S02_Seg1() {
+	rs232_1->sendMsg(RS232_PUCK_ARRIVED_ON_BAND2);
+}
+
+void B2S02_Seg1::sbHeightcontrolOpen() {
+
+	new (this) B2S03_Height(controller);
+	if(this->controller->isSegTimerMinCalled()){
+		controller->resetSegTimers();
+
+		new (this) B2S03_Height(controller);
+	}
+//
+//	else {
+//
+//		printf("Debug State <B2S02_Seg1>: ERROR<ERR_STATE_ERROR_MIN> called by puck%d\n", controller->getID());
+//
+//		int errorfsmChid = errfsm->getErrorFSMChid();
+//		int errorfsmCoid;
+//		int rc;
+//
+//		if ((errorfsmCoid = ConnectAttach(0, 0, errorfsmChid, _NTO_SIDE_CHANNEL, 0)) == -1) {
+//			printf("B2S02_Seg1: Error in ConnectAttach\n");
+//		}
+//
+//		rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_ERROR_MIN);
+//		if (rc < 0) {
+//			printf("B2S02_Seg1: Error in MsgSendPulse");
+//		}
+//
+//		if (ConnectDetach(errorfsmCoid) == -1) {
+//			printf("B2S02_Seg1: Error in ConnectDetach\n");
+//		}
+//	}
+}
+
+void B2S02_Seg1::timerSeg1Min() {
+	controller->setSegTimerMinCalled(true);
+}
+
+void B2S02_Seg1::timerSeg1Max() {
+
+	puckHandler->removePuckFromBand(controller);
+	hal_a->engineStop();
+
+	printf("Debug State <B2S02_Seg1>: ERROR<ERR_STATE_ERROR_MAX> called by puck%d\n", controller->getID());
+
+	int replyChid = errfsm->getReplyChid();
+	int errorfsmChid = errfsm->getErrorFSMChid();
+	int errorfsmCoid;
+	int rc;
+
+	struct _pulse pulse;
+
+	if ((errorfsmCoid = ConnectAttach(0, 0, errorfsmChid, _NTO_SIDE_CHANNEL, 0)) == -1) {
+		printf("B2S02_Seg1: Error in ConnectAttach\n");
+	}
+
+	//rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_CRITICAL_ERROR);
+	rc = MsgSendPulse(errorfsmCoid, SIGEV_PULSE_PRIO_INHERIT, PULSE_FROM_PUCK, ERR_STATE_ERROR_MAX);
+	if (rc < 0) {
+		printf("B2S02_Seg1: Error in MsgSendPulse");
+	}
+
+	rc = MsgReceivePulse(replyChid, &pulse, sizeof(pulse), NULL);
+	if (rc < 0) {
+		printf("B2S02_Seg1: Error in recv pulse\n");
+	}
+
+	if (ConnectDetach(errorfsmCoid) == -1) {
+		printf("B2S02_Seg1: Error in ConnectDetach\n");
+	}
+
+	bool tmpBand1Waiting = controller->isBand1Waiting();
+
+	controller->resetController();
+
+	if(tmpBand1Waiting){
+		rs232_1->sendMsg(RS232_BAND2_READY);
+		HAL_A::getInstance()->engineRight(false);
+		HAL_A::getInstance()->engineUnstop();
+
+		controller->handOverTimer = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_HAND_OVER_SEC, TIME_VALUE_HAND_OVER_MSEC, TIMER_HAND_OVER);
+		timerHandler->startTimer(controller->handOverTimer);
+	}
+}

@@ -1,0 +1,126 @@
+/**
+ * SE2 WiSe 2012
+ * Festo ISRHandler
+ *
+ * ISRHandler receives pulse messages from the system. System is set up to send a pulse
+ * message upon completion. ISRHandler evaluates the pulse received by the ISR and sends
+ * a specific pulse to Dispatcher and ErrorFSM.
+ *
+ * @file ISRHandler.h
+ * @author Chris Addo
+ *         Jens Eberwein
+ *         Tristan Rudat
+ *         Martin Slowikowski
+ * @date 2012-11-22
+ * @version 0.2
+ *
+ */
+
+#ifndef ISRHANDLER_H_
+#define ISRHANDLER_H_
+
+#include "HAWThread.h"
+#include "Addresses.h"
+#include "HAL_S.h"
+#include "messages.h"
+#include "Mutex.h"
+#include "Dispatcher.h"
+#include "ErrorFSM.h"
+
+//#define DEBUG_ISRHandler
+
+class HAL_ISR: public thread::HAWThread {
+public:
+	/**
+	 * Standard destructor. If an instance of ISRHandler was created, it is destroyed,
+	 * as well as its corresponding mutex.
+	 */
+	virtual ~HAL_ISR();
+
+	/**
+	 * Returns an instance of the ISRHandler to work with
+	 *
+	 * @return ISRHandler instance
+	 */
+	static HAL_ISR* getInstance();
+
+	/**
+	 * Starts ISRHandler, blocks in MsgReceivePulse until pulse messages from the ISR arrive.
+	 * After receiving a pulse message, the message is evaluated and afterwards a corresponding
+	 * signal is send as pulse message to the Dispatcher and ErrorFSM.
+	 */
+	virtual void execute(void* arg);
+
+	/**
+	 * Empty shutdown method
+	 */
+	virtual void shutdown();
+
+	/**
+	 * If stop is called, at first stop() method from superclass is called.
+	 * Afterwards the stopInterrupt() method in the SensorHAL is called.
+	 * In that method the interrupt will be detached and used channel is destroyed,
+	 * the blocking call MsgReceivePulse() gets back and thread ends.
+	 * Finally ISRHandler detaches from ErrorFSM and Dispatcher channel.
+	 */
+	void stop();
+
+private:
+	/**
+	 * Standard constructor for Singleton. Set up of all used instances and
+	 * ConnectAttach to Dispatcher and ErrorFSM.
+	 */
+	HAL_ISR();
+
+	/**
+	 * Instance for the ISRHandler
+	 */
+	static HAL_ISR* instance;
+
+	/**
+	 * Mutex to secure singleton pattern
+	 */
+	static Mutex* isrhandlerInstanceMutex;
+
+	/**
+	 * Instance of the SensorHAL
+	 */
+	HAL_S* hal_s;
+
+	/**
+	 * Instance of the Dispatcher
+	 */
+	Dispatcher* disp;
+
+	/**
+	 * Instance of the ErrorFSM
+	 */
+	ErrorFSM* errfsm;
+
+	/**
+	 * Instance of the LightController
+	 */
+	LightController* lc;
+
+	/**
+	 * Channel id of the Dispatcher
+	 */
+	int dispatcherChid;
+
+	/**
+	 * Channel id of the ErrorFSM
+	 */
+	int errfsmChid;
+
+	/**
+	 * Corresponding connection id to dispatcherChid from ConnectAttach
+	 */
+	int dispatcherCoid;
+
+	/**
+	 * Corresponding connection id to errfsmChid from ConnectAttach
+	 */
+	int errfsmCoid;
+};
+
+#endif /* ISRHANDLER_H_ */

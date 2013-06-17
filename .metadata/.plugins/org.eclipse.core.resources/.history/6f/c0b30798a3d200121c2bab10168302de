@@ -1,0 +1,3 @@
+ActorHAL.o: D:/WorkspaceQNX/CHRIS/HAL/ActorHAL.cpp \
+ D:/WorkspaceQNX/CHRIS/HAL/ActorHAL.h D:/WorkspaceQNX/CHRIS/address.h \
+ D:/WorkspaceQNX/CHRIS/HWaccess.h D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h

@@ -1,0 +1,4 @@
+SensorHAL.o: D:/WorkspaceQNX/CHRIS/HAL/SensorHAL.cpp \
+ D:/WorkspaceQNX/CHRIS/HAL/SensorHAL.h D:/WorkspaceQNX/CHRIS/address.h \
+ D:/WorkspaceQNX/CHRIS/HWaccess.h D:/WorkspaceQNX/CHRIS/Mutex/Mutex.h \
+ D:/WorkspaceQNX/CHRIS/FSM/puckTypes.h
