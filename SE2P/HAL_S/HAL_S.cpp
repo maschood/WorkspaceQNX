@@ -98,12 +98,7 @@ void HAL_S::initInterrupt() {
 }
 
 int HAL_S::getHeight() {
-	/*
-	 Bohrung oben	3506,3524,3528
-	 Bohrung unten	2470,2478,2480
-	 zu flach	2731,2737
-	 Bohrung oben oM	3492
-	 */
+
 	int hoehe = -1;
 	int i;
 

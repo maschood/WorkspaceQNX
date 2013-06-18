@@ -8,7 +8,7 @@
 #define FESTOSELECT_H_
 
 #ifndef FESTO_NUMBER
-#define FESTO_NUMBER 7// hier die Nummer des Bandes aendern.
+#define FESTO_NUMBER 5// hier die Nummer des Bandes aendern.
 #endif
 
 #if FESTO_NUMBER == 1
@@ -25,6 +25,12 @@
 
 #define TURNAROUND ((height) >= 2450 && (height) <= 2600)  	// Gutes WS, aber falsch herum
 #define OTHERSHEIGHT ((height) >= 2700 && (height) <= 2800)	// schlechtes WS (aber wohl kein Schluesselbund)
+
+#elif FESTO_NUMBER == 5
+
+#define TURNAROUND ((height) >= 2450 && (height) <= 2600)  	// Gutes WS, aber falsch herum
+#define OTHERSHEIGHT ((height) >= 2750 && (height) <= 2850)	// schlechtes WS (aber wohl kein Schluesselbund)
+
 
 #elif FESTO_NUMBER == 6
 

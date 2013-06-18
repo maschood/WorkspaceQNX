@@ -25,7 +25,7 @@ B2S05_Gate::B2S05_Gate(Controller* controller) :BaseState(controller) {
 		hal_a->gate(true);
 		this->controller->gateTimer = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_CLOSE_GATE_SEC, TIME_VALUE_CLOSE_GATE_MSEC, TIMER_GATE_CLOSE);
 		this->controller->gateTimer->start();
-		std::cout<< "Hallo 1" << endl;
+//		std::cout<< "Hallo 1" << endl;
 
 		controller->gateStatus = true;
 
@@ -34,7 +34,7 @@ B2S05_Gate::B2S05_Gate(Controller* controller) :BaseState(controller) {
 			hal_a->gate(true);
 			this->controller->gateTimer = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_CLOSE_GATE_SEC, TIME_VALUE_CLOSE_GATE_MSEC, TIMER_GATE_CLOSE);
 			this->controller->gateTimer->start();
-			std::cout<< "Hallo 2" << endl;
+//			std::cout<< "Hallo 2" << endl;
 			controller->gateStatus = true;
 		}
 
@@ -61,7 +61,7 @@ void B2S05_Gate::sbGateClosed(){
 		this->controller->segTimerMax = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_SEG3_MAX_SEC, TIME_VALUE_SEG3_MAX_MSEC, TIMER_SEG3_MAX);
 		timerHandler->startTimer(this->controller->segTimerMin);
 		timerHandler->startTimer(this->controller->segTimerMax);
-		std::cout<< "Hallo 3" << endl;
+//		std::cout<< "Hallo 3" << endl;
 
 		new (this) B2S07_Seg3(controller);
 

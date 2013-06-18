@@ -317,5 +317,24 @@ bool Controller::isInOrder(){
 	return order_metall;
 }
 
+/**
+ * Höhenwerte
+ */
+
+int Controller::getHeightB1(){
+	return heightB1;
+}
+
+int Controller::getHeightB2(){
+	return heightB2;
+}
+
+void Controller::setHeightB1(int h1){
+	this->heightB1 = h1;
+}
+
+void Controller::setHeightB2(int h2){
+	this->heightB2 = h2;
+}
 
 

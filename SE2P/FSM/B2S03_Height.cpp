@@ -21,8 +21,8 @@ B2S03_Height::B2S03_Height(Controller* controller) : BaseState(controller) {
 
 	timerHandler->pauseAllTimers();
 	hal_a->engine_stop();
+	controller->setHeightB2(hal_s->getHeight());
 	controller->puckType = hal_s->getHeightPuckType();
-	std::cout << "TYP: "<< controller->puckType<< endl;
 	hal_a->engine_unstop();
 	timerHandler->continueAllTimers();
 }

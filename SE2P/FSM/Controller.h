@@ -190,7 +190,11 @@ public:
 	 *
 	 */
 
+	int getHeightB1 ();
+	int getHeightB2 ();
 
+	void setHeightB1(int h1);
+	void setHeightB2(int h2);
 
     int getPuckTyp() const
     {
@@ -310,6 +314,10 @@ private:
 	int puckTypBand1;
 
 	int puckTypBand2;
+
+	int heightB1;
+
+	int heightB2;
 
 
 };

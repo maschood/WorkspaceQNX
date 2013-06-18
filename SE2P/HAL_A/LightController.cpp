@@ -94,7 +94,7 @@ void LightController::upcomingNotReceiptedTimerMax() {
 
 void LightController::upcomingNotReceipted() {
 	lightsOff();
-	function = &LightController::blinkRedSlow;
+	function = &LightController::blinkRedFast;
 	cont();
 }
 
@@ -105,7 +105,7 @@ void LightController::upcomingReceipted() {
 
 void LightController::goneUnreceipted() {
 	lightsOff();
-	function = &LightController::blinkRedFast;
+	function = &LightController::blinkRedSlow;
 	cont();
 }
 

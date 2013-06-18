@@ -26,18 +26,12 @@ B2S06_Slide::~B2S06_Slide() {
 }
 
 void B2S06_Slide::sbSlideClosed(){
-	printf("0");
-
 	puckHandler->removePuckFromBand(controller);
 	hal_a->engine_stop();
 
-	printf("1");
-
 	bool tmpBand1Waiting = controller->isBand1Waiting();
-	printf("2");
 
 	controller->resetController();
-	printf("3");
 
 	if(tmpBand1Waiting){
 		rs232_1->sendMsg(RS232_BAND2_READY);
@@ -47,8 +41,6 @@ void B2S06_Slide::sbSlideClosed(){
 		controller->handOverTimer = timerHandler->createTimer(puckHandler->getDispChid(), TIME_VALUE_HAND_OVER_SEC, TIME_VALUE_HAND_OVER_MSEC, TIMER_HAND_OVER);
 		timerHandler->startTimer(controller->handOverTimer);
 	}
-	printf("4");
-
 }
 
 void B2S06_Slide::timerSlideFull(){

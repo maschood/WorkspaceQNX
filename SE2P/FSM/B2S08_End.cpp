@@ -16,7 +16,8 @@ B2S08_End::B2S08_End(Controller* controller) : BaseState(controller) {
 	this->controller = controller;
 
 #ifdef DEBUG_STATE_PRINTF
-	printf("DEBUG STATE: Puck%d -> B2S08_End PUCK TYP: %d \n", this->controller->getID(), this->controller->puckType);
+	printf("DEBUG STATE: Puck%d -> B2S08_End\n", this->controller->getID());
+	printf ("Puck Typ: %d Hoehe Band2: %d \n",  this->controller->puckType, this->controller->getHeightB2());
 #endif
 }
 

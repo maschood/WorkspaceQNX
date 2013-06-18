@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="18" version="2.0">
 <workbenchAdvisor/>
-<window height="728" maximized="true" width="964" x="299" y="60">
+<window height="728" maximized="true" minimized="true" width="964" x="299" y="60">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="365"/>
 </perspectiveBar>
 <coolbarLayout locked="0">
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="130" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="247" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="com.qnx.tools.ide.phab.ui.PhabActionSet" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
@@ -38,37 +38,42 @@
 <part id="4"/>
 <part id="5"/>
 <part id="6"/>
+<part id="7"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S05_Gate.cpp" partName="B2S05_Gate.cpp" path="D:/WorkspaceQNX/SE2P/FSM/B2S05_Gate.cpp" title="B2S05_Gate.cpp" tooltip="SE2P/FSM/B2S05_Gate.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S05_Gate.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="848" selectionTopPixel="568"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BaseState.cpp" partName="BaseState.cpp" path="D:/WorkspaceQNX/SE2P/FSM/BaseState.cpp" title="BaseState.cpp" tooltip="SE2P/FSM/BaseState.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/BaseState.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="308" selectionTopPixel="1333"/>
-</editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="BaseState.h" partName="BaseState.h" path="D:/WorkspaceQNX/SE2P/FSM/BaseState.h" title="BaseState.h" tooltip="SE2P/FSM/BaseState.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/BaseState.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="845" selectionTopPixel="408"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B2S08_End.cpp" partName="B2S08_End.cpp" path="D:/WorkspaceQNX/SE2P/FSM/B2S08_End.cpp" title="B2S08_End.cpp" tooltip="SE2P/FSM/B2S08_End.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S08_End.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="733" selectionTopPixel="330"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cpp" partName="Controller.cpp" path="D:/WorkspaceQNX/SE2P/FSM/Controller.cpp" title="Controller.cpp" tooltip="SE2P/FSM/Controller.cpp" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/Controller.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="352" selectionTopPixel="4546"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5255" selectionTopPixel="5186"/>
 </editor>
 <editor id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" partName="Controller.h" path="D:/WorkspaceQNX/SE2P/FSM/Controller.h" title="Controller.h" tooltip="SE2P/FSM/Controller.h" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/Controller.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4827" selectionTopPixel="4029"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3903" selectionTopPixel="2993"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B2S05_Gate.h" partName="B2S05_Gate.h" path="D:/WorkspaceQNX/SE2P/FSM/B2S05_Gate.h" title="B2S05_Gate.h" tooltip="SE2P/FSM/B2S05_Gate.h" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S05_Gate.h"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="397" selectionTopPixel="0"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B2S03_Height.cpp" partName="B2S03_Height.cpp" path="D:/WorkspaceQNX/SE2P/FSM/B2S03_Height.cpp" title="B2S03_Height.cpp" tooltip="SE2P/FSM/B2S03_Height.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S03_Height.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="632" selectionTopPixel="177"/>
 </editor>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B2S06_Slide.cpp" partName="B2S06_Slide.cpp" path="D:/WorkspaceQNX/SE2P/FSM/B2S06_Slide.cpp" title="B2S06_Slide.cpp" tooltip="SE2P/FSM/B2S06_Slide.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S06_Slide.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="497" selectionTopPixel="52"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B2S03_Height.h" partName="B2S03_Height.h" path="D:/WorkspaceQNX/SE2P/FSM/B2S03_Height.h" title="B2S03_Height.h" tooltip="SE2P/FSM/B2S03_Height.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B2S03_Height.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="B1S03_Height.cpp" partName="B1S03_Height.cpp" path="D:/WorkspaceQNX/SE2P/FSM/B1S03_Height.cpp" title="B1S03_Height.cpp" tooltip="SE2P/FSM/B1S03_Height.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/B1S03_Height.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="300" selectionTopPixel="204"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="LightController.cpp" partName="LightController.cpp" path="D:/WorkspaceQNX/SE2P/HAL_A/LightController.cpp" title="LightController.cpp" tooltip="SE2P/HAL_A/LightController.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/HAL_A/LightController.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="376" selectionTopPixel="102"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="puckTypes.h" partName="puckTypes.h" path="D:/WorkspaceQNX/SE2P/FSM/puckTypes.h" title="puckTypes.h" tooltip="SE2P/FSM/puckTypes.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SE2P/FSM/puckTypes.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="322" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -131,8 +136,6 @@
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
 <category IMemento.internal.id="Warnings"/>
-<category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="64" org.eclipse.ui.ide.markerType="94" org.eclipse.ui.ide.pathField="124" org.eclipse.ui.ide.resourceField="94" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -143,7 +146,7 @@
 </viewState>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView" activePerspective="org.eclipse.cdt.ui.CPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="org.eclipse.cdt.ui.CPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="com.qnx.tools.ide.SystemProfiler.ui.SystemProfilerPerspective" id="com.qnx.tools.ide.SystemProfiler.ui.perspective.traceperspective" label="QNX System Profiler"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -537,171 +540,174 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S01_Entry.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/bandselection.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S03_Height.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B1S04_Seg2.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S02_Seg1.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/puckTypes.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S07_Seg3.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FestoSelection.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/BaseState.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/BaseState.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S03_Height.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/Controller.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/Controller.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S05_Gate.h"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S06_Slide.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S08_End.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/Controller.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_S/HAL_S.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/DISPATCHER/PuckHandler.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B2S03_Height.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/B1S03_Height.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_A/LightController.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/HAL_A/LightController.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SE2P/FSM/puckTypes.h"/>
 </editors>
-<item historyLabel="bandselection.h" index="1">
+<item historyLabel="B2S05_Gate.h" index="1">
+<position info="not_deleted" x="397" y="0"/>
+</item>
+<item historyLabel="B2S05_Gate.cpp" index="0">
+<position info="not_deleted" x="848" y="0"/>
+</item>
+<item historyLabel="bandselection.h" index="2">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="B2S01_Entry.cpp" index="0">
-<position info="not_deleted" x="531" y="0"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="575" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
+<item historyLabel="FestoSelection.h" index="3">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="560" y="0"/>
+<item historyLabel="FestoSelection.h" index="3">
+<position info="not_deleted" x="204" y="0"/>
 </item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="577" y="0"/>
+<item historyLabel="FestoSelection.h" index="3">
+<position info="not_deleted" x="922" y="0"/>
 </item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="916" y="0"/>
+<item historyLabel="FestoSelection.h" index="3">
+<position info="not_deleted" x="1844" y="0"/>
 </item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="663" y="0"/>
+<item historyLabel="B2S05_Gate.cpp" index="0">
+<position info="not_deleted" x="848" y="0"/>
 </item>
-<item historyLabel="B1S04_Seg2.cpp" index="4">
-<position info="not_deleted" x="0" y="0"/>
+<item historyLabel="BaseState.cpp" index="4">
+<position info="not_deleted" x="308" y="0"/>
 </item>
-<item historyLabel="B1S04_Seg2.cpp" index="4">
-<position info="not_deleted" x="504" y="0"/>
+<item historyLabel="B2S05_Gate.cpp" index="0">
+<position info="not_deleted" x="668" y="0"/>
 </item>
-<item historyLabel="B2S02_Seg1.cpp" index="5">
-<position info="not_deleted" x="404" y="0"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="575" y="0"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="165" y="249"/>
-</item>
-<item historyLabel="puckTypes.h" index="6">
-<position info="not_deleted" x="295" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="1759" y="0"/>
-</item>
-<item historyLabel="B2S02_Seg1.cpp" index="5">
-<position info="not_deleted" x="404" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="1759" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="916" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="871" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="1869" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="1412" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="7">
-<position info="not_deleted" x="482" y="0"/>
-</item>
-<item historyLabel="B2S07_Seg3.cpp" index="8">
-<position info="not_deleted" x="401" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="7">
-<position info="not_deleted" x="482" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="3">
-<position info="not_deleted" x="422" y="0"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="165" y="249"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="854" y="0"/>
-</item>
-<item historyLabel="B2S03_Height.cpp" index="2">
-<position info="not_deleted" x="1240" y="0"/>
-</item>
-<item historyLabel="B2S07_Seg3.cpp" index="8">
-<position info="not_deleted" x="401" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1832" y="0"/>
-</item>
-<item historyLabel="BaseState.h" index="10">
+<item historyLabel="BaseState.h" index="5">
 <position info="not_deleted" x="845" y="0"/>
 </item>
-<item historyLabel="Controller.cpp" index="11">
+<item historyLabel="BaseState.h" index="5">
+<position info="not_deleted" x="961" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item historyLabel="FestoSelection.h" index="3">
+<position info="not_deleted" x="1844" y="0"/>
+</item>
+<item historyLabel="Controller.cpp" index="7">
 <position info="not_deleted" x="352" y="0"/>
 </item>
-<item historyLabel="Controller.h" index="12">
-<position info="not_deleted" x="4827" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1915" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="13">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="13">
-<position info="not_deleted" x="315" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
-<position info="not_deleted" x="1235" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
-<position info="not_deleted" x="808" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="13">
-<position info="not_deleted" x="315" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1915" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1946" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1915" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
-<position info="not_deleted" x="808" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
-<position info="not_deleted" x="776" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
-<position info="not_deleted" x="641" y="0"/>
-</item>
-<item historyLabel="B2S05_Gate.h" index="13">
-<position info="not_deleted" x="397" y="0"/>
-</item>
-<item historyLabel="B2S06_Slide.cpp" index="14">
+<item historyLabel="B2S06_Slide.cpp" index="8">
 <position info="not_deleted" x="497" y="0"/>
 </item>
-<item historyLabel="B2S05_Gate.h" index="13">
-<position info="not_deleted" x="397" y="0"/>
+<item historyLabel="B2S06_Slide.cpp" index="8">
+<position info="not_deleted" x="297" y="0"/>
 </item>
-<item active="true" historyLabel="B2S05_Gate.cpp" index="9">
-<position info="not_deleted" x="1915" y="0"/>
+<item historyLabel="Controller.cpp" index="7">
+<position info="not_deleted" x="352" y="0"/>
+</item>
+<item historyLabel="FestoSelection.h" index="3">
+<position info="not_deleted" x="1823" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="402" y="0"/>
+</item>
+<item historyLabel="BaseState.h" index="5">
+<position info="not_deleted" x="961" y="0"/>
+</item>
+<item historyLabel="B2S05_Gate.cpp" index="0">
+<position info="not_deleted" x="668" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="Controller.cpp" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="10">
+<position info="not_deleted" x="3827" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="10">
+<position info="not_deleted" x="3808" y="0"/>
+</item>
+<item historyLabel="Controller.cpp" index="7">
+<position info="not_deleted" x="5174" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="428" y="0"/>
+</item>
+<item historyLabel="Controller.h" index="10">
+<position info="not_deleted" x="3903" y="0"/>
+</item>
+<item historyLabel="Controller.cpp" index="7">
+<position info="not_deleted" x="5255" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="227" y="0"/>
+</item>
+<item historyLabel="HAL_S.cpp" index="11">
+<position info="not_deleted" x="2165" y="0"/>
+</item>
+<item historyLabel="PuckHandler.cpp" index="12">
+<position info="not_deleted" x="272" y="0"/>
+</item>
+<item historyLabel="HAL_S.cpp" index="11">
+<position info="not_deleted" x="2165" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="629" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="573" y="0"/>
+</item>
+<item historyLabel="HAL_S.cpp" index="11">
+<position info="not_deleted" x="2165" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="573" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="475" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.h" index="13">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="550" y="0"/>
+</item>
+<item historyLabel="B1S03_Height.cpp" index="14">
+<position info="not_deleted" x="300" y="0"/>
+</item>
+<item historyLabel="B2S03_Height.cpp" index="6">
+<position info="not_deleted" x="632" y="0"/>
+</item>
+<item historyLabel="B2S08_End.cpp" index="9">
+<position info="not_deleted" x="733" y="0"/>
+</item>
+<item historyLabel="LightController.cpp" index="15">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="LightController.cpp" index="15">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item historyLabel="LightController.h" index="16">
+<position info="not_deleted" x="2725" y="0"/>
+</item>
+<item historyLabel="LightController.cpp" index="15">
+<position info="not_deleted" x="376" y="0"/>
+</item>
+<item active="true" historyLabel="puckTypes.h" index="17">
+<position info="not_deleted" x="196" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -715,7 +721,6 @@
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="topRight"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@13c9c89"/>
 </trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
@@ -724,17 +729,34 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@f03283"/>
 <trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S06_Slide.cpp" tooltip="SE2P/FSM/B2S06_Slide.cpp">
-<persistable path="/SE2P/FSM/B2S06_Slide.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="puckTypes.h" tooltip="SE2P/FSM/puckTypes.h">
+<persistable path="/SE2P/FSM/puckTypes.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S05_Gate.h" tooltip="SE2P/FSM/B2S05_Gate.h">
-<persistable path="/SE2P/FSM/B2S05_Gate.h"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LightController.h" tooltip="SE2P/HAL_A/LightController.h">
+<persistable path="/SE2P/HAL_A/LightController.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="LightController.cpp" tooltip="SE2P/HAL_A/LightController.cpp">
+<persistable path="/SE2P/HAL_A/LightController.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B1S03_Height.cpp" tooltip="SE2P/FSM/B1S03_Height.cpp">
+<persistable path="/SE2P/FSM/B1S03_Height.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S03_Height.h" tooltip="SE2P/FSM/B2S03_Height.h">
+<persistable path="/SE2P/FSM/B2S03_Height.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="PuckHandler.cpp" tooltip="SE2P/DISPATCHER/PuckHandler.cpp">
+<persistable path="/SE2P/DISPATCHER/PuckHandler.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
+<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S03_Height.cpp" tooltip="SE2P/FSM/B2S03_Height.cpp">
+<persistable path="/SE2P/FSM/B2S03_Height.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.h" tooltip="SE2P/FSM/Controller.h">
 <persistable path="/SE2P/FSM/Controller.h"/>
@@ -742,29 +764,8 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Controller.cpp" tooltip="SE2P/FSM/Controller.cpp">
 <persistable path="/SE2P/FSM/Controller.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseState.h" tooltip="SE2P/FSM/BaseState.h">
-<persistable path="/SE2P/FSM/BaseState.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BaseState.cpp" tooltip="SE2P/FSM/BaseState.cpp">
-<persistable path="/SE2P/FSM/BaseState.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S05_Gate.cpp" tooltip="SE2P/FSM/B2S05_Gate.cpp">
-<persistable path="/SE2P/FSM/B2S05_Gate.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S07_Seg3.cpp" tooltip="SE2P/FSM/B2S07_Seg3.cpp">
-<persistable path="/SE2P/FSM/B2S07_Seg3.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="puckTypes.h" tooltip="SE2P/FSM/puckTypes.h">
-<persistable path="/SE2P/FSM/puckTypes.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S02_Seg1.cpp" tooltip="SE2P/FSM/B2S02_Seg1.cpp">
-<persistable path="/SE2P/FSM/B2S02_Seg1.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B1S04_Seg2.cpp" tooltip="SE2P/FSM/B1S04_Seg2.cpp">
-<persistable path="/SE2P/FSM/B1S04_Seg2.cpp"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S03_Height.cpp" tooltip="SE2P/FSM/B2S03_Height.cpp">
-<persistable path="/SE2P/FSM/B2S03_Height.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S08_End.cpp" tooltip="SE2P/FSM/B2S08_End.cpp">
+<persistable path="/SE2P/FSM/B2S08_End.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="FestoSelection.h" tooltip="SE2P/FestoSelection.h">
 <persistable path="/SE2P/FestoSelection.h"/>
@@ -772,8 +773,11 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="bandselection.h" tooltip="SE2P/bandselection.h">
 <persistable path="/SE2P/bandselection.h"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="HAL_S.cpp" tooltip="SE2P/HAL_S/HAL_S.cpp">
-<persistable path="/SE2P/HAL_S/HAL_S.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S06_Slide.cpp" tooltip="SE2P/FSM/B2S06_Slide.cpp">
+<persistable path="/SE2P/FSM/B2S06_Slide.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="B2S05_Gate.h" tooltip="SE2P/FSM/B2S05_Gate.h">
+<persistable path="/SE2P/FSM/B2S05_Gate.h"/>
 </file>
 </mruList>
 </workbench>
